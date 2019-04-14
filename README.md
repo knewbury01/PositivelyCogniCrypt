@@ -10,33 +10,33 @@
 
 
 
-    q=application+language:java&per_page=100&page=$pagenum&sort=stars    
+          q=application+language:java&per_page=100&page=$pagenum&sort=stars    
   
 
- 1. Collect a JSON formatted file of repo data:
+ ####  1. Collect a JSON formatted file of repo data:
 
 
 
 
-    ./curlData.sh
+    	  ./curlData.sh
 
 
- 2. Extract just the Git urls:
+ ####  2. Extract just the Git urls:
 
 
 
 
 
-    ./preprocessurls.sh
+        ./preprocessurls.sh
 
 
- 3. Fetch and Build Projects:
- *Fetch the projects in the git url list and attempt to build these projects. Each repo then goes through a few criteria that determine if it will be retained in the final sample. Each project must be cloned in order to check these criteria:
+ #### 3. Fetch and Build Projects:
+ * Fetch the projects in the git url list and attempt to build these projects. Each repo then goes through a few criteria that determine if it will be retained in the final sample. Each project must be cloned in order to check these criteria:
    * checked to assess if it contains a (partially quantified) [JCA Core Class or Interface](https://docs.oracle.com/javase/9/security/java-cryptography-architecture-jca-reference-guide.htm#JSSEC-GUID-71693272-7F57-4155-99F9-A2139271FD6D). This is to assure that the data that is collected is actually relevant to crypto API usage.
    * Only projects that use maven will be retained. This criteria is implicitly enforced by assuming the project uses Maven, and we attempt to build using the following mvn command.
 
 
-     	  mvn -Dmaven.test.skip=true package
+     	 mvn -Dmaven.test.skip=true package
 
 	 
    * Lastly the project must succeed in building. For projects meeting these criteria the project source will be retained, so that the jars can be extracted from the repo, and also that the source code can be used to manually verify false positives.
@@ -45,15 +45,33 @@
 
 
 
-    ./fetchnbuild.sh
+        ./fetchnbuild.sh
 
- ## Filtering project items:
- *from this process we must extract a list of items we actually wish to analyze. 
+ ## 4. Filtering project items:
+ * from this process we must extract a list of items we actually wish to analyze. 
 
- ## Running Analysis:
+
+   	./extractJars.sh
+
+ ## 5. Running Analysis:
  * Once we have a set of sample projects, run CogniCrypt.
- * We supply the version of CogniCrypt that we use, however we did not distribute the rules, as they are a bit larger. You will have to obtain them from [here](https://github.com/CROSSINGTUD/CryptoAnalysis/releases/download/2.0/JCA_rule\
-s.zip)
+ * We supply the version of CogniCrypt that we use, however we did not distribute the rules, as they are a bit larger. You will have to obtain them from [here](https://github.com/CROSSINGTUD/CryptoAnalysis/releases/download/2.0/JCA_rules.zip)
 
 
-   ./runCogniCrypt.sh <file-of-items-to-analyze>
+      	 ./runCogniCrypt.sh <file-of-items-to-analyze>
+
+
+ ## 6. Find Relevant Analysis Outputs:
+ * Some analysis outputs will not contain objects to analyze. Some (although very few) will have failed. This step collects just those outputs that contain an analyzed object.
+
+
+   	 ./partitionCogniResults.sh
+
+
+ ## 7. Find Analysis Outputs Containing Constraint Error:
+ * In this study we analyzed false positives in constraint errors specifically. This step isolates those results that contained at least one of this type of error.
+
+
+
+
+        ./findConstraintErrors.sh
