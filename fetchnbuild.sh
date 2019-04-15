@@ -19,9 +19,6 @@
 #
 #
 ######################
-
-mkdir projects
-mkdir classes
 var=0
 pwdd=${pwd}
 
@@ -40,10 +37,9 @@ while IFS='' read -r repo || [[ -n "$repo" ]]; do
     #sometimes the repo does not exist, so dont try rest of stuff
     if [  -d "$reponame" ]; then
 
-	#actually this search would have been better...
-	#"\<Provider\>|\<Security\>|\<SecureRandom\>|\<MessageDigest\>|\<Signature\>|\<Cipher\>|\<KeyFactory\>|\<KeyGenerator\>|\<KeyAgreement\>|\<KeyStore\>|> <CertificateFactory\>|\<KeyPair\>|\<KeySpec\>|\<AlgorithmParameter\>"
 	#test if this directory has the one of the interesting keywords in it 
-	if grep -RqE "Provider|Security|SecureRandom|MessageDigest|Signature|Cipher|KeyFactory|KeyGenerator|KeyAgreement|KeyStore|CertificateFactory|KeyPair|KeySpec|AlgorithmParameter" $reponame;
+	#uses an exact match pattern
+	if grep -RqE "\<Provider\>|\<Security\>|\<SecureRandom\>|\<MessageDigest\>|\<Signature\>|\<Cipher\>|\<KeyFactory\>|\<KeyGenerator\>|\<KeyAgreement\>|\<KeyStore\>|> <CertificateFactory\>|\<KeyPair\>|\<KeySpec\>|\<AlgorithmParameter\>"  $reponame;
 
 	   then
 
@@ -56,29 +52,17 @@ while IFS='' read -r repo || [[ -n "$repo" ]]; do
  	git rev-parse HEAD >> ../commitlog.txt
     
 	#attempt build, and only proceed if it succeeds, otherwise just rm this dir
-	if mvn package -Dmaven.test.skip=true | grep "SUCCESS"; then
+	if mvn compile | grep "SUCCESS"; then
 
 	    #also keep a separate list of the projects that built
 	    echo -n "$repo " >> ../successcommitlog.txt
             git rev-parse HEAD >> ../successcommitlog.txt
-
-	    #finds all jars in ONLY target dir
-	found=`find . -path 'target/*' -regex ".*jar"`
-	for each in $found:
-	do
-		echo "FOUND THIS JAR $each"
-		if [ -f "${each}" ]; then
-			mv $each ../projects/
-		fi
-	done
-
-	#try to also keep the classes dir...
-	mv target/classes ../classes/${reponame}classes
-
-
+	    #keep a list as well of plain names of projects, for a quick cleanup if need be
+	    echo "$reponame" >> ../projectsample.txt
+	    
 	else
 
-	    #mvn package attempt did not succeed
+	    #mvn compile attempt did not succeed
 	    cd $pwd
 	    rm -rf $reponame
 
@@ -98,9 +82,5 @@ while IFS='' read -r repo || [[ -n "$repo" ]]; do
     fi
     
     done<allrepos.txt
-
-#filter out the javadocs and sources jars for the resulting project folder
-rm projects/*javadoc.jar
-rm projects/*sources.jar
 
 ./summaryFetch.sh
