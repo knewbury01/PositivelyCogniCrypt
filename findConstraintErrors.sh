@@ -21,7 +21,7 @@ for file in ResultsWithObjects/*.txt; do
     if cat $file | grep -q "ConstraintError\:";then
 	echo "$file" >> ConstraintErrors.txt
 	echo "$file=" >> FPLog.txt
-	mv ResultsWithObjects/$file resultsConstraintError/$file
+	cp $file resultsConstraintError/${file#ResultsWithObjects/}
     fi  
 done 
 
