@@ -1,8 +1,15 @@
 # Welcome to Falsely Positive CogniCrypt!
   * This is a project to investigate two things:
     * The presence of false positives in [CogniCrypt](https://github.com/CROSSINGTUD/CryptoAnalysis) reports
-    * The feasibility of using Infoflow to aid in false positive detection
+  * We look at two versions of CogniCrypt, [Release 1.0.0](https://github.com/CROSSINGTUD/CryptoAnalysis/releases/download/v1.0.0/CryptoAnalysis-1.0.0-jar-with-dependencies.jar) and a build approximately from 2.0.0, specifically from sha:
 
+
+
+    5f531d1d4377aefd35cec6658ae95308c6594244
+
+
+  * this project uses some gnu specific bash commands (sed and grep variants)
+  * some scripts may need a tweak, they will be annotated for such
 
 # Steps to Replicate:
  ## Data collection and processing:
@@ -22,7 +29,7 @@
 
 
  ####  2. Extract just the Git urls:
-
+ * The first step will not persist to have the same results over time, for reproduction purposes it may be necessary to begin from this step, where json-file is the [allreposjson.txt](https://github.com/knewbury01/PositivelyCogniCrypt/blob/master/allreposjson.txt) file supplied in this project.
 
 
 
@@ -62,19 +69,26 @@
 
        	 ./runCogniCrypt.sh <file-of-items-to-analyze>
 
+	 ./runCogniV1.sh <file-of-items-to-analyze>
+
 
  ## 6. Find Relevant Analysis Outputs:
  * Some analysis outputs will not contain objects to analyze. Some (although very few) will have failed. This step collects just those outputs that contain an analyzed object.
 
 
 
-      	 ./partition CogniResults.sh
+      	 ./partitionCogniResults.sh CogniCryptResults V2
+
+
+	 ./partitionCogniResults.sh CogniCryptResultsV1 V1
 
 
  ## 7. Find Analysis Outputs Containing Constraint Error:
- * In this study we analyzed false positives in constraint errors specifically. This step isolates those results that contained at least one of this type of error.
+ * In this study we analyzed false positives in constraint errors specifically. This step isolates those results that contained at least one of this type of error. This also generates a template report for 
 
 
 
+        ./findConstraintErrors.sh FPV1Log.txt V1
 
-        ./findConstraintErrors.sh
+
+	./findConstraintErrors.sh FPV2Log.txt V2

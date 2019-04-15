@@ -8,22 +8,22 @@
 #obviously
 #
 #also generates a template file
-#FPLog.txt for the next manual step,
+#FPLogVx.txt for the next manual step,
 #for the reviewer to fill out
 #WARNING running this after fp detection has begun will remove your work
 #either backup or dont run
 ###################
-rm FPLog.txt
-rm ConstraintErrors.txt
-mkdir resultsConstraintError
+rm $1
+rm ConstraintErrors$2.txt
+mkdir resultsConstraintError$2
 
-for file in ResultsWithObjects/*.txt; do
+for file in ResultsWithObjects$2/*.txt; do
     if cat $file | grep -q "ConstraintError\:";then
-	echo "$file" >> ConstraintErrors.txt
-	echo "$file=" >> FPLog.txt
-	cp $file resultsConstraintError/${file#ResultsWithObjects/}
+	echo "$file" >> ConstraintErrors$2.txt
+	echo "$file=" >> $1
+	cp $file resultsConstraintError$2/${file#ResultsWithObjects$2/}
     fi  
 done 
 
-total=$(cat ConstraintErrors.txt | wc -l)
+total=$(cat ConstraintErrors$2.txt | wc -l)
 echo "Found this many outputs with at least one ConstraintError: $total"
