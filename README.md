@@ -36,36 +36,39 @@
    * Only projects that use maven will be retained. This criteria is implicitly enforced by assuming the project uses Maven, and we attempt to build using the following mvn command.
 
 
-     	 mvn -Dmaven.test.skip=true package
+     	 mvn compile
 
 	 
-   * Lastly the project must succeed in building. For projects meeting these criteria the project source will be retained, so that the jars can be extracted from the repo, and also that the source code can be used to manually verify false positives.
+   * Lastly the project must succeed in building. For projects meeting these criteria the project source will be retained, so that we can run the analysis right on bytecodes generated in each project directory, and also that the source code can be used to manually verify false positives.
 
 
 
 
-
-        ./fetchnbuild.sh
+   
+	  ./fetchnbuild.sh
 
  ## 4. Filtering project items:
  * from this process we must extract a list of items we actually wish to analyze. 
 
 
-   	./extractJars.sh
+
+   	  ./extractClasses.sh
 
  ## 5. Running Analysis:
  * Once we have a set of sample projects, run CogniCrypt.
  * We supply the version of CogniCrypt that we use, however we did not distribute the rules, as they are a bit larger. You will have to obtain them from [here](https://github.com/CROSSINGTUD/CryptoAnalysis/releases/download/2.0/JCA_rules.zip)
 
 
-      	 ./runCogniCrypt.sh <file-of-items-to-analyze>
+
+       	 ./runCogniCrypt.sh <file-of-items-to-analyze>
 
 
  ## 6. Find Relevant Analysis Outputs:
  * Some analysis outputs will not contain objects to analyze. Some (although very few) will have failed. This step collects just those outputs that contain an analyzed object.
 
 
-   	 ./partitionCogniResults.sh
+
+      	 ./partition CogniResults.sh
 
 
  ## 7. Find Analysis Outputs Containing Constraint Error:
