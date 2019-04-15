@@ -93,13 +93,10 @@
  ## 7. Find Analysis Outputs Containing Constraint Error:
  * In this study we analyzed false positives in constraint errors specifically. This step isolates those results that contained at least one of this type of error. This also generates a template report for 
 
-
+```
 
         ./findConstraintErrors.sh FPV1Log.txt V1
 
-
-
-
-
-
 	./findConstraintErrors.sh FPV2Log.txt V2
+
+```
