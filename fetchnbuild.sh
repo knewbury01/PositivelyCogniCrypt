@@ -22,6 +22,9 @@
 var=0
 pwdd=${pwd}
 
+echo "THIS IS PWD $pwdd"
+
+
 while IFS='' read -r repo || [[ -n "$repo" ]]; do
 
    
@@ -48,32 +51,32 @@ while IFS='' read -r repo || [[ -n "$repo" ]]; do
 	
 	
 	#get the latest sha of this, for reproducibility
-	echo -n "$repo " >> ../commitlog.txt
- 	git rev-parse HEAD >> ../commitlog.txt
+	echo -n "$repo " >> $pwdd/commitlog.txt
+ 	git rev-parse HEAD >> $pwdd/commitlog.txt
     
 	#attempt build, and only proceed if it succeeds, otherwise just rm this dir
 	if mvn compile | grep "SUCCESS"; then
 
 	    #also keep a separate list of the projects that built
-	    echo -n "$repo " >> ../successcommitlog.txt
-            git rev-parse HEAD >> ../successcommitlog.txt
+	    echo -n "$repo " >> $pwdd/successcommitlog.txt
+            git rev-parse HEAD >> $pwdd/successcommitlog.txt
 	    #keep a list as well of plain names of projects, for a quick cleanup if need be
-	    echo "$reponame" >> ../projectsample.txt
+	    echo "$reponame" >> $pwdd/projectsample.txt
 	    
 	else
 
 	    #mvn compile attempt did not succeed
-	    cd $pwd
+	    cd $pwdd
 	    rm -rf $reponame
 
 	fi
 
 	#use full path bc maybe we already cd'd here prev
-	cd $pwd
+	cd $pwdd
 	
 	else
 	    #do not keep dirs that do not contain any in the keyword set, too much clutter
-	    cd $pwd
+	    cd $pwdd
 	    rm -rf $reponame 
 	
 	
@@ -83,4 +86,3 @@ while IFS='' read -r repo || [[ -n "$repo" ]]; do
     
     done<allrepos.txt
 
-./summaryFetch.sh
