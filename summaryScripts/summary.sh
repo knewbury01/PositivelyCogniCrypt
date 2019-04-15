@@ -1,5 +1,8 @@
 #$1 is the dir to summarize
 
+    echo -n "The total number of analyzed files is: "
+    ls $1 | wc -l
+
     echo -n "Number of results containing no violation: "    
     cat $1/*.txt | grep "No violation" | wc -l
 
