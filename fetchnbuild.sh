@@ -20,7 +20,7 @@
 #
 ######################
 var=0
-pwdd=${pwd}
+pwdd=$(pwd)
 
 echo "THIS IS PWD $pwdd"
 
