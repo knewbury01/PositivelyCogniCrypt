@@ -5,7 +5,7 @@
 ##################################
 rm allclasses.txt
 
-find . -path '*/classes' 
+find . -path '*/classes' >> allclasses.txt
 total=$(cat allclasses.txt | wc -l)
 
 echo "The number of collected analysis inputs is: $total"

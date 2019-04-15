@@ -27,7 +27,7 @@
 
 
 
-        ./preprocessurls.sh
+        ./preprocessurls.sh <json-file>
 
 
  #### 3. Fetch and Build Projects:

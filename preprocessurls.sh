@@ -29,3 +29,9 @@ sed -i 's/"//' allrepos.txt
 sed -i 's/,//' allrepos.txt
 #remove "git_url:"
 sed -i 's/git_url://' allrepos.txt
+#remove anything with android in the name
+sed -i '/android/d' allrepos.txt
+sed -i '/Android/d' allrepos.txt
+
+echo -n "There are this many samples to fetch and clone: "
+cat allrepos.txt | wc -l
