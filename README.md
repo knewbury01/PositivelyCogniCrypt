@@ -64,39 +64,26 @@
  * Once we have a set of sample projects, run CogniCrypt.
  * We supply the version of CogniCrypt that we use, however we did not distribute the rules, as they are a bit larger. You will have to obtain them from [here](https://github.com/CROSSINGTUD/CryptoAnalysis/releases/download/2.0/JCA_rules.zip)
 
-
-
+```
         ./runCogniCrypt.sh <file-of-items-to-analyze>
 
-
-
-
-
 	./runCogniV1.sh <file-of-items-to-analyze>
-
+```
 
  ## 6. Find Relevant Analysis Outputs:
  * Some analysis outputs will not contain objects to analyze. Some (although very few) will have failed. This step collects just those outputs that contain an analyzed object.
 
-
-
+```
         ./partitionCogniResults.sh CogniCryptResults V2
 
-
-
-
-
-
 	./partitionCogniResults.sh CogniCryptResultsV1 V1
-
+```
 
  ## 7. Find Analysis Outputs Containing Constraint Error:
  * In this study we analyzed false positives in constraint errors specifically. This step isolates those results that contained at least one of this type of error. This also generates a template report for 
 
 ```
-
         ./findConstraintErrors.sh FPV1Log.txt V1
 
 	./findConstraintErrors.sh FPV2Log.txt V2
-
 ```
