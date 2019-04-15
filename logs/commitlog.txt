@@ -1,0 +1,185 @@
+       git://github.com/square/okhttp.git b15b93c5424562dfc0ce9498173239376891a307
+git://github.com//doe300/jactiverecord.git git://github.com/4455jkjh/apktool.git git://github.com/Benjamin-Dobell/Apktool.git d00e60c3cf856c0b508ab186343c40754cd7834c
+git://github.com/debian-pkg-android-tools/apktool.git a38ba1851232e2fe7fe790b72a394d4eff69b16c
+git://github.com/droidefense/engine.git 20b7d05a8575b39ea14e3e76d599b284efc9e6b3
+git://github.com/iBotPeaches/Apktool.git cc194daf8366b850d6b0888343269dde1b9d837c
+git://github.com/sudosurootdev/apktool.git 34a2d03b31fc92bbb032a3ef7e388ec16b0212b3
+git://github.com/MartinSeeler/evil-java.git 28428cba2433521203fdfcdfaaf31907540fa120
+git://github.com/andy-goryachev/PasswordSafe.git 8089c738ef506101f0d7aa02965ea90653e888b3
+git://github.com/andy-goryachev/PasswordSafeFX.git e39fb79fb8fe5a720d2b7a07f946f347c40d8c49
+git://github.com/ONSdigital/Dylan.git 7d9c892b477342b72ae27b13b85e53b896c04ffb
+git://github.com/ONSdigital/csdb-import.git b1531e1095894d1380a980ea25e2c4c7ad0af09f
+git://github.com/brjannc/SuSHi.git e0711fe09023844cd3e0afe125ec3f14d8082f40
+git://github.com/cvarjao/jenkins-sshd.git 726cb9b76ea82fc27c7a61a4584f491e16abfaad
+git://github.com/nickman/HeliosStreams.git 9152a7bba7198fef3122360f6b3ed0ffa5048824
+git://github.com/Cryptonomica/cryptonomica.git a97745531c87f32d914bf3934cb5823f7619b477
+git://github.com/camlow325/jvm-ssl-utils.git 87d381528eeea54492bbc8896b911663c95650cc
+git://github.com/puppetlabs/jvm-ssl-utils.git d513b3f7030785962a93d33d32026fd4946a69e5
+git://github.com/steveax/jvm-ssl-utils.git b59a03a06e23e4c9246b9f7a35c2c2d8c3e69131
+git://github.com/ahmed-dinar/JustOJ.git 95dbe1af1440dc12d94d4cb956f98e30a5d07040
+git://github.com/leechoongyon/HadoopSourceAnalyze.git git://github.com/BjerknesClimateDataCentre/QuinCe.git e08095191cbe47ea2615dbfc1f857c97b4fe5b54
+git://github.com/squaregoldfish/QuinCe.git a3dd5b0e094d16506a6e6211c91058e9103e6de6
+git://github.com/argonavisbr/JavaEE7SecurityExamples.git ffb6f4d7b7fc6357c422b098095b9fcbdf2e7fd2
+git://github.com/helderdarocha/JavaEE7SecurityExamples.git b593a8518c064ad70a9165ec7add1d830b6726bb
+git://github.com/tootedom/related.git 3782dd5a839bbcdc15661d598e8b895aae8aabb7
+git://github.com/javaSynopsis/java.git c29219dac9571af0ebe1ae87bdaaf6d0e28f64d9
+git://github.com/StevenLeRoux/warp10-platform.git ce770da786fd861c91abf346d6fc6763f4f1645f
+git://github.com/cityzendata/warp10-platform.git b827cac81ada14707f50ede4cd6e049c9fec8d97
+git://github.com/hbs/warp10-platform.git 728090a9bb5a92882ea089473428a2330f2949d9
+git://github.com/Hiperzone/open-keychain.git 35301e43bcfe08d24ef1c8047389725e6116d1db
+git://github.com/actframework/actframework.git 980283e504fc1f4e63402612df0195c4f6cce61f
+git://github.com/adithyaphilip/open-keychain.git 3be44898db2afd1fd993553e228efaac94f14120
+git://github.com/leechoongyon/HadoopSourceAnalyze.git git://github.com/bashrc/open-keychain.git git://github.com/bresalio/apg.git 1a74b4a169a149c7c31627bba63160b58d8f6c63
+git://github.com/bresalio/open-keychain.git 0b3b6db43dd800defcf4cbfb258a39655628f719
+git://github.com/fjodorver/open-keychain.git ce5e5f36c56fe14cb4a90a912eece07e4cb92285
+git://github.com/iKeirNez/CommunicationsFramework.git c1b177b085ee73f53a2f7f9be7c242142059cb05
+git://github.com/iseki-masaya/open-keychain.git 0314d3697911a1e08b96607e00e2c75c271b2b36
+git://github.com/josecastillo/open-keychain.git cda8b63bb4c4c38065f76b7db474188e478e5b23
+git://github.com/marvinmarnold/open-keychain.git 460f0d5f3346d14ad11821d15cd4828d6cf91046
+git://github.com/nmikhailov/open-keychain.git 4c2abcec633120f1038121b927e52e071f944c99
+git://github.com/open-keychain/open-keychain.git 0a001e4cf676f349c31aa0ae60e93c52aaf08e79
+git://github.com/rohands/open-keychain.git aa77414353cce62bdb19906d1c77494a540f27c3
+git://github.com/siddharths2710/open-keychain.git 586051651967b4dbb1f25005cb77c30082bd7997
+git://github.com/thialfihar/apg.git 95a97b2c2fb8ff1b7f6eeb466a8ed79e78144ee1
+git://github.com/tobiasschuelke/open-keychain.git 44ed22c040e90c428f4fa36c48fb11f6d7a8661f
+git://github.com/xSooDx/open-keychain.git ee5343fcb63952469ade90ae005424956aa59aa3
+git://github.com/pgdurand/jGAF.git f855473b03036530b32b19b83fcd427d86b69d8f
+git://github.com/zzycjcg/foundation.git 99267a1b7401b99bf65ea1ac6f3c466873049fd8
+git://github.com/xaanit/celatum.git 9a053b79babbdcd59c5e68b9c7ced96d0f383790
+git://github.com/jorisroovers/java-tutoring.git a24b387a88f8eb2bde909666d0c2f1d98bc7aed5
+git://github.com/tingjan1982/password-keeper.git 0a908355bb42005d273b430629e272b37077d0b4
+git://github.com/pressgang-ccms/PressGangCCMSREST.git bd8b5f97edd03c526fc3aa3005463de7a7577e94
+git://github.com/evandor/skysail-framework.git 480df6f043ab85328ecc6cc38958c501edbc2374
+git://github.com/evandor/skysail.git ca26e9b98e802111aa63a5edf719a331c0f6d062
+git://github.com/jenkinsci/ws-cleanup-plugin.git 6141871ce59008861cb78d035ea4c8b18ce6e185
+git://github.com/Rayman2200/pdfbox-crypto.git 0ea9d9de553a102b263a0e236678e77f2dd6fb6d
+git://github.com/ScottSWu/wosu-api.git bd28e23fbb4b8d8b9a36105cc85cfd61ba9a1cd4
+git://github.com/Ucombinator/jaam.git 9a7e2efdbad38c76f52824d133b545a064ccd865
+git://github.com/djr4488/camera-notifier.git 5bac2ef00cb65da2487a0840c47dbb66c8840a04
+git://github.com/demoiselle/signer.git 0530e5818550f03f4f22aede446031c4072dd502
+git://github.com/Flowdalic/Smack.git ab7d81e7b58d39e1fbebad32a4d492165d4f1783
+git://github.com/Soo000/SooChat.git git://github.com/Doi9t/facturomax.git git://github.com/FHannes/intellij-community.git c01c021473736f1827fac3ddc361b71d2c0fcc20
+git://github.com/GunoH/intellij-community.git b23f82d2dc8a60327667c8536f070686afa06ab2
+git://github.com/JetBrains/intellij-community.git 8086c94417c303ccd6107ac0e5b56383f0909024
+git://github.com/Maccimo/intellij-community.git 1dc7f6b8d4fb18dec1e4a08b008024133614133a
+git://github.com/MrCreosote/auth2.git 01a4d2c6e9bf8aff7d7f6eda78af47522ca158d8
+git://github.com/MrCreosote/auth2proto.git 09107b980194474b469d031e36ae074edd423f99
+git://github.com/Nike-Inc/cerberus-management-service.git bbd8d1ecab4f0424ccd5ebaac86e1a36c133420a
+git://github.com/NonlinearFruit/Retrospector.git 31fdffd797e3935c4efa6cedc5df68c710f26b35
+git://github.com/RobertZagorski/MaterialInitials.git 7643c5a7a5cdf5c34b6dc516827ffa33ce9b7189
+git://github.com/SAS-Systems/imflux.git d64186b14addd1f235a3897eab99e0414887ce34
+git://github.com/Saketme/JRAW.git 54dda0e19cdb9477868224d592199d19320dd2c5
+git://github.com/ThiagoGarciaAlves/intellij-community.git c830ef55341746e4bfe729215ae89ac6f970309a
+git://github.com/Xceptance/XCMailr.git 05fc0f47fefe18c1f2114d79f92bffc8b0c4a386
+git://github.com/allotria/intellij-community.git d31ca80cacfc46219c8e83478bfcc933dcd37275
+       git://github.com/netty/netty.git 34aa2c841c70f85e163bb6515995033fd242388e
+       git://github.com/jfeinstein10/SlidingMenu.git 4254feca3ece9397cd501921ee733f19ea0fdad8
+       git://github.com/facebook/stetho.git 9421aaa7e1330d16ade22b20d486e8decac7897e
+       git://github.com/eclipse-vertx/vert.x.git 840644c541d3316b50094b918f883b2654062fcd
+       git://github.com/naver/pinpoint.git e3fcb3c73050adb45e5c47cbbdcf451af2deaa38
+       git://github.com/apache/incubator-druid.git 721191635aa719e8b82caacae7621478ab3b6ca5
+       git://github.com/JessYanCoding/MVPArms.git 0a5103dce65aa1e04375b3533fbb0cc94f2302dc
+       git://github.com/Netflix/SimianArmy.git e8eb9f3bad23962d03db4af936abeeabd8b4071b
+       git://github.com/apache/incubator-skywalking.git ab58baa753f77783c822c7c601ca79796a3c4b14
+       git://github.com/codecentric/spring-boot-admin.git 844990a923d7995bfc8249f4ba6cb74f25070f2a
+       git://github.com/dropwizard/metrics.git 187915bea32fef84ba6e36bb45db2297bb9351d8
+       git://github.com/GoogleContainerTools/jib.git 4976cb09ffcdfa92dbc2a7e94ae357e56c5701b9
+       git://github.com/springside/springside4.git 8950746bb53ce209b4cb5d2d1706712e9c6a0efc
+       git://github.com/alibaba/nacos.git f7142c1151726ea91a83c259b30829525d640c4e
+       git://github.com/spring-cloud-incubator/spring-cloud-alibaba.git adcd590b58685e7c9413c11155edc500af940beb
+       git://github.com/Activiti/Activiti.git b7d43fada149f816a478faf405cc2d83c7a88dc1
+       git://github.com/ACRA/acra.git bfa3235ab110328c5ab2f792ddf8ee87be4a32d1
+       git://github.com/alibaba/dexposed.git d1082567d6dc1de814b9ed2e9a3a63285a552bf9
+       git://github.com/h2oai/h2o-3.git 36a9e48559d9c63cf75828b5e2895114825e4e49
+       git://github.com/keycloak/keycloak.git 2736dd9d616a7a294f2036a9dc58e43a2d174a76
+       git://github.com/spring-projects/spring-security-oauth.git bbae0027eceb2c74a21ac26bbc86142dc732ffbe
+       git://github.com/seven332/EhViewer.git 120124101acedb2adf7bd5f6b79e1c5d982ba6f7
+       git://github.com/crazycodeboy/react-native-splash-screen.git 683bcf9b1496ca11a0eb1313ab79fcfb6ffcf9d8
+       git://github.com/airbnb/native-navigation.git 9cf50bf9b751b40778f473f3b19fcfe2c4d40599
+       git://github.com/Skykai521/StickerCamera.git 6fc41b14fe3d9c67525604ae6d44346d8701e6e5
+       git://github.com/Freeyourgadget/Gadgetbridge.git bd76590fec87f36524b503fc36e4584d3b2cbf28
+       git://github.com/cyrilmottier/GreenDroid.git abd9769f677bb4a753f0bf1119f961187bdf7020
+       git://github.com/wildfly/wildfly.git 2ee5a9937eda7bd39878df9e5dad1181fb57ab2e
+       git://github.com/LWJGL/lwjgl3.git 374ad362e6b1c546a57ac321ddfc080e9a69b0bf
+       git://github.com/micronaut-projects/micronaut-core.git f32d5183d9083768cbf6a1b0b0f1707e38530dcf
+       git://github.com/M66B/NetGuard.git 43877cc1067cc73a1e1cfa3e827c5ee608a84b79
+       git://github.com/spring-io/sagan.git e639942ec14f1549537025f3a8eb0a7c351a1010
+       git://github.com/federicoiosue/Omni-Notes.git 8f0144244f8285866b45fb7c97b9b5d435f5ae30
+       git://github.com/javamelody/javamelody.git 41d2c16009df612ffe1dad4c177b4f8a3191c61a
+       git://github.com/jeremylong/DependencyCheck.git 9d850e25e0903e6c73ced09850ecc8a97714dd0e
+       git://github.com/spring-projects/spring-integration-samples.git 47ebbee8f3ebbf616df9a23fffcee74741915073
+       git://github.com/Qihoo360/ArgusAPM.git 68fbd1793e902e7d8850de67a7bb31b3af8eea21
+       git://github.com/vaadin/framework.git fb5dc06d578a7268d9f9b826fc7e3b39ea5e1451
+       git://github.com/stagemonitor/stagemonitor.git 7a1bf6848906f816aa465983f602ea1f1e8f2b7b
+       git://github.com/xuuhaoo/OkSocket.git 99a39cc114b0b25a815ea220cb192a8dcf21198a
+       git://github.com/syncany/syncany.git d57afd79ebb67a88f36dd5799727db564af0d697
+       git://github.com/blynkkk/blynk-server.git aff164d905a2ff400d78acae1c1c0c1f4b171bf4
+       git://github.com/scouter-project/scouter.git c60d5a0540382aa74252ff61ba32dffcec6239e3
+       git://github.com/mttkay/ignition.git bbeb55cb4f080bdc31e549142ea745c65e4727c7
+       git://github.com/chrisk44/Hijacker.git 79fcde8e40e06fc94207694358ef7d59ca4042ad
+       git://github.com/JabRef/jabref.git 0190a10c418f5ac98830428ef7f6f8c333793896
+       git://github.com/6thsolution/EasyMVP.git 56fbaed3197d8aeaec22dc4b74354b60b07fa194
+       git://github.com/yigit/dev-summit-architecture-demo.git b5c6bd562d7a4fc7eebf19bd03573d7819ad3140
+       git://github.com/spring-projects/spring-batch.git b24a05d532e7bfa5ed7d3839882c512fd116a837
+       git://github.com/remkop/picocli.git db6092f1b3d87706aac8a0d735b3a353b93a43ec
+       git://github.com/PureDark/H-Viewer.git 0438ce8f462ba14db7683e972b9d3c35544da547
+       git://github.com/spring-projects/greenhouse.git c7994183812150de971ef4a76c08d5b4631ab5d1
+       git://github.com/todoroo/astrid.git 4fc5c7714fb1b48ae46dcacbda287bcef9c3f6bf
+       git://github.com/datumbox/datumbox-framework.git 909dff0476e80834f05ecdde0624dd2390e9b0ca
+       git://github.com/jhipster/jhipster-sample-app.git 6e42d1c7bfee34463caafeaf5430459ee0d16af2
+       git://github.com/find-sec-bugs/find-sec-bugs.git 26cf792806923c2bd86265d7c83150691fc8a552
+       git://github.com/mendhak/gpslogger.git ca25caba64a4510d9883d464e009e014f60ae765
+       git://github.com/kolorobot/spring-mvc-quickstart-archetype.git 48905937af634619175ed159c9597fbab3a3ff66
+       git://github.com/topjohnwu/MagiskManager.git 201d8a97d4a6f54519cd8d72afc04cfc3536d9f4
+       git://github.com/GcsSloop/diycode.git 5074f2c16f366abb9170a95db026036c9240f207
+       git://github.com/cloudera/flume.git 1d7535638556998e895d55599a2f4a024390edd1
+       git://github.com/nordnet/cordova-hot-code-push.git 0163767206f4cf97f49257e2ad599bf0ba61f43d
+       git://github.com/kbastani/spring-cloud-event-sourcing-example.git 01f435d6750a074c7c7c0ef8d5919da5cf809fc5
+       git://github.com/vanniktech/Emoji.git a1a0f00f44ba5a21cfd6fd46e14354086729dea5
+       git://github.com/aol/cyclops.git 764e6389a872c5253ea44952ca35689ae0e8454b
+       git://github.com/Musenkishi/wally.git a289fb3f66787e2958c1c8ff604d089ffe4434bd
+       git://github.com/MyCollab/mycollab.git 0f88919827cd46e239cf260b4506e42f32e4a7f9
+       git://github.com/almalence/OpenCamera.git 24b600e7af4487f2a6d245d0e46ae8bda7afbb64
+       git://github.com/nasa/mct.git 1538dd1f149d970917958a2345c5b2e5d157875c
+       git://github.com/dragonite-network/dragonite-java.git ccce5cac9bc0b65d0102c63c87df5e40b04ad3e5
+       git://github.com/VREMSoftwareDevelopment/WiFiAnalyzer.git 2d176487f932cb34455f158d0efc93106aa1ccd5
+       git://github.com/i2p/i2p.i2p.git 89b38f4fffe842b0e8688cae3ed23cc73d688a88
+       git://github.com/openmrs/openmrs-core.git f7829d717d5a5ebed47b14cf503644ac073252f0
+       git://github.com/confluentinc/kafka-streams-examples.git 6688b65b66dbb0d446826ecde359dcf8940d1b62
+       git://github.com/maoruibin/GankDaily.git bbdf5a79c336968ed7308d562aeff4ede8dd2736
+       git://github.com/mgarin/weblaf.git d0e9fd4ede2960658f1058da8351f9a45901352c
+       git://github.com/mimno/Mallet.git b248453895b043ae9d99f11a0816884b2a1a4e97
+       git://github.com/tonyofrancis/Fetch.git 72cb9c9eaf50bcee5a4ddc3bb2b4d8d3f2a7c28c
+       git://github.com/ddanny/achartengine.git e49b62b4862b7b12982153864762dc4ff123e6fd
+       git://github.com/payara/Payara.git 3a0318edd96695b130f09af40f619f039ffc4ad3
+       git://github.com/torakiki/pdfsam.git b5f16d44637fbf16aa6a19cf4a780301c88c5e47
+       git://github.com/cuba-platform/cuba.git 142dfe91ea3eb714c34ea06730cd628b560b0b3e
+       git://github.com/philipsorst/angular-rest-springsecurity.git 64569e066ceed122976c5aaa1734f10d5bd8c05b
+       git://github.com/spring-projects/spring-statemachine.git cdaa9a1400037df52e1beecbd1c806aa0f503bf9
+       git://github.com/honeynet/apkinspector.git e6c32a6735d39eb6686cbf445ed65a4fe3f3d67b
+       git://github.com/la-team/light-admin.git 2d8875f3dcfb0ed10fcabd92be50d36032f28bf3
+       git://github.com/spring-projects/spring-roo.git 4a2e9f1eb17d4e49ad947503a63afef7d5a37842
+       git://github.com/OWASP/SecurityShepherd.git 0d6f40274d674ecde5c2f74a14fc07f3c879f59a
+       git://github.com/imageprocessor/cv4j.git 63d54c0f38285bd1409d8f7d472c6a642bc40495
+       git://github.com/ron190/jsql-injection.git eb97df4cbedad969cd6f80da1fb1d5bf2a0dc48d
+       git://github.com/paddybyers/anode.git 0dd99e2ec33e80c6ec46ed769530fe208bfcf488
+       git://github.com/Microsoft/mssql-jdbc.git e1f3d7e3e55b0b43e288b2c1224d3daf7fd50fc4
+       git://github.com/vert-x3/vertx-web.git f688399bf0b521ab4e70ff7ec6a6666338e08db7
+       git://github.com/nodebox/nodebox.git 6653934c5a663f34b3942daf229b1db3faa06903
+       git://github.com/spring-projects/spring-hadoop.git dca51562ab475c523eb097ac89161771d784480e
+       git://github.com/gitskarios/Gitskarios.git e87b5e4d5e28b0ed5071c35ef3786154afe891b2
+       git://github.com/OpenLiberty/open-liberty.git 03db595055c2191e95ad63f39bf5bb91a33c0e8a
+       git://github.com/berndruecker/flowing-retail.git 034c57957c0b820ef21bdd3c454ec1d4f1cb84d8
+       git://github.com/structr/structr.git a3354ca42ef038e2495df44f6b5dbd36d39df404
+       git://github.com/spring-projects/spring-social.git e41cfecb288022b83c79413b58f52511c3c9d4fc
+       git://github.com/eventuate-local/eventuate-local.git b85697d9d87a141634045470d27cfa0b5fabae82
+       git://github.com/Shouheng88/MarkNote.git c69ec585b27edddc6929531d10e3cde0a49e91ec
+       git://github.com/Grarak/KernelAdiutor.git 9468630c065739bedf42136bca6bbaf4dfb9cabb
+       git://github.com/wwadge/bonecp.git 74bc3287025fc137ca28909f0f7693edae37a15d
+       git://github.com/inspectIT/inspectIT.git b0602457f77c8893301e368817735ce55aa57b82
+       git://github.com/Netflix/karyon.git d50bc0ff37693ef3fbda373e90a109d1f92e0b9a
+       git://github.com/oracle/oracle-db-examples.git 9fdbf3bc7cc29c9dec9c9db36c7f2fe330a4663e
+       git://github.com/lucee/Lucee.git 29b153fc4e126e5edb97da937f2ee2e231b87593
+       git://github.com/jaxio/celerio-angular-quickstart.git ef5e6457d73e02ad74d72c86fac8b787d2beece9
+       git://github.com/continuumsecurity/bdd-security.git 095a59419344255480436c9b6140c953ceccfc49
+       git://github.com/edvin/fxlauncher.git 3024b413c8743d1e3576e91f9911b68076bcb625
