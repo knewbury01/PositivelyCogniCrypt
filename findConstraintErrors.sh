@@ -12,6 +12,9 @@
 #for the reviewer to fill out
 #WARNING running this after fp detection has begun will remove your work
 #either backup or dont run
+#
+#sample usage:
+#   ./findConstraintErrors.sh FPV2Log.txt V2
 ###################
 rm $1
 rm ConstraintErrors$2.txt
