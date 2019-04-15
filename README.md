@@ -21,7 +21,7 @@
   
 
  ####  1. Collect a JSON formatted file of repo data:
-
+ * A manual verification or grep from json is required to guarantee the number of stars or other importance metric is within a prefered range. For this study this yields projects with >430 stars. Ideally we include this criteria in the url query, but we did not! [Its not clear how to do that](https://developer.github.com/v3/search/)
 
 
 
@@ -70,6 +70,8 @@
 
 
 
+
+
 	./runCogniV1.sh <file-of-items-to-analyze>
 
 
@@ -83,6 +85,8 @@
 
 
 
+
+
 	./partitionCogniResults.sh CogniCryptResultsV1 V1
 
 
@@ -92,6 +96,8 @@
 
 
         ./findConstraintErrors.sh FPV1Log.txt V1
+
+
 
 
 
