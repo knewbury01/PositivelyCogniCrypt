@@ -1,11 +1,11 @@
 # Welcome to Falsely Positive CogniCrypt!
-  * This is a project to investigate two things:
+  * This is a project to investigate one important thing!:
     * The presence of false positives in [CogniCrypt](https://github.com/CROSSINGTUD/CryptoAnalysis) reports
   * We look at two versions of CogniCrypt, [Release 1.0.0](https://github.com/CROSSINGTUD/CryptoAnalysis/releases/download/v1.0.0/CryptoAnalysis-1.0.0-jar-with-dependencies.jar) and a build approximately from 2.0.0, specifically from sha:
 
 
 
-    5f531d1d4377aefd35cec6658ae95308c6594244
+       5f531d1d4377aefd35cec6658ae95308c6594244
 
 
   * this project uses some gnu specific bash commands (sed and grep variants)
@@ -17,7 +17,7 @@
 
 
 
-          q=application+language:java&per_page=100&page=$pagenum&sort=stars    
+        q=application+language:java&per_page=100&page=$pagenum&sort=stars    
   
 
  ####  1. Collect a JSON formatted file of repo data:
@@ -25,7 +25,7 @@
 
 
 
-    	  ./curlData.sh
+        ./curlData.sh
 
 
  ####  2. Extract just the Git urls:
@@ -43,7 +43,7 @@
    * Only projects that use maven will be retained. This criteria is implicitly enforced by assuming the project uses Maven, and we attempt to build using the following mvn command.
 
 
-     	 mvn compile
+         mvn compile
 
 	 
    * Lastly the project must succeed in building. For projects meeting these criteria the project source will be retained, so that we can run the analysis right on bytecodes generated in each project directory, and also that the source code can be used to manually verify false positives.
@@ -51,15 +51,14 @@
 
 
 
-   
-	  ./fetchnbuild.sh
+        ./fetchnbuild.sh
 
  ## 4. Filtering project items:
  * from this process we must extract a list of items we actually wish to analyze. 
 
 
 
-   	  ./extractClasses.sh
+        ./extractClasses.sh
 
  ## 5. Running Analysis:
  * Once we have a set of sample projects, run CogniCrypt.
@@ -67,9 +66,11 @@
 
 
 
-       	 ./runCogniCrypt.sh <file-of-items-to-analyze>
+        ./runCogniCrypt.sh <file-of-items-to-analyze>
 
-	 ./runCogniV1.sh <file-of-items-to-analyze>
+
+
+	./runCogniV1.sh <file-of-items-to-analyze>
 
 
  ## 6. Find Relevant Analysis Outputs:
@@ -77,10 +78,12 @@
 
 
 
-      	 ./partitionCogniResults.sh CogniCryptResults V2
+        ./partitionCogniResults.sh CogniCryptResults V2
 
 
-	 ./partitionCogniResults.sh CogniCryptResultsV1 V1
+
+
+	./partitionCogniResults.sh CogniCryptResultsV1 V1
 
 
  ## 7. Find Analysis Outputs Containing Constraint Error:
@@ -89,6 +92,8 @@
 
 
         ./findConstraintErrors.sh FPV1Log.txt V1
+
+
 
 
 	./findConstraintErrors.sh FPV2Log.txt V2
