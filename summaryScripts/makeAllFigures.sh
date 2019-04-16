@@ -9,6 +9,6 @@
 ./collectErrorDist.sh ../CogniCryptResultsV1 V1ErrorDist 
 
 #makes a figure of the distribution of constraint error totals, across projects, for cognicrypt 2.1
-./getDistributionCountConstraintError.sh ../CogniCryptResults V2.1CEDist.png 
+./getDistributionCountConstraintError.sh ../CogniCryptResults V21CEDist
 #1.0
-./getDistributionCountConstraintError.sh ../CogniCryptResultsV1 V1.0CEDist.png
+./getDistributionCountConstraintError.sh ../CogniCryptResultsV1 V10CEDist

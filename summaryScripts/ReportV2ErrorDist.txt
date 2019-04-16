@@ -1,0 +1,7 @@
+Constraint=38
+NeverTypeOf=5
+ForbiddenMethod=0
+ImpreciseValueExt=0
+Typestate=3
+RequiredPredicate=54
+IncompleteOp=25

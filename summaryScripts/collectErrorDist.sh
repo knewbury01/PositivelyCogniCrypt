@@ -4,9 +4,9 @@
 # sample usage:
 #    ./collectErrorDist.sh ../CogniCryptResults V2ErrorDist
 ########################
-rm Report.txt
-rm allErrors.txt
-cat $1/*.txt | grep "Error: " >> allErrors.txt
+rm Report$2.txt
+rm allErrors$2.txt
+cat $1/*.txt | grep "Error: " >> allErrors$2.txt
 
 ConstraintError=0
 NeverTypeOfError=0
@@ -42,7 +42,7 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
        IncompleteOperationError=$((IncompleteOperationError+num))
     fi
 
-done <allErrors.txt
+done <allErrors$2.txt
 
 echo "ConstraintError=$ConstraintError"
 echo "NeverTypeOfError=$NeverTypeOfError"
@@ -52,12 +52,12 @@ echo "TypestateError=$TypestateError"
 echo "RequiredPredicateError=$RequiredPredicateError"
 echo "IncompleteOperationError=$IncompleteOperationError"
 
-echo "Constraint=$ConstraintError" >> Report.txt
-echo "NeverTypeOf=$NeverTypeOfError" >> Report.txt
-echo "ForbiddenMethod=$ForbiddenMethodError" >> Report.txt
-echo "ImpreciseValueExt=$ImpreciseValueExtractionError" >> Report.txt
-echo "Typestate=$TypestateError" >> Report.txt
-echo "RequiredPredicate=$RequiredPredicateError" >> Report.txt
-echo "IncompleteOp=$IncompleteOperationError" >> Report.txt
+echo "Constraint=$ConstraintError" >> Report$2.txt
+echo "NeverTypeOf=$NeverTypeOfError" >> Report$2.txt
+echo "ForbiddenMethod=$ForbiddenMethodError" >> Report$2.txt
+echo "ImpreciseValueExt=$ImpreciseValueExtractionError" >> Report$2.txt
+echo "Typestate=$TypestateError" >> Report$2.txt
+echo "RequiredPredicate=$RequiredPredicateError" >> Report$2.txt
+echo "IncompleteOp=$IncompleteOperationError" >> Report$2.txt
 
-RScript CogSummary.r Report.txt $2
+RScript CogSummary.r Report.txt $2.png
