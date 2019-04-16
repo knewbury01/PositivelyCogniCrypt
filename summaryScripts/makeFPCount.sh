@@ -5,7 +5,7 @@
 #sample usage:
 #  ./makeFPCount.sh V1
 ##################
-totalFP=$(cat FP$1Log.txt | grep -q "FP" | wc -l)
+totalFP=$(cat FP$1Log.txt | grep -o "FP" | wc -l)
 total=$(cat FP$1Log.txt | wc -l)
 
 RScript makeTable.r $1.png $totalFP $total

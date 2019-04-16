@@ -3,7 +3,7 @@
 #of number of Constraint Errors per project
 #
 # sample usage:
-#  ./getDistributionCountConstraintError.sh ../CogniCryptResults V21CEDist
+#  ./getDistributionCountConstraintError.sh ../CogniCryptResults V21CEDist V2.1
 ######################
 rm ConstraintErrorDistribution$2.txt
 cat $1/*.txt |  grep "ConstraintError\:" |  sed 's/ConstraintError\: //' >> ConstraintErrorDistribution$2.txt
@@ -16,4 +16,4 @@ done <ConstraintErrorDistribution$2.txt
 
 echo "Total number of constraint errors found: $total"
 
-RScript constraintDist.r ConstraintErrorDistribution$2.txt $2.png
+RScript constraintDist.r ConstraintErrorDistribution$2.txt $2.png "Distribution of Constraint Error Totals Found Across Projects $3"
