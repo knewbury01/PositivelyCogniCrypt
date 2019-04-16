@@ -1,0 +1,196 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Ruleset: 
+	javax.net.ssl.SSLEngine
+	java.security.DigestInputStream
+	java.security.cert.PKIXBuilderParameters
+	java.security.Key
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.Mac
+	java.security.spec.DSAGenParameterSpec
+	java.security.DigestOutputStream
+	javax.crypto.spec.PBEParameterSpec
+	javax.net.ssl.SSLParameters
+	javax.crypto.CipherOutputStream
+	javax.crypto.spec.DHParameterSpec
+	java.security.spec.RSAKeyGenParameterSpec
+	java.security.KeyPairGenerator
+	SSLServerSocket
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	java.security.SecureRandom
+	java.security.cert.PKIXParameters
+	SSLSocketFactory
+	java.security.AlgorithmParameters
+	java.security.spec.DSAParameterSpec
+	SSLServerSocketFactory
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.KeyGenerator
+	javax.net.ssl.TrustManagerFactory
+	java.security.cert.TrustAnchor
+	Stopwatch
+	javax.crypto.spec.DHGenParameterSpec
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.SecretKey
+	javax.crypto.Cipher
+	java.security.KeyStore
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.Signature
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.net.ssl.SSLContext
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.crypto.spec.SecretKeySpec
+	javax.crypto.CipherInputStream
+	SSLSocket
+	MessageDigest
+
+Analyzed Objects: 
+	Object:
+		Variable: r1
+		Type: java.security.MessageDigest
+		Statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r0)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BufReadSysIn: java.lang.String getSHA256()>
+		SHA-256: f817f4e549e8103d006fd98c4ce65b64820063c7813d7fc2eb97f14e604c5ade
+		Secure: true
+	Object:
+		Variable: r4
+		Type: java.security.MessageDigest
+		Statement: r4 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r3)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BaseEncodeBad: java.lang.String getSHA256()>
+		SHA-256: d7841ad9747f093956399243ff3ee3a404a79c8f06cc7cebf4676aadbc84b59a
+		Secure: true
+	Object:
+		Variable: r1
+		Type: java.security.MessageDigest
+		Statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r0)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ConsoleIn: java.lang.String getSHA256()>
+		SHA-256: cd29ae19fef2887e0f4091a2fbdafacee85bb37b78240f293398c37e3736c14e
+		Secure: true
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r2 = virtualinvoke r0.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.FileAsStr: java.lang.String getSHA256()>
+		SHA-256: 9c889c93e3ef7344604e768b6ab7d75f61b84a4184a1f855aff6469ea5f729f2
+		Secure: true
+	Object:
+		Variable: r0
+		Type: java.security.MessageDigest
+		Statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ScanLoop: java.lang.String getSHA256()>
+		SHA-256: 78f5d2a8e356afb85e92993f9ede922fb49fdc114c35a19f456dbbf5d54370ca
+		Secure: true
+	Object:
+		Variable: r4
+		Type: java.security.MessageDigest
+		Statement: r4 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r3)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BaseEncodeGood: java.lang.String getSHA256()>
+		SHA-256: c332f5cb4f2854cc778e6329329c8a5ec4decea8e8d8329d6c175b6102240798
+		Secure: true
+	Object:
+		Variable: r3
+		Type: byte[]
+		Statement: r3 = virtualinvoke r1.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ConsoleIn: java.lang.String getSHA256()>
+		SHA-256: 9a1395d9b06082cff8d115f47782b11cfcd42e2f3268c1cda3798a29be8e0423
+		Secure: true
+	Object:
+		Variable: r6
+		Type: byte[]
+		Statement: r6 = virtualinvoke r4.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BaseEncodeBad: java.lang.String getSHA256()>
+		SHA-256: a13258ad6ad2a833650ffa898a0c29f65e6261c90c4cb0f78248e9269403f044
+		Secure: true
+	Object:
+		Variable: r3
+		Type: byte[]
+		Statement: r3 = virtualinvoke r1.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BufReadSysIn: java.lang.String getSHA256()>
+		SHA-256: 769ffa5e1cebcf34c32f311a35d173d9f3dac925fd0776c56528f2e16e0812c1
+		Secure: true
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r2 = virtualinvoke r0.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ScanLoop: java.lang.String getSHA256()>
+		SHA-256: b73bdcc506f26dff6053f25841c120e5d3b789cb0c481ce1b1339e15434d41b8
+		Secure: true
+	Object:
+		Variable: r0
+		Type: java.security.MessageDigest
+		Statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ScanNext: java.lang.String getSHA256()>
+		SHA-256: 8b2168e2863b53bb7a8a30ff2649d5b5a2e58d442d77a32569385749be5c21ef
+		Secure: true
+	Object:
+		Variable: r6
+		Type: byte[]
+		Statement: r6 = virtualinvoke r4.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BaseEncodeGood: java.lang.String getSHA256()>
+		SHA-256: 18869a35e3e538d83bc9f6d09741f4bf5e5e5976365fce5103c9376c6b0ade86
+		Secure: true
+	Object:
+		Variable: r0
+		Type: java.security.MessageDigest
+		Statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.FileAsStr: java.lang.String getSHA256()>
+		SHA-256: 9451ba0096c609ea50e1fda77b846ea76e6c0c8eb96cd103bcb1544f78a6ef12
+		Secure: true
+	Object:
+		Variable: r1
+		Type: java.security.MessageDigest
+		Statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r0)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ScanSysIn: java.lang.String getSHA256()>
+		SHA-256: 62fd98b54464493bc265691a963396433b7dd3d23aae62003b0f176e031ee40e
+		Secure: true
+	Object:
+		Variable: r0
+		Type: java.security.MessageDigest
+		Statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.FileRead: java.lang.String getSHA256()>
+		SHA-256: e9cdfe408292dd1f31b06f584f3d041c1fd354ff053a4b8bc7e6fb3f411926db
+		Secure: true
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r2 = virtualinvoke r0.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BufRead: java.lang.String getSHA256()>
+		SHA-256: 43725fbfe8df2ae7358f23b9dccdf950baeb1c5de64a7aea566fde9f4268a2c9
+		Secure: true
+	Object:
+		Variable: r0
+		Type: java.security.MessageDigest
+		Statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BufRead: java.lang.String getSHA256()>
+		SHA-256: f7692c4abbdc640a0994cdb2e9391b97c526c0d499250851371e56deb35265cc
+		Secure: true
+	Object:
+		Variable: r3
+		Type: byte[]
+		Statement: r3 = virtualinvoke r1.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ScanSysIn: java.lang.String getSHA256()>
+		SHA-256: 41605be4d407f614cee7c4a7064794932cfda295e6116c7d5db991834978166f
+		Secure: true
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r2 = virtualinvoke r0.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ScanNext: java.lang.String getSHA256()>
+		SHA-256: c7d0840d66bab747f58ac2dad5b294044cff2ff4b7e16f343a9ecb48f18b8e04
+		Secure: true
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r2 = virtualinvoke r0.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.FileRead: java.lang.String getSHA256()>
+		SHA-256: eb9a8c326b7bdf6f1b69679495dcc83d08a52a0106e71ab1a785cf6e38ac1ee3
+		Secure: true
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 20
+No violation of any of the rules found.=====================================================================
+Analysis finished after 2 seconds
