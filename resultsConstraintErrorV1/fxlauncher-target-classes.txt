@@ -1,0 +1,98 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Warning: Couldn't find any method for CryptSLMethod: javax.net.ssl.SSLSocketFactory.createSocket( _ port);
+Warning: Couldn't find any method for CryptSLMethod: javax.net.ssl.SSLServerSocketFactory.createServerSocket( port);
+Discovered 2 analysis seeds within 0 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT0.734087768S
+Estimated Time: PT0.734087768S
+Analyzed Objects: 1 of 2
+Percentage Completed: 0.5
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: r2
+		Type: javax.net.ssl.SSLContext
+		Statement: r2 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("SSL")
+		Method: <fxlauncher.AbstractLauncher: void setupIgnoreSSLCertificate()>
+		SHA-256: a379102bd3d6ab997b33f706bd24b9821bf58f53f965ee83986393edca1a3ee5
+	Object:
+		Variable: r10
+		Type: java.security.SecureRandom
+		Statement: r10 = new java.security.SecureRandom
+		Method: <fxlauncher.AbstractLauncher: void setupIgnoreSSLCertificate()>
+		SHA-256: 848e3c151d1405758be31ef516d02c9522d3e0311efec6c1d3ede14d7b9b837a
+
+Findings in Java Class: fxlauncher.AbstractLauncher
+
+	 in Method: void setupIgnoreSSLCertificate()
+		ConstraintError violating CrySL rule for javax.net.ssl.SSLContext (on Object #a379102bd3d6ab997b33f706bd24b9821bf58f53f965ee83986393edca1a3ee5)
+			First parameter (with value "SSL") should be any of {TLSv1, TLSv1.1, TLSv1.2}
+			at statement: r2 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("SSL")
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter was not properly generatedTrustManager
+			at statement: virtualinvoke r2.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, r11, r10)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter (with value null) was not properly generatedKeyManager
+			at statement: virtualinvoke r2.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, r11, r10)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 2
+
+	CogniCrypt found the following violations. For details see description above.
+	ConstraintError: 1
+	RequiredPredicateError: 2
+=====================================================================
+Static Analysis took 0 seconds!
+Analysis finished after 2 seconds

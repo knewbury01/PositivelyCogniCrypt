@@ -1,0 +1,165 @@
+Using call graph algorithm CHA
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: $r16
+		Type: byte[]
+		Statement: r28 = virtualinvoke r24.<java.security.MessageDigest: byte[] digest(byte[])>($r16)
+		Method: <org.freedesktop.dbus.Transport$SASL: int do_challenge(int,org.freedesktop.dbus.Transport$SASL$Command)>
+		SHA-256: e4a8fa68f6f997deecf6179ff0c9b14bd6c5090fd038b33722c3f620346a9c1f
+		Secure: false
+	Object:
+		Variable: $r17
+		Type: byte[]
+		Statement: $r17 = virtualinvoke r41.<java.security.MessageDigest: byte[] digest(byte[])>(r42)
+		Method: <org.freedesktop.dbus.Transport$SASL: int do_response(int,java.lang.String,java.lang.String,org.freedesktop.dbus.Transport$SASL$Command)>
+		SHA-256: 2eda39e31c6ab414f948d928b121c8afb95334519f3aad92717f885c950fe409
+		Secure: false
+	Object:
+		Variable: r42
+		Type: byte[]
+		Statement: $r20 = virtualinvoke r41.<java.security.MessageDigest: byte[] digest(byte[])>(r42)
+		Method: <org.freedesktop.dbus.Transport$SASL: int do_response(int,java.lang.String,java.lang.String,org.freedesktop.dbus.Transport$SASL$Command)>
+		SHA-256: 912a747893930b985c397cbfbf6849ea88aa3a66a8974af0a5d3bea9c58f288a
+		Secure: false
+	Object:
+		Variable: $r9
+		Type: byte[]
+		Statement: $r9 = virtualinvoke r24.<java.security.MessageDigest: byte[] digest(byte[])>(r25)
+		Method: <org.freedesktop.dbus.Transport$SASL: int do_challenge(int,org.freedesktop.dbus.Transport$SASL$Command)>
+		SHA-256: de17eaf0c56cb6475bde49c9fca5bab6f99a5d20881c37d7913cba6c33fc9e39
+		Secure: false
+	Object:
+		Variable: r41
+		Type: java.security.MessageDigest
+		Statement: r41 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer279)
+		Method: <org.freedesktop.dbus.Transport$SASL: int do_response(int,java.lang.String,java.lang.String,org.freedesktop.dbus.Transport$SASL$Command)>
+		SHA-256: 80b0ec36f508187316d77524e72f60a2cfa407e3c30a5283f65d3fc97a33107
+		Secure: false
+	Object:
+		Variable: r42
+		Type: byte[]
+		Statement: $r17 = virtualinvoke r41.<java.security.MessageDigest: byte[] digest(byte[])>(r42)
+		Method: <org.freedesktop.dbus.Transport$SASL: int do_response(int,java.lang.String,java.lang.String,org.freedesktop.dbus.Transport$SASL$Command)>
+		SHA-256: 5b5bb8e45447a5bb85b05f311aa681f0521ad4f51ccfc33e21e417df1bbe88f
+		Secure: false
+	Object:
+		Variable: $r15
+		Type: byte[]
+		Statement: r47 = virtualinvoke r41.<java.security.MessageDigest: byte[] digest(byte[])>($r15)
+		Method: <org.freedesktop.dbus.Transport$SASL: int do_response(int,java.lang.String,java.lang.String,org.freedesktop.dbus.Transport$SASL$Command)>
+		SHA-256: 4fad9dffec128a1b3dcb5e64deab27026ab192ec69931c3a5a1c878e07ef981d
+		Secure: false
+	Object:
+		Variable: r24
+		Type: java.security.MessageDigest
+		Statement: r24 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer260)
+		Method: <org.freedesktop.dbus.Transport$SASL: int do_challenge(int,org.freedesktop.dbus.Transport$SASL$Command)>
+		SHA-256: 5b84e53f2f89c60f67400259a630d456c449e76d0a859f74d190816979522494
+		Secure: false
+	Object:
+		Variable: r28
+		Type: byte[]
+		Statement: r28 = virtualinvoke r24.<java.security.MessageDigest: byte[] digest(byte[])>($r16)
+		Method: <org.freedesktop.dbus.Transport$SASL: int do_challenge(int,org.freedesktop.dbus.Transport$SASL$Command)>
+		SHA-256: 9c3b0ad2d4cdd58f796290bd8ad963924d14039e0ae20cccbceda12a2dec1756
+		Secure: false
+	Object:
+		Variable: r47
+		Type: byte[]
+		Statement: r47 = virtualinvoke r41.<java.security.MessageDigest: byte[] digest(byte[])>($r15)
+		Method: <org.freedesktop.dbus.Transport$SASL: int do_response(int,java.lang.String,java.lang.String,org.freedesktop.dbus.Transport$SASL$Command)>
+		SHA-256: b6f0417892e2906a50ad1a0d59e5ce7e3b1b7c784f65d1855bee92de7ca6016d
+		Secure: false
+	Object:
+		Variable: $r20
+		Type: byte[]
+		Statement: $r20 = virtualinvoke r41.<java.security.MessageDigest: byte[] digest(byte[])>(r42)
+		Method: <org.freedesktop.dbus.Transport$SASL: int do_response(int,java.lang.String,java.lang.String,org.freedesktop.dbus.Transport$SASL$Command)>
+		SHA-256: 84e3dc054e70d4ec443ac91839f4b76b0ee2e41f5d55bb6a05ec3e29a1da7828
+		Secure: false
+	Object:
+		Variable: r25
+		Type: byte[]
+		Statement: $r9 = virtualinvoke r24.<java.security.MessageDigest: byte[] digest(byte[])>(r25)
+		Method: <org.freedesktop.dbus.Transport$SASL: int do_challenge(int,org.freedesktop.dbus.Transport$SASL$Command)>
+		SHA-256: 4d2cb4a638cc0ed2ace14297749fe313b552530eca674c4187249502b6b2d090
+		Secure: false
+
+Findings in Java Class: org.freedesktop.dbus.Transport$SASL
+
+	 in Method: int do_challenge(int,org.freedesktop.dbus.Transport$SASL$Command)
+		ConstraintError violating CrySL rule for MessageDigest (on Object #5b84e53f2f89c60f67400259a630d456c449e76d0a859f74d190816979522494)
+			First parameter (with value "SHA") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r24 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer260)
+
+
+	 in Method: int do_response(int,java.lang.String,java.lang.String,org.freedesktop.dbus.Transport$SASL$Command)
+		IncompleteOperationError violating CrySL rule for MessageDigest (on Object #80b0ec36f508187316d77524e72f60a2cfa407e3c30a5283f65d3fc97a33107)
+			Operation on object of type java.security.MessageDigest object not completed. Expected call to digest, update
+			at statement: r41 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer279)
+
+		ConstraintError violating CrySL rule for MessageDigest (on Object #80b0ec36f508187316d77524e72f60a2cfa407e3c30a5283f65d3fc97a33107)
+			First parameter (with value "SHA") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r41 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer279)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 12
+
+	CogniCrypt found the following violations. For details see description above.
+	IncompleteOperationError: 1
+	ConstraintError: 2
+=====================================================================
+Analysis finished after 4 seconds

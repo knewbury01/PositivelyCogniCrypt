@@ -1,0 +1,181 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Warning: Couldn't find any method for CryptSLMethod: keyMaterial = javax.crypto.SecretKey.getEncoded();
+Warning: Couldn't find any method for CryptSLMethod: javax.crypto.SecretKey.destroy();
+Discovered 6 analysis seeds within 1 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT1.492494264S
+Estimated Time: PT7.46247132S
+Analyzed Objects: 1 of 6
+Percentage Completed: 0.17
+
+Analysis Time: PT1.610697499S
+Estimated Time: PT4.832092494S
+Analyzed Objects: 2 of 8
+Percentage Completed: 0.25
+
+Analysis Time: PT1.625999099S
+Estimated Time: PT2.709998495S
+Analyzed Objects: 3 of 8
+Percentage Completed: 0.38
+
+Analysis Time: PT1.717618039S
+Estimated Time: PT1.717618036S
+Analyzed Objects: 4 of 8
+Percentage Completed: 0.5
+
+Analysis Time: PT1.767000855S
+Estimated Time: PT1.060200513S
+Analyzed Objects: 5 of 8
+Percentage Completed: 0.63
+
+Analysis Time: PT1.826559471S
+Estimated Time: PT0.608853156S
+Analyzed Objects: 6 of 8
+Percentage Completed: 0.75
+
+Analysis Time: PT1.830722324S
+Estimated Time: PT0.26153176S
+Analyzed Objects: 7 of 8
+Percentage Completed: 0.88
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: $r3
+		Type: java.security.MessageDigest
+		Statement: $r3 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+		Method: <io.vertx.ext.web.handler.impl.DigestAuthHandlerImpl: void <clinit>()>
+		SHA-256: 9fecfd2e0c2c49e1b7c458a3ea0173e48aef37cc3707987124f17be8334d76c5
+	Object:
+		Variable: $r5
+		Type: javax.crypto.Mac
+		Statement: $r5 = staticinvoke <javax.crypto.Mac: javax.crypto.Mac getInstance(java.lang.String)>("HmacSHA256")
+		Method: <io.vertx.ext.web.handler.impl.CSRFHandlerImpl: void <init>(java.lang.String)>
+		SHA-256: 41406380b6fecf118f38dfbefcb50ec7c19c87378d98b68d347255041e7c0829
+	Object:
+		Variable: $r3
+		Type: java.security.SecureRandom
+		Statement: $r3 = new java.security.SecureRandom
+		Method: <io.vertx.ext.web.handler.impl.CSRFHandlerImpl: void <init>(java.lang.String)>
+		SHA-256: 66ff02f37d920c1780c48f90167975385554a25466ea282ab25eeed3188b1169
+	Object:
+		Variable: $r4
+		Type: java.security.SecureRandom
+		Statement: $r4 = new java.security.SecureRandom
+		Method: <io.vertx.ext.web.handler.impl.DigestAuthHandlerImpl: void <init>(io.vertx.ext.auth.htdigest.HtdigestAuth,long)>
+		SHA-256: 8d812dd7f9809c2ebf4cdf11e11644f1744b78035319686cd10b7901a9ee91db
+	Object:
+		Variable: r12
+		Type: java.security.MessageDigest
+		Statement: r12 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+		Method: <io.vertx.ext.web.handler.sockjs.impl.SockJSHandlerImpl: java.lang.String getMD5String(java.lang.String)>
+		SHA-256: d2fb089363af52991d285713b16287b4a2f682328cb88c6c32fd3ab43a6e1aba
+	Object:
+		Variable: $r6
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: $r6 = new javax.crypto.spec.SecretKeySpec
+		Method: <io.vertx.ext.web.handler.impl.CSRFHandlerImpl: void <init>(java.lang.String)>
+		SHA-256: 759178ef312325109c2b4c2231f7732298279775e70e1e552e37476ec5b4bc48
+	Object:
+		Variable: $r5
+		Type: byte[]
+		Statement: r1 = virtualinvoke r12.<java.security.MessageDigest: byte[] digest(byte[])>($r5)
+		Method: <io.vertx.ext.web.handler.sockjs.impl.SockJSHandlerImpl: java.lang.String getMD5String(java.lang.String)>
+		SHA-256: dd9c234876b48adc0c9b43a50b896ddd9561b415c5a2446a924625a59427570c
+	Object:
+		Variable: r1
+		Type: byte[]
+		Statement: r1 = virtualinvoke r12.<java.security.MessageDigest: byte[] digest(byte[])>($r5)
+		Method: <io.vertx.ext.web.handler.sockjs.impl.SockJSHandlerImpl: java.lang.String getMD5String(java.lang.String)>
+		SHA-256: 9f98190423734ff26f490aa026a109a1f9061ebcfecb7927432a164dcd5494ac
+
+Findings in Java Class: io.vertx.ext.web.handler.impl.DigestAuthHandlerImpl
+
+	 in Method: void <clinit>()
+		ConstraintError violating CrySL rule for MessageDigest (on Object #9fecfd2e0c2c49e1b7c458a3ea0173e48aef37cc3707987124f17be8334d76c5)
+			First parameter (with value "MD5") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: $r3 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+
+
+Findings in Java Class: io.vertx.ext.web.handler.sockjs.impl.SockJSHandlerImpl
+
+	 in Method: java.lang.String getMD5String(java.lang.String)
+		ConstraintError violating CrySL rule for MessageDigest (on Object #d2fb089363af52991d285713b16287b4a2f682328cb88c6c32fd3ab43a6e1aba)
+			First parameter (with value "MD5") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r12 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+
+
+Findings in Java Class: examples.WebExamples
+
+	 in Method: void example54(io.vertx.ext.web.Router)
+		IncompleteOperationError violating CrySL rule for javax.crypto.Mac (on Object #41406380b6fecf118f38dfbefcb50ec7c19c87378d98b68d347255041e7c0829)
+			Operation on object of type javax.crypto.Mac object not completed. Expected call to update, doFinal
+			at statement: interfaceinvoke $r5.<io.vertx.ext.web.Route: io.vertx.ext.web.Route handler(io.vertx.core.Handler)>($r6)
+
+
+Findings in Java Class: io.vertx.ext.web.handler.impl.CSRFHandlerImpl
+
+	 in Method: void <init>(java.lang.String)
+		RequiredPredicateError violating CrySL rule for javax.crypto.spec.SecretKeySpec
+			First parameter was not properly preparedKeyMaterial
+			at statement: specialinvoke $r6.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>($r8, "HmacSHA256")
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 8
+
+	CogniCrypt found the following violations. For details see description above.
+	IncompleteOperationError: 1
+	ConstraintError: 2
+	RequiredPredicateError: 1
+=====================================================================
+Static Analysis took 1 seconds!
+Analysis finished after 4 seconds

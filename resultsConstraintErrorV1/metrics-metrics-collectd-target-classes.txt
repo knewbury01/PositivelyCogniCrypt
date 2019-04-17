@@ -1,0 +1,219 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Warning: Couldn't find any method for CryptSLMethod: keyMaterial = javax.crypto.SecretKey.getEncoded();
+Warning: Couldn't find any method for CryptSLMethod: javax.crypto.SecretKey.destroy();
+Discovered 6 analysis seeds within 0 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT0.705944648S
+Estimated Time: PT4.941612536S
+Analyzed Objects: 1 of 8
+Percentage Completed: 0.13
+
+Analysis Time: PT0.816861686S
+Estimated Time: PT3.267446744S
+Analyzed Objects: 2 of 10
+Percentage Completed: 0.2
+
+Analysis Time: PT0.83950939S
+Estimated Time: PT2.238691704S
+Analyzed Objects: 3 of 11
+Percentage Completed: 0.27
+
+Analysis Time: PT0.847896946S
+Estimated Time: PT1.483819652S
+Analyzed Objects: 4 of 11
+Percentage Completed: 0.36
+
+Analysis Time: PT0.917017242S
+Estimated Time: PT1.100420688S
+Analyzed Objects: 5 of 11
+Percentage Completed: 0.45
+
+Analysis Time: PT0.921686142S
+Estimated Time: PT0.921686142S
+Analyzed Objects: 6 of 12
+Percentage Completed: 0.5
+
+Analysis Time: PT0.937710849S
+Estimated Time: PT0.66979346S
+Analyzed Objects: 7 of 12
+Percentage Completed: 0.58
+
+Analysis Time: PT0.938690033S
+Estimated Time: PT0.469345016S
+Analyzed Objects: 8 of 12
+Percentage Completed: 0.67
+
+Analysis Time: PT0.944283237S
+Estimated Time: PT0.314761077S
+Analyzed Objects: 9 of 12
+Percentage Completed: 0.75
+
+Analysis Time: PT0.947940904S
+Estimated Time: PT0.18958818S
+Analyzed Objects: 10 of 12
+Percentage Completed: 0.83
+
+Analysis Time: PT0.950496757S
+Estimated Time: PT0.086408796S
+Analyzed Objects: 11 of 12
+Percentage Completed: 0.92
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: r0
+		Type: byte[]
+		Statement: $r3 = virtualinvoke $r2.<java.security.MessageDigest: byte[] digest(byte[])>(r0)
+		Method: <com.codahale.metrics.collectd.PacketWriter: byte[] sha256(byte[])>
+		SHA-256: ec51addbeb8beb1b219ccab7bb1aef7908a10d603b1224081e90e05631a35c6e
+	Object:
+		Variable: $r3
+		Type: byte[]
+		Statement: $r3 = virtualinvoke $r2.<java.security.MessageDigest: byte[] digest(byte[])>(r0)
+		Method: <com.codahale.metrics.collectd.PacketWriter: byte[] sha256(byte[])>
+		SHA-256: 554740c081bf6917701385559a1df24912d4b737b25677e3b718770ff77c489e
+	Object:
+		Variable: r1
+		Type: byte[]
+		Statement: r1 = virtualinvoke r5.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.codahale.metrics.collectd.PacketWriter: byte[] sha1(java.nio.ByteBuffer)>
+		SHA-256: 7f8a9004084dd3ceb041352f28d810cb91af42f8a971faf3045993569e0fec9
+	Object:
+		Variable: $r4
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: $r4 = new javax.crypto.spec.SecretKeySpec
+		Method: <com.codahale.metrics.collectd.PacketWriter: com.codahale.metrics.collectd.PacketWriter$EncryptionResult encrypt(byte[],java.nio.ByteBuffer)>
+		SHA-256: 7eccb1dbc1c9bd58d80cec9633ec76458d51503ddf11d1e41d77c15506c7bffa
+	Object:
+		Variable: r2
+		Type: javax.crypto.Mac
+		Statement: r2 = staticinvoke <javax.crypto.Mac: javax.crypto.Mac getInstance(java.lang.String)>("HmacSHA256")
+		Method: <com.codahale.metrics.collectd.PacketWriter: byte[] sign(byte[],java.nio.ByteBuffer)>
+		SHA-256: 77a7da4dfb15bd5cebd0edbe57ad4abcdd148ff8245447f1e1d33fadef989c6a
+	Object:
+		Variable: r22
+		Type: java.nio.ByteBuffer
+		Statement: virtualinvoke r2.<javax.crypto.Cipher: int doFinal(java.nio.ByteBuffer,java.nio.ByteBuffer)>(r1, r22)
+		Method: <com.codahale.metrics.collectd.PacketWriter: com.codahale.metrics.collectd.PacketWriter$EncryptionResult encrypt(byte[],java.nio.ByteBuffer)>
+		SHA-256: 99268296e1ef0ffa1cff1d5c7e3306ec6c208d7f2f25de0cc41390fc148e1e73
+	Object:
+		Variable: r2
+		Type: javax.crypto.Cipher
+		Statement: r2 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("AES_256/OFB/NoPadding")
+		Method: <com.codahale.metrics.collectd.PacketWriter: com.codahale.metrics.collectd.PacketWriter$EncryptionResult encrypt(byte[],java.nio.ByteBuffer)>
+		SHA-256: d02aa84843a4e6538943c823cc42a7afe0f748f8d7eaf0a0136ac7d742bcfece
+	Object:
+		Variable: $r2
+		Type: java.security.MessageDigest
+		Statement: $r2 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("SHA-256")
+		Method: <com.codahale.metrics.collectd.PacketWriter: byte[] sha256(byte[])>
+		SHA-256: fee838994955da94ee7fee1b7ed6a92ab415f2d624fe110ee063b7229db53592
+	Object:
+		Variable: r1
+		Type: java.nio.ByteBuffer
+		Statement: virtualinvoke r2.<javax.crypto.Cipher: int doFinal(java.nio.ByteBuffer,java.nio.ByteBuffer)>(r1, r22)
+		Method: <com.codahale.metrics.collectd.PacketWriter: com.codahale.metrics.collectd.PacketWriter$EncryptionResult encrypt(byte[],java.nio.ByteBuffer)>
+		SHA-256: c871839f98c8b665a39da31177ec01722d415b16f96c0db4edf8745e2ce2f5fb
+	Object:
+		Variable: $r5
+		Type: byte[]
+		Statement: $r5 = virtualinvoke r2.<javax.crypto.Mac: byte[] doFinal()>()
+		Method: <com.codahale.metrics.collectd.PacketWriter: byte[] sign(byte[],java.nio.ByteBuffer)>
+		SHA-256: 32686e66db511c0320ca3eb5b65cfe28d93bdf40e760a0dd3fc29f2c5813e7be
+	Object:
+		Variable: r5
+		Type: java.security.MessageDigest
+		Statement: r5 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("SHA1")
+		Method: <com.codahale.metrics.collectd.PacketWriter: byte[] sha1(java.nio.ByteBuffer)>
+		SHA-256: ca2d3ce17741b94723f2120b1cb00c9ffab7910c43025af656ac28bf60d2ff63
+	Object:
+		Variable: $r4
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: $r4 = new javax.crypto.spec.SecretKeySpec
+		Method: <com.codahale.metrics.collectd.PacketWriter: byte[] sign(byte[],java.nio.ByteBuffer)>
+		SHA-256: 9e54d350fcb9a0589481cf77d49aeaff60c3181a9b22c78794ae4a1d10d0a118
+
+Findings in Java Class: com.codahale.metrics.collectd.PacketWriter
+
+	 in Method: com.codahale.metrics.collectd.PacketWriter$EncryptionResult encrypt(byte[],java.nio.ByteBuffer)
+		ConstraintError violating CrySL rule for javax.crypto.Cipher (on Object #d02aa84843a4e6538943c823cc42a7afe0f748f8d7eaf0a0136ac7d742bcfece)
+			First parameter (with value "AES_256/OFB/NoPadding") should be any of {AES, PBEWithHmacSHA224AndAES_128, PBEWithHmacSHA256AndAES_128, PBEWithHmacSHA384AndAES_128, PBEWithHmacSHA512AndAES_128, PBEWithHmacSHA224AndAES_256, PBEWithHmacSHA256AndAES_256, PBEWithHmacSHA384AndAES_256, PBEWithHmacSHA512AndAES_256, RSA}
+			at statement: r2 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("AES_256/OFB/NoPadding")
+
+		RequiredPredicateError violating CrySL rule for javax.crypto.Cipher
+			Second parameter was not properly generatedKey
+			at statement: virtualinvoke r2.<javax.crypto.Cipher: void init(int,java.security.Key)>(1, $r4)
+
+		IncompleteOperationError violating CrySL rule for javax.crypto.Cipher (on Object #d02aa84843a4e6538943c823cc42a7afe0f748f8d7eaf0a0136ac7d742bcfece)
+			Operation on object of type javax.crypto.Cipher object not completed. Expected call to init, update, wrap, doFinal
+			at statement: $r6 = virtualinvoke r2.<javax.crypto.Cipher: java.security.AlgorithmParameters getParameters()>()
+
+		RequiredPredicateError violating CrySL rule for javax.crypto.spec.SecretKeySpec
+			First parameter was not properly preparedKeyMaterial
+			at statement: specialinvoke $r4.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>($r5, "AES")
+
+
+	 in Method: byte[] sha1(java.nio.ByteBuffer)
+		ConstraintError violating CrySL rule for MessageDigest (on Object #ca2d3ce17741b94723f2120b1cb00c9ffab7910c43025af656ac28bf60d2ff63)
+			First parameter (with value "SHA1") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r5 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("SHA1")
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 12
+
+	CogniCrypt found the following violations. For details see description above.
+	ConstraintError: 2
+	RequiredPredicateError: 2
+	IncompleteOperationError: 1
+=====================================================================
+Static Analysis took 0 seconds!
+Analysis finished after 2 seconds

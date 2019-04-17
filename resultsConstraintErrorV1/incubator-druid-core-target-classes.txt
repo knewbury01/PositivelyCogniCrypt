@@ -1,0 +1,145 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 1 seconds
+Warning: Couldn't find any method for CryptSLMethod: javax.net.ssl.SSLSocketFactory.createSocket( _ port);
+Warning: Couldn't find any method for CryptSLMethod: javax.net.ssl.SSLServerSocketFactory.createServerSocket( port);
+Discovered 4 analysis seeds within 5 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT6.354818668S
+Estimated Time: PT19.064456004S
+Analyzed Objects: 1 of 4
+Percentage Completed: 0.25
+
+Analysis Time: PT6.373048651S
+Estimated Time: PT6.37304865S
+Analyzed Objects: 2 of 4
+Percentage Completed: 0.5
+
+Analysis Time: PT6.383738313S
+Estimated Time: PT4.255825542S
+Analyzed Objects: 3 of 5
+Percentage Completed: 0.6
+
+Analysis Time: PT6.388232014S
+Estimated Time: PT1.597058003S
+Analyzed Objects: 4 of 5
+Percentage Completed: 0.8
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: r2
+		Type: javax.net.ssl.TrustManagerFactory
+		Statement: r2 = staticinvoke <javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManagerFactory getInstance(java.lang.String)>($r9)
+		Method: <org.apache.druid.java.util.http.client.HttpClientInit: javax.net.ssl.SSLContext sslContextWithTrustedKeyStore(java.lang.String,java.lang.String)>
+		SHA-256: 3cc3f97e98a70e9b5253d1e1d06a4dbaaf50525dba4665fbb97119a5f5b99d2c
+	Object:
+		Variable: r25
+		Type: java.security.KeyStore
+		Statement: r25 = staticinvoke <java.security.KeyStore: java.security.KeyStore getInstance(java.lang.String)>($r6)
+		Method: <org.apache.druid.java.util.http.client.HttpClientInit: javax.net.ssl.SSLContext sslContextWithTrustedKeyStore(java.lang.String,java.lang.String)>
+		SHA-256: 7a981b242ffd44c1214f198d517fba36b41c6f7217ab3be8d82c37081ec704a2
+	Object:
+		Variable: $r10
+		Type: javax.net.ssl.TrustManager[]
+		Statement: $r10 = virtualinvoke r2.<javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManager[] getTrustManagers()>()
+		Method: <org.apache.druid.java.util.http.client.HttpClientInit: javax.net.ssl.SSLContext sslContextWithTrustedKeyStore(java.lang.String,java.lang.String)>
+		SHA-256: efcf6211f1e9a6a8cc6221aa3a222be0df07cdb288b6c4438e2ad7f8321a625b
+	Object:
+		Variable: r3
+		Type: javax.net.ssl.SSLContext
+		Statement: r3 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("TLS")
+		Method: <org.apache.druid.java.util.http.client.HttpClientInit: javax.net.ssl.SSLContext sslContextWithTrustedKeyStore(java.lang.String,java.lang.String)>
+		SHA-256: a95f2e2f3e3034794cf0f453d7c751ae7c0a205c88bad8f725a3368e46f3eb25
+	Object:
+		Variable: r36
+		Type: javax.net.ssl.SSLParameters
+		Statement: r36 = new javax.net.ssl.SSLParameters
+		Method: <org.apache.druid.java.util.http.client.pool.ChannelResourceFactory: org.jboss.netty.channel.ChannelFuture generate(java.lang.String)>
+		SHA-256: 87604f9b2e247dc560ca8eed1cea4d0ecce71954f7594893f8c8cdfa95d72c7
+
+Findings in Java Class: org.apache.druid.java.util.http.client.pool.ChannelResourceFactory
+
+	 in Method: org.jboss.netty.channel.ChannelFuture generate(java.lang.String)
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.SSLParameters (on Object #87604f9b2e247dc560ca8eed1cea4d0ecce71954f7594893f8c8cdfa95d72c7)
+			Operation on object of type javax.net.ssl.SSLParameters object not completed. Expected call to setProtocols, setCipherSuites
+			at statement: virtualinvoke r4.<javax.net.ssl.SSLEngine: void setSSLParameters(javax.net.ssl.SSLParameters)>(r5)
+
+
+Findings in Java Class: org.apache.druid.java.util.http.client.HttpClientInit
+
+	 in Method: javax.net.ssl.SSLContext sslContextWithTrustedKeyStore(java.lang.String,java.lang.String)
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter was not properly generatedTrustManager
+			at statement: virtualinvoke r3.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, $r10, null)
+
+		ImpreciseValueExtractionError violating CrySL rule for javax.net.ssl.TrustManagerFactory
+			Constraint VC:java.lang.String algo - PKIX,SunX509, could not be evaluted due to insufficient information.
+			at statement: r2 = staticinvoke <javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManagerFactory getInstance(java.lang.String)>($r9)
+
+		ConstraintError violating CrySL rule for javax.net.ssl.SSLContext (on Object #a95f2e2f3e3034794cf0f453d7c751ae7c0a205c88bad8f725a3368e46f3eb25)
+			First parameter (with value "TLS") should be any of {TLSv1, TLSv1.1, TLSv1.2}
+			at statement: r3 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("TLS")
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter (with value null) was not properly generatedKeyManager
+			at statement: virtualinvoke r3.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, $r10, null)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 5
+
+	CogniCrypt found the following violations. For details see description above.
+	RequiredPredicateError: 2
+	ImpreciseValueExtractionError: 1
+	IncompleteOperationError: 1
+	ConstraintError: 1
+=====================================================================
+Static Analysis took 6 seconds!
+Analysis finished after 13 seconds

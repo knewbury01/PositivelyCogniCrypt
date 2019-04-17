@@ -1,0 +1,94 @@
+Using call graph algorithm CHA
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Warning: Couldn't find any method for CryptSLMethod: com.google.common.base.Stopwatch.isRunning();
+Warning: Couldn't find any method for CryptSLMethod: com.google.common.base.Stopwatch.stop();
+Warning: Couldn't find any method for CryptSLMethod: com.google.common.base.Stopwatch.start();
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: r1
+		Type: com.google.common.base.Stopwatch
+		Statement: r1 = staticinvoke <com.google.common.base.Stopwatch: com.google.common.base.Stopwatch createStarted()>()
+		Method: <com.alibaba.nacos.config.server.service.capacity.CapacityService$1: void run()>
+		SHA-256: b94aa660c07be32013548b1359880c008cd2a2ff532093cebefb9eebd36fef73
+		Secure: true
+	Object:
+		Variable: $r3
+		Type: java.security.MessageDigest
+		Statement: $r3 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer473)
+		Method: <com.alibaba.nacos.config.server.utils.MD5: void <init>()>
+		SHA-256: c66914ba62cae110a481b13e01a200077716afc2d7eaab53929326342576d986
+		Secure: false
+
+Findings in Java Class: com.alibaba.nacos.config.server.utils.MD5
+
+	 in Method: void <init>()
+		ConstraintError violating CrySL rule for MessageDigest (on Object #c66914ba62cae110a481b13e01a200077716afc2d7eaab53929326342576d986)
+			First parameter (with value "md5") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: $r3 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer473)
+
+
+	 in Method: void <clinit>()
+		IncompleteOperationError violating CrySL rule for MessageDigest (on Object #c66914ba62cae110a481b13e01a200077716afc2d7eaab53929326342576d986)
+			Operation on object of type java.security.MessageDigest object not completed. Expected call to digest, update
+			at statement: return
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 2
+
+	CogniCrypt found the following violations. For details see description above.
+	IncompleteOperationError: 1
+	ConstraintError: 1
+=====================================================================
+Analysis finished after 14 seconds

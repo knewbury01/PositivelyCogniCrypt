@@ -1,0 +1,196 @@
+Using call graph algorithm CHA
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: r5
+		Type: java.security.Signature
+		Statement: r5 = staticinvoke <java.security.Signature: java.security.Signature getInstance(java.lang.String)>(varReplacer1837)
+		Method: <org.keycloak.saml.processing.core.saml.v2.util.SignatureUtil: java.security.Signature getSignature(java.lang.String)>
+		SHA-256: e9aecd1656557e4a9f113f52bd3a1dfcb8d2715d427ca43beb1895be5c09eba2
+		Secure: false
+	Object:
+		Variable: $r6
+		Type: byte[]
+		Statement: $r6 = virtualinvoke r3.<java.security.Signature: byte[] sign()>()
+		Method: <org.keycloak.saml.processing.core.saml.v2.util.SignatureUtil: byte[] sign(java.lang.String,java.security.PrivateKey)>
+		SHA-256: 9b16f50e6cf9a615e0efcbdc4916115298ef436e42730de8ba1c7377142ac428
+		Secure: false
+	Object:
+		Variable: $r4
+		Type: java.security.KeyPair
+		Statement: specialinvoke $r4.<java.security.KeyPair: void <init>(java.security.PublicKey,java.security.PrivateKey)>(r3, r2)
+		Method: <org.keycloak.saml.BaseSAML2BindingBuilder: org.keycloak.saml.BaseSAML2BindingBuilder signWith(java.lang.String,java.security.PrivateKey,java.security.PublicKey)>
+		SHA-256: ce71bcf646ec87a71071e63b2d5ee3e52798ce852ff55318ee61aefc5c8b69b7
+		Secure: true
+	Object:
+		Variable: $r3
+		Type: java.security.Signature
+		Statement: $r3 = staticinvoke <java.security.Signature: java.security.Signature getInstance(java.lang.String)>($r2)
+		Method: <org.keycloak.saml.SignatureAlgorithm: java.security.Signature createSignature()>
+		SHA-256: 4c33576c10f2cb13f56b2752b2d0e78a6a0f3eadc609dc3309b2150de2c4e91
+		Secure: false
+	Object:
+		Variable: r1
+		Type: byte[]
+		Statement: virtualinvoke r0.<java.security.SecureRandom: void nextBytes(byte[])>(r1)
+		Method: <org.keycloak.saml.RandomSecret: byte[] createRandomSecret(int)>
+		SHA-256: 9f8e252308ff410a60f319eb5e9316bcf45c61e83943fee8e7d6039d5fbd0db4
+		Secure: true
+	Object:
+		Variable: r23
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: specialinvoke r23.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r3, $r11)
+		Method: <org.keycloak.saml.BaseSAML2BindingBuilder: void encryptDocument(org.w3c.dom.Document)>
+		SHA-256: c1825dfc6e003a1d06bc83c8368ed307808e17a171c103cb2782eab4d94f80d7
+		Secure: false
+	Object:
+		Variable: r5
+		Type: java.security.Signature
+		Statement: r5 = staticinvoke <java.security.Signature: java.security.Signature getInstance(java.lang.String)>(varReplacer1838)
+		Method: <org.keycloak.saml.processing.core.saml.v2.util.SignatureUtil: java.security.Signature getSignature(java.lang.String)>
+		SHA-256: 676b5a4492544b2f79a1e0f65600ac352db46ae712e051de7de6c2c739defac9
+		Secure: false
+	Object:
+		Variable: $r11
+		Type: java.lang.String
+		Statement: specialinvoke r23.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r3, $r11)
+		Method: <org.keycloak.saml.BaseSAML2BindingBuilder: void encryptDocument(org.w3c.dom.Document)>
+		SHA-256: 70eee12ff9a60991fe82b5bc4108e0c90d40c04bd3093df736488028f4372025
+		Secure: false
+	Object:
+		Variable: r32
+		Type: byte[]
+		Statement: r32 = virtualinvoke r7.<java.security.Signature: byte[] sign()>()
+		Method: <org.keycloak.saml.BaseSAML2BindingBuilder: java.net.URI generateRedirectUri(java.lang.String,java.lang.String,org.w3c.dom.Document)>
+		SHA-256: 2742008a1a570d2355635e0edd1fed7ddae73176b5c4862cf228c1581a15c173
+		Secure: false
+	Object:
+		Variable: $r5
+		Type: java.security.KeyPair
+		Statement: specialinvoke $r5.<java.security.KeyPair: void <init>(java.security.PublicKey,java.security.PrivateKey)>(r3, r2)
+		Method: <org.keycloak.saml.BaseSAML2BindingBuilder: org.keycloak.saml.BaseSAML2BindingBuilder signWith(java.lang.String,java.security.PrivateKey,java.security.PublicKey,java.security.cert.X509Certificate)>
+		SHA-256: 12466130c687166d5668cb512f7f516d315085f0e988272e4e44f4f2903eece8
+		Secure: true
+	Object:
+		Variable: r1
+		Type: byte[]
+		Statement: $z0 = virtualinvoke r4.<java.security.Signature: boolean verify(byte[])>(r1)
+		Method: <org.keycloak.saml.processing.core.saml.v2.util.SignatureUtil: boolean validate(byte[],byte[],java.security.PublicKey)>
+		SHA-256: d86f375465456ec228e76aac94b82f3096ca7038beb47fd34433edff80c136dd
+		Secure: false
+	Object:
+		Variable: r1
+		Type: byte[]
+		Statement: $z0 = virtualinvoke r4.<java.security.Signature: boolean verify(byte[])>(r1)
+		Method: <org.keycloak.saml.processing.core.saml.v2.util.SignatureUtil: boolean validate(byte[],byte[],java.lang.String,java.security.cert.X509Certificate)>
+		SHA-256: d86f375465456ec228e76aac94b82f3096ca7038beb47fd34433edff80c136dd
+		Secure: false
+	Object:
+		Variable: $r2
+		Type: java.security.SecureRandom
+		Statement: specialinvoke $r2.<java.security.SecureRandom: void <init>()>()
+		Method: <org.keycloak.saml.RandomSecret: byte[] createRandomSecret(int)>
+		SHA-256: 59f5936b714ee7d25ab5e0d651b723cbf09e81a1cd07ff8bfb7c431d29eae64e
+		Secure: true
+
+Findings in Java Class: org.keycloak.saml.processing.core.saml.v2.util.SignatureUtil
+
+	 in Method: java.security.Signature getSignature(java.lang.String)
+		ConstraintError violating CrySL rule for java.security.Signature (on Object #e9aecd1656557e4a9f113f52bd3a1dfcb8d2715d427ca43beb1895be5c09eba2)
+			First parameter (with value "SHA1withRSA") should be any of {NONEwithDSA, SHA1withDSA, SHA224withDSA, SHA256withDSA, SHA256withRSA, SHA256withECDSA}
+			at statement: r5 = staticinvoke <java.security.Signature: java.security.Signature getInstance(java.lang.String)>(varReplacer1837)
+
+
+	 in Method: byte[] sign(java.lang.String,java.security.PrivateKey)
+		RequiredPredicateError violating CrySL rule for java.security.Signature
+			First parameter was not properly generated as generated Privkey
+			at statement: virtualinvoke r3.<java.security.Signature: void initSign(java.security.PrivateKey)>(r1)
+
+		RequiredPredicateError violating CrySL rule for java.security.Signature
+			First parameter was not properly generated as generated Privkey
+			at statement: virtualinvoke r3.<java.security.Signature: void initSign(java.security.PrivateKey)>(r1)
+
+
+	 in Method: boolean validate(byte[],byte[],java.security.PublicKey)
+		RequiredPredicateError violating CrySL rule for java.security.Signature
+			First parameter was not properly generated as generated Pubkey
+			at statement: virtualinvoke r4.<java.security.Signature: void initVerify(java.security.PublicKey)>(r2)
+
+		RequiredPredicateError violating CrySL rule for java.security.Signature
+			First parameter was not properly generated as generated Pubkey
+			at statement: virtualinvoke r4.<java.security.Signature: void initVerify(java.security.PublicKey)>(r2)
+
+
+Findings in Java Class: org.keycloak.saml.BaseSAML2BindingBuilder
+
+	 in Method: java.net.URI generateRedirectUri(java.lang.String,java.lang.String,org.w3c.dom.Document)
+		RequiredPredicateError violating CrySL rule for java.security.Signature
+			First parameter was not properly generated as generated Privkey
+			at statement: virtualinvoke r7.<java.security.Signature: void initSign(java.security.PrivateKey)>($r21)
+
+
+	 in Method: void encryptDocument(org.w3c.dom.Document)
+		RequiredPredicateError violating CrySL rule for javax.crypto.spec.SecretKeySpec
+			First parameter was not properly generated as prepared Key Material
+			at statement: specialinvoke r23.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r3, $r11)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 13
+
+	CogniCrypt found the following violations. For details see description above.
+	RequiredPredicateError: 6
+	ConstraintError: 1
+=====================================================================
+Analysis finished after 7 seconds

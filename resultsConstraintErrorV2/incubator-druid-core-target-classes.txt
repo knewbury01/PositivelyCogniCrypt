@@ -1,0 +1,132 @@
+Using call graph algorithm CHA
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: $r10
+		Type: javax.net.ssl.TrustManager[]
+		Statement: $r10 = virtualinvoke r2.<javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManager[] getTrustManagers()>()
+		Method: <org.apache.druid.java.util.http.client.HttpClientInit: javax.net.ssl.SSLContext sslContextWithTrustedKeyStore(java.lang.String,java.lang.String)>
+		SHA-256: c32f4e0332b69dd6343096424d8f03f7f62d980abe3fb8a45927e6de155eb90c
+		Secure: false
+	Object:
+		Variable: r2
+		Type: javax.net.ssl.TrustManagerFactory
+		Statement: r2 = staticinvoke <javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManagerFactory getInstance(java.lang.String)>($r9)
+		Method: <org.apache.druid.java.util.http.client.HttpClientInit: javax.net.ssl.SSLContext sslContextWithTrustedKeyStore(java.lang.String,java.lang.String)>
+		SHA-256: f0701bbfac90bf5963c0649db309c0bf885fb0a14482ad103511245fc9b1e343
+		Secure: false
+	Object:
+		Variable: r25
+		Type: java.security.KeyStore
+		Statement: r25 = staticinvoke <java.security.KeyStore: java.security.KeyStore getInstance(java.lang.String)>($r6)
+		Method: <org.apache.druid.java.util.http.client.HttpClientInit: javax.net.ssl.SSLContext sslContextWithTrustedKeyStore(java.lang.String,java.lang.String)>
+		SHA-256: a6d7e9e8427827c91126d7f516867422a143811edb35e8568452f5195cf8f650
+		Secure: false
+	Object:
+		Variable: r36
+		Type: javax.net.ssl.SSLParameters
+		Statement: specialinvoke r36.<javax.net.ssl.SSLParameters: void <init>()>()
+		Method: <org.apache.druid.java.util.http.client.pool.ChannelResourceFactory: org.jboss.netty.channel.ChannelFuture generate(java.lang.String)>
+		SHA-256: fcf7ac24c2b7cbf2739207faac99a1ee47d985d0263c6d97901a74550dbce82e
+		Secure: false
+	Object:
+		Variable: r3
+		Type: javax.net.ssl.SSLContext
+		Statement: r3 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>(varReplacer58)
+		Method: <org.apache.druid.java.util.http.client.HttpClientInit: javax.net.ssl.SSLContext sslContextWithTrustedKeyStore(java.lang.String,java.lang.String)>
+		SHA-256: 8f56aa7c97be5e12b53da92750e5d262a900ec1836368e95643421c2c0c254eb
+		Secure: false
+
+Findings in Java Class: org.apache.druid.java.util.http.client.HttpClientInit
+
+	 in Method: javax.net.ssl.SSLContext sslContextWithTrustedKeyStore(java.lang.String,java.lang.String)
+		NeverTypeOfError violating CrySL rule for java.security.KeyStore (on Object #a6d7e9e8427827c91126d7f516867422a143811edb35e8568452f5195cf8f650)
+			Second parameter should never be of type java.lang.String.
+			at statement: virtualinvoke r25.<java.security.KeyStore: void load(java.io.InputStream,char[])>(r24, $r8)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter was not properly generated as generated Trust Manager
+			at statement: virtualinvoke r3.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(varReplacer56, $r10, varReplacer56)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter was not properly generated as generated Key Manager
+			at statement: virtualinvoke r3.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(varReplacer56, $r10, varReplacer56)
+
+		ConstraintError violating CrySL rule for javax.net.ssl.SSLContext (on Object #8f56aa7c97be5e12b53da92750e5d262a900ec1836368e95643421c2c0c254eb)
+			First parameter (with value "TLS") should be any of {TLSv1, TLSv1.1, TLSv1.2}
+			at statement: r3 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>(varReplacer58)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.TrustManagerFactory
+			First parameter was not properly generated as generated Key Store
+			at statement: virtualinvoke r2.<javax.net.ssl.TrustManagerFactory: void init(java.security.KeyStore)>(r25)
+
+
+Findings in Java Class: org.apache.druid.java.util.http.client.pool.ChannelResourceFactory
+
+	 in Method: org.jboss.netty.channel.ChannelFuture generate(java.lang.String)
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.SSLParameters (on Object #fcf7ac24c2b7cbf2739207faac99a1ee47d985d0263c6d97901a74550dbce82e)
+			Operation on object of type javax.net.ssl.SSLParameters object not completed. Expected call to setProtocols, setCipherSuites
+			at statement: virtualinvoke r4.<javax.net.ssl.SSLEngine: void setSSLParameters(javax.net.ssl.SSLParameters)>(r5)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 5
+
+	CogniCrypt found the following violations. For details see description above.
+	ConstraintError: 1
+	NeverTypeOfError: 1
+	IncompleteOperationError: 1
+	RequiredPredicateError: 3
+=====================================================================
+Analysis finished after 7 seconds

@@ -1,0 +1,156 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Warning: Couldn't find any method for CryptSLMethod: keyMaterial = javax.crypto.SecretKey.getEncoded();
+Warning: Couldn't find any method for CryptSLMethod: javax.crypto.SecretKey.destroy();
+Warning: Couldn't find any method for CryptSLMethod: javax.net.ssl.SSLServerSocketFactory.createServerSocket( port);
+Discovered 5 analysis seeds within 1 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT1.777887823S
+Estimated Time: PT12.445214761S
+Analyzed Objects: 1 of 8
+Percentage Completed: 0.13
+
+Analysis Time: PT1.790516461S
+Estimated Time: PT5.37154938S
+Analyzed Objects: 2 of 8
+Percentage Completed: 0.25
+
+Analysis Time: PT1M1.545046993S
+Estimated Time: PT1M42.57507832S
+Analyzed Objects: 3 of 8
+Percentage Completed: 0.38
+
+Analysis Time: PT1M1.562087982S
+Estimated Time: PT1M1.56208798S
+Analyzed Objects: 4 of 8
+Percentage Completed: 0.5
+
+Analysis Time: PT1M1.573127821S
+Estimated Time: PT36.943876692S
+Analyzed Objects: 5 of 8
+Percentage Completed: 0.63
+
+Analysis Time: PT1M1.647019412S
+Estimated Time: PT20.54900647S
+Analyzed Objects: 6 of 8
+Percentage Completed: 0.75
+
+Analysis Time: PT1M1.708800852S
+Estimated Time: PT8.815542978S
+Analyzed Objects: 7 of 8
+Percentage Completed: 0.88
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: r12
+		Type: byte[]
+		Statement: r12 = virtualinvoke r10.<java.security.MessageDigest: byte[] digest(byte[])>(r3)
+		Method: <org.glassfish.security.common.SSHA: byte[] compute(byte[],byte[],java.lang.String)>
+		SHA-256: 8cfe4c0971eb7c3099ad82462099d5c9440f805f9b21956e4573a69a32fdd4f8
+	Object:
+		Variable: r3
+		Type: byte[]
+		Statement: r12 = virtualinvoke r10.<java.security.MessageDigest: byte[] digest(byte[])>(r3)
+		Method: <org.glassfish.security.common.SSHA: byte[] compute(byte[],byte[],java.lang.String)>
+		SHA-256: 1fbb0ea3fdf6dbb24d0b716d26c7bbed5345e6ae0e83777e3a3f59585dd3f78b
+	Object:
+		Variable: $r1
+		Type: java.security.SecureRandom
+		Statement: $r1 = new java.security.SecureRandom
+		Method: <org.glassfish.common.util.admin.AuthTokenManager: void <init>()>
+		SHA-256: d728ddeda8625f152ee84cc7b6ce61464495e934ccafaaac92c61699fe0d74ac
+	Object:
+		Variable: r10
+		Type: java.security.MessageDigest
+		Statement: r10 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r2)
+		Method: <org.glassfish.security.common.SSHA: byte[] compute(byte[],byte[],java.lang.String)>
+		SHA-256: 92edc8ce32184a253cf5ddb4c2b62b88a8c5dd5230b56bd78968cc09c4e30a94
+	Object:
+		Variable: $r1
+		Type: java.security.SecureRandom
+		Statement: $r1 = new java.security.SecureRandom
+		Method: <org.glassfish.security.common.SharedSecureRandomImpl: void <clinit>()>
+		SHA-256: c245e4add0789647cfcaa0a4820f3f528f0f5fa0dd4db6b2c2283e91279995f
+	Object:
+		Variable: $r1
+		Type: java.security.SecureRandom
+		Statement: $r1 = new java.security.SecureRandom
+		Method: <org.glassfish.common.util.admin.RestSessionManager: void <init>()>
+		SHA-256: cfcd663af96ccc41f11ac294d45a97ad98d6da7c0a5b769d40a7f6e48daeb74b
+	Object:
+		Variable: r12
+		Type: byte[]
+		Statement: r12 = virtualinvoke r10.<java.security.MessageDigest: byte[] digest()>()
+		Method: <org.glassfish.security.common.SSHA: byte[] compute(byte[],byte[],java.lang.String)>
+		SHA-256: 285cf3130dd24f69bad2fbeb1981f028036d3fd8865932073bcfd2e77f11bb66
+	Object:
+		Variable: $r14
+		Type: javax.net.ServerSocketFactory
+		Statement: $r14 = staticinvoke <javax.net.ssl.SSLServerSocketFactory: javax.net.ServerSocketFactory getDefault()>()
+		Method: <org.glassfish.security.common.CipherInfo: void <clinit>()>
+		SHA-256: 3104b26cf862360fe7e71c46f41415bfeb4dbce7449bc346c96cf082cf0f153d
+
+Findings in Java Class: org.glassfish.security.common.SSHA
+
+	 in Method: byte[] compute(byte[],byte[],java.lang.String)
+		ConstraintError violating CrySL rule for MessageDigest (on Object #92edc8ce32184a253cf5ddb4c2b62b88a8c5dd5230b56bd78968cc09c4e30a94)
+			First parameter (with value "SHA-256") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r10 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r2)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 8
+
+	CogniCrypt found the following violations. For details see description above.
+	ConstraintError: 1
+=====================================================================
+Static Analysis took 61 seconds!
+Analysis finished after 63 seconds

@@ -1,0 +1,98 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Discovered 1 analysis seeds within 0 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT0.537875124S
+Estimated Time: PT1.075750248S
+Analyzed Objects: 1 of 3
+Percentage Completed: 0.33
+
+Analysis Time: PT0.546595836S
+Estimated Time: PT0.273297918S
+Analyzed Objects: 2 of 3
+Percentage Completed: 0.67
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: $r3
+		Type: byte[]
+		Statement: $r4 = virtualinvoke r14.<java.security.MessageDigest: byte[] digest(byte[])>($r3)
+		Method: <org.springframework.cloud.alicloud.acm.refresh.AcmContextRefresher$1: void receiveConfigInfo(java.lang.String)>
+		SHA-256: 1a0813851c1ddf9e1ebe0ba64547eb691acdd5be19f1ad5b9bf661efcdd342b4
+	Object:
+		Variable: r14
+		Type: java.security.MessageDigest
+		Statement: r14 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+		Method: <org.springframework.cloud.alicloud.acm.refresh.AcmContextRefresher$1: void receiveConfigInfo(java.lang.String)>
+		SHA-256: bf341abbabe623f05d2cce1975dc7079a9b28694ebf7b46495aa9dffa25d526a
+	Object:
+		Variable: $r4
+		Type: byte[]
+		Statement: $r4 = virtualinvoke r14.<java.security.MessageDigest: byte[] digest(byte[])>($r3)
+		Method: <org.springframework.cloud.alicloud.acm.refresh.AcmContextRefresher$1: void receiveConfigInfo(java.lang.String)>
+		SHA-256: 690875b483ff7dfdef662a654e9d109773331b1611e2e64889ac38f1cce57a91
+
+Findings in Java Class: org.springframework.cloud.alicloud.acm.refresh.AcmContextRefresher$1
+
+	 in Method: void receiveConfigInfo(java.lang.String)
+		ConstraintError violating CrySL rule for MessageDigest (on Object #bf341abbabe623f05d2cce1975dc7079a9b28694ebf7b46495aa9dffa25d526a)
+			First parameter (with value "MD5") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r14 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 3
+
+	CogniCrypt found the following violations. For details see description above.
+	ConstraintError: 1
+=====================================================================
+Static Analysis took 0 seconds!
+Analysis finished after 1 seconds

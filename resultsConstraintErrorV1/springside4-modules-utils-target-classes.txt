@@ -1,0 +1,358 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Warning: Couldn't find any method for CryptSLMethod: javax.crypto.SecretKey.destroy();
+Discovered 16 analysis seeds within 0 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT1.245156845S
+Estimated Time: PT21.167666365S
+Analyzed Objects: 1 of 18
+Percentage Completed: 0.06
+
+Analysis Time: PT1.27978126S
+Estimated Time: PT11.51803134S
+Analyzed Objects: 2 of 20
+Percentage Completed: 0.1
+
+Analysis Time: PT1.285809569S
+Estimated Time: PT7.286254213S
+Analyzed Objects: 3 of 20
+Percentage Completed: 0.15
+
+Analysis Time: PT1.287072021S
+Estimated Time: PT5.470056085S
+Analyzed Objects: 4 of 21
+Percentage Completed: 0.19
+
+Analysis Time: PT1.287881725S
+Estimated Time: PT4.378797865S
+Analyzed Objects: 5 of 22
+Percentage Completed: 0.23
+
+Analysis Time: PT1.291645209S
+Estimated Time: PT3.659661417S
+Analyzed Objects: 6 of 23
+Percentage Completed: 0.26
+
+Analysis Time: PT1.296337118S
+Estimated Time: PT3.148247272S
+Analyzed Objects: 7 of 24
+Percentage Completed: 0.29
+
+Analysis Time: PT1.307299643S
+Estimated Time: PT2.61459928S
+Analyzed Objects: 8 of 24
+Percentage Completed: 0.33
+
+Analysis Time: PT1.318228839S
+Estimated Time: PT2.197048065S
+Analyzed Objects: 9 of 24
+Percentage Completed: 0.38
+
+Analysis Time: PT1.326390654S
+Estimated Time: PT1.85694691S
+Analyzed Objects: 10 of 24
+Percentage Completed: 0.42
+
+Analysis Time: PT1.333400586S
+Estimated Time: PT1.575837055S
+Analyzed Objects: 11 of 24
+Percentage Completed: 0.46
+
+Analysis Time: PT1.338466672S
+Estimated Time: PT1.561544446S
+Analyzed Objects: 12 of 26
+Percentage Completed: 0.46
+
+Analysis Time: PT13.400999707S
+Estimated Time: PT13.400999703S
+Analyzed Objects: 13 of 26
+Percentage Completed: 0.5
+
+Analysis Time: PT19.943050177S
+Estimated Time: PT17.094043008S
+Analyzed Objects: 14 of 26
+Percentage Completed: 0.54
+
+Analysis Time: PT26.491906161S
+Estimated Time: PT19.427397847S
+Analyzed Objects: 15 of 26
+Percentage Completed: 0.58
+
+Analysis Time: PT35.973631658S
+Estimated Time: PT22.48351978S
+Analyzed Objects: 16 of 26
+Percentage Completed: 0.62
+
+Analysis Time: PT35.984431775S
+Estimated Time: PT19.05058152S
+Analyzed Objects: 17 of 26
+Percentage Completed: 0.65
+
+Analysis Time: PT35.9851874S
+Estimated Time: PT15.993416616S
+Analyzed Objects: 18 of 26
+Percentage Completed: 0.69
+
+Analysis Time: PT35.992288962S
+Estimated Time: PT13.260316986S
+Analyzed Objects: 19 of 26
+Percentage Completed: 0.73
+
+Analysis Time: PT35.993117977S
+Estimated Time: PT10.797935388S
+Analyzed Objects: 20 of 26
+Percentage Completed: 0.77
+
+Analysis Time: PT35.994865215S
+Estimated Time: PT8.570206S
+Analyzed Objects: 21 of 26
+Percentage Completed: 0.81
+
+Analysis Time: PT35.995329702S
+Estimated Time: PT6.5446054S
+Analyzed Objects: 22 of 26
+Percentage Completed: 0.85
+
+Analysis Time: PT35.995808288S
+Estimated Time: PT4.695105426S
+Analyzed Objects: 23 of 26
+Percentage Completed: 0.88
+
+Analysis Time: PT35.996542033S
+Estimated Time: PT2.999711836S
+Analyzed Objects: 24 of 26
+Percentage Completed: 0.92
+
+Analysis Time: PT35.997338368S
+Estimated Time: PT1.439893534S
+Analyzed Objects: 25 of 26
+Percentage Completed: 0.96
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: r0
+		Type: javax.crypto.SecretKey
+		Statement: r0 = virtualinvoke r4.<javax.crypto.KeyGenerator: javax.crypto.SecretKey generateKey()>()
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateAesKey(int)>
+		SHA-256: 12c2487a43e54a6cac2c14b9a96677e48ff6640a98ebfaba72d20bc788ceb1fb
+	Object:
+		Variable: $r7
+		Type: byte[]
+		Statement: $r7 = virtualinvoke r4.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r0)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],byte[],int)>
+		SHA-256: 8d5cce3356dd5d2610f7e4f21aa7afaed817f985da46e489d382c4be5e2c
+	Object:
+		Variable: $r2
+		Type: java.security.SecureRandom
+		Statement: $r2 = new java.security.SecureRandom
+		Method: <org.springside.modules.utils.text.HashUtil: void <clinit>()>
+		SHA-256: c87f7df968a032ef4c89e1f83575d55d4f172032b444058ed62e51b59e44a38f
+	Object:
+		Variable: r4
+		Type: javax.crypto.Cipher
+		Statement: r4 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("AES/CBC/PKCS5Padding")
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],byte[],int)>
+		SHA-256: 9eb8bd1aefef971e93d9090f9082e97b509bdfa7fc4609950a43fcc61067b0ac
+	Object:
+		Variable: $r5
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: $r5 = new javax.crypto.spec.SecretKeySpec
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],byte[],int)>
+		SHA-256: 77929121842d016733342075a3062c59466c8b7eb812f9128efd8a954e5d83a4
+	Object:
+		Variable: $r3
+		Type: java.security.MessageDigest
+		Statement: $r3 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>($r2)
+		Method: <org.springside.modules.utils.text.HashUtil$1: java.security.MessageDigest initialValue()>
+		SHA-256: 7bd1769a280550d2fcd72405bd39bdf40d197509f34080b8e0742a7b976a2167
+	Object:
+		Variable: $r6
+		Type: javax.crypto.spec.IvParameterSpec
+		Statement: $r6 = new javax.crypto.spec.IvParameterSpec
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],byte[],int)>
+		SHA-256: 3ee1e3a7d2c18d22fb388ee024e60aede0265ec55dde9f2939ce39a853294973
+	Object:
+		Variable: r0
+		Type: javax.crypto.SecretKey
+		Statement: $r1 = interfaceinvoke r0.<javax.crypto.SecretKey: byte[] getEncoded()>()
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateAesKey(int)>
+		SHA-256: 9f4a732ab314ef48233f3d963470c80edc0d67df3dab823e684b53b9a789592e
+	Object:
+		Variable: $r3
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: $r3 = new javax.crypto.spec.SecretKeySpec
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] hmacSha1(byte[],byte[])>
+		SHA-256: 268e65d27e11aa1fef49df254e0bf988d8d717c2cb2646c5904fcc501ae985d9
+	Object:
+		Variable: $r0
+		Type: java.security.SecureRandom
+		Statement: $r0 = new java.security.SecureRandom
+		Method: <org.springside.modules.utils.misc.IdGenerator: void <clinit>()>
+		SHA-256: ad5669b968ec36d8fd19d20f762adebe9bf69f2c2faa985616b3f6f98fab2e28
+	Object:
+		Variable: r4
+		Type: javax.crypto.KeyGenerator
+		Statement: r4 = staticinvoke <javax.crypto.KeyGenerator: javax.crypto.KeyGenerator getInstance(java.lang.String)>("HmacSHA1")
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateHmacSha1Key()>
+		SHA-256: 71d161deb300811b637cc9ae135004e4dfc30962543f27f23ed619aabebf716f
+	Object:
+		Variable: $r1
+		Type: byte[]
+		Statement: $r1 = interfaceinvoke r0.<javax.crypto.SecretKey: byte[] getEncoded()>()
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateHmacSha1Key()>
+		SHA-256: dfd16a4128d291025e96e13072376539ced7477e00b564b7c624240440cd6db9
+	Object:
+		Variable: $r3
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: $r3 = new javax.crypto.spec.SecretKeySpec
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],int)>
+		SHA-256: 95f476e3667046d5a8c6738de1deea33d8273b952cae059fc29ffcb865e18655
+	Object:
+		Variable: r0
+		Type: byte[]
+		Statement: $r4 = virtualinvoke r2.<javax.crypto.Mac: byte[] doFinal(byte[])>(r0)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] hmacSha1(byte[],byte[])>
+		SHA-256: f964a8e723dff322078e8d29d50280f5b0b2c515f8288bcd03672c59f03604e4
+	Object:
+		Variable: $r3
+		Type: java.security.SecureRandom
+		Statement: $r3 = new java.security.SecureRandom
+		Method: <org.springside.modules.utils.number.RandomUtil: java.security.SecureRandom secureRandom()>
+		SHA-256: d7561c3501db4c147a42300a7ab84a529720616994ec091514913b5e6680ff08
+	Object:
+		Variable: $r1
+		Type: byte[]
+		Statement: $r1 = interfaceinvoke r0.<javax.crypto.SecretKey: byte[] getEncoded()>()
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateAesKey(int)>
+		SHA-256: b199a2e02e67cf26cf217cafddb918b30f943dfab708cdff2271bd372cd55959
+	Object:
+		Variable: r2
+		Type: javax.crypto.Cipher
+		Statement: r2 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("AES")
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],int)>
+		SHA-256: 7048461641e3763001bf093709c34fd86e0d098b47679261b4d3518585a11963
+	Object:
+		Variable: $r4
+		Type: byte[]
+		Statement: $r4 = virtualinvoke r2.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r0)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],int)>
+		SHA-256: e1709d5ee31685a9315f8888217388547f6503f759a4b1676b8629802705407c
+	Object:
+		Variable: r0
+		Type: byte[]
+		Statement: $r7 = virtualinvoke r4.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r0)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],byte[],int)>
+		SHA-256: d331dd72cd253031443a5c947c136a4a1f104c05768785719ecc289e5637525a
+	Object:
+		Variable: $r1
+		Type: java.security.SecureRandom
+		Statement: $r1 = staticinvoke <java.security.SecureRandom: java.security.SecureRandom getInstance(java.lang.String)>("SHA1PRNG")
+		Method: <org.springside.modules.utils.number.RandomUtil: java.security.SecureRandom secureRandom()>
+		SHA-256: 32e9162456a4e1cc6a754e5d05eb2fb8d0770559a579ab6a4bf4d92a1b711c73
+	Object:
+		Variable: r0
+		Type: javax.crypto.SecretKey
+		Statement: $r1 = interfaceinvoke r0.<javax.crypto.SecretKey: byte[] getEncoded()>()
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateHmacSha1Key()>
+		SHA-256: 5ce28281f360031a72e47a26627c2c3fbebcd665b8d07d881940878c8fe73088
+	Object:
+		Variable: r4
+		Type: javax.crypto.KeyGenerator
+		Statement: r4 = staticinvoke <javax.crypto.KeyGenerator: javax.crypto.KeyGenerator getInstance(java.lang.String)>("AES")
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateAesKey(int)>
+		SHA-256: 6db58c634276f6a584b31dd31bc0ee7fff6606d9eda767a0268d8e46ad304681
+	Object:
+		Variable: $r4
+		Type: byte[]
+		Statement: $r4 = virtualinvoke r2.<javax.crypto.Mac: byte[] doFinal(byte[])>(r0)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] hmacSha1(byte[],byte[])>
+		SHA-256: c78cf27cb85b755cedd0561b756b5f059c11bfc7676f07a911a37a5b7cf38b97
+	Object:
+		Variable: r2
+		Type: javax.crypto.Mac
+		Statement: r2 = staticinvoke <javax.crypto.Mac: javax.crypto.Mac getInstance(java.lang.String)>("HmacSHA1")
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] hmacSha1(byte[],byte[])>
+		SHA-256: bb07d094998ad83ebdc8428f7adca7b1a385b05e38fd8395e6494edf50e51f8b
+	Object:
+		Variable: r0
+		Type: javax.crypto.SecretKey
+		Statement: r0 = virtualinvoke r4.<javax.crypto.KeyGenerator: javax.crypto.SecretKey generateKey()>()
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateHmacSha1Key()>
+		SHA-256: b776e2036200cdeeb6292940ab6f7a088971bbbb9a8149f669d7d0d54847a378
+	Object:
+		Variable: r0
+		Type: byte[]
+		Statement: $r4 = virtualinvoke r2.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r0)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],int)>
+		SHA-256: 695a7b43bd3e33d04c068dcc9f09583dedf029c2fcc4aed3f6f837589742854b
+
+Findings in Java Class: org.springside.modules.utils.security.CryptoUtil
+
+	 in Method: byte[] aes(byte[],byte[],int)
+		ConstraintError violating CrySL rule for javax.crypto.Cipher (on Object #7048461641e3763001bf093709c34fd86e0d098b47679261b4d3518585a11963)
+			First parameter (with value "AES") should be any of AES/{CBC, GCM, PCBC, CTR, CTS, CFB, OFB}
+			at statement: r2 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("AES")
+
+
+	 in Method: byte[] generateHmacSha1Key()
+		ConstraintError violating CrySL rule for javax.crypto.KeyGenerator (on Object #71d161deb300811b637cc9ae135004e4dfc30962543f27f23ed619aabebf716f)
+			First parameter (with value "HmacSHA1") should be any of {AES, HmacSHA224, HmacSHA256, HmacSHA384, HmacSHA512}
+			at statement: r4 = staticinvoke <javax.crypto.KeyGenerator: javax.crypto.KeyGenerator getInstance(java.lang.String)>("HmacSHA1")
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 26
+
+	CogniCrypt found the following violations. For details see description above.
+	ConstraintError: 2
+=====================================================================
+Static Analysis took 36 seconds!
+Analysis finished after 38 seconds

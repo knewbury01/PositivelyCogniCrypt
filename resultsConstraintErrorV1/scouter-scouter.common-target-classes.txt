@@ -1,0 +1,424 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Warning: Couldn't find any method for CryptSLMethod: keyMaterial = javax.crypto.SecretKey.getEncoded();
+Warning: Couldn't find any method for CryptSLMethod: javax.crypto.SecretKey.destroy();
+Discovered 9 analysis seeds within 1 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT1.993338196S
+Estimated Time: PT19.93338196S
+Analyzed Objects: 1 of 11
+Percentage Completed: 0.09
+
+Analysis Time: PT2.029792316S
+Estimated Time: PT11.163857738S
+Analyzed Objects: 2 of 13
+Percentage Completed: 0.15
+
+Analysis Time: PT2.232039273S
+Estimated Time: PT8.928157092S
+Analyzed Objects: 3 of 15
+Percentage Completed: 0.2
+
+Analysis Time: PT2.371778716S
+Estimated Time: PT7.708280827S
+Analyzed Objects: 4 of 17
+Percentage Completed: 0.24
+
+Analysis Time: PT14M41.691134044S
+Estimated Time: PT41M8.735175312S
+Analyzed Objects: 5 of 19
+Percentage Completed: 0.26
+
+Analysis Time: PT27M45.277013865S
+Estimated Time: PT1H4M45.646365678S
+Analyzed Objects: 6 of 20
+Percentage Completed: 0.3
+
+Analysis Time: PT53M45.642877034S
+Estimated Time: PT1H55M12.09187935S
+Analyzed Objects: 7 of 22
+Percentage Completed: 0.32
+
+Analysis Time: PT53M45.650230118S
+Estimated Time: PT1H40M48.09418146S
+Analyzed Objects: 8 of 23
+Percentage Completed: 0.35
+
+Analysis Time: PT53M45.652879846S
+Estimated Time: PT1H29M36.08813307S
+Analyzed Objects: 9 of 24
+Percentage Completed: 0.38
+
+Analysis Time: PT53M45.660645939S
+Estimated Time: PT1H15M15.924904302S
+Analyzed Objects: 10 of 24
+Percentage Completed: 0.42
+
+Analysis Time: PT53M45.661596394S
+Estimated Time: PT1H3M32.145523004S
+Analyzed Objects: 11 of 24
+Percentage Completed: 0.46
+
+Analysis Time: PT53M45.679691079S
+Estimated Time: PT53M45.679691076S
+Analyzed Objects: 12 of 24
+Percentage Completed: 0.5
+
+Analysis Time: PT53M45.680471265S
+Estimated Time: PT45M29.42193722S
+Analyzed Objects: 13 of 24
+Percentage Completed: 0.54
+
+Analysis Time: PT53M45.684557485S
+Estimated Time: PT38M24.0603982S
+Analyzed Objects: 14 of 24
+Percentage Completed: 0.58
+
+Analysis Time: PT53M45.685206512S
+Estimated Time: PT32M15.411123906S
+Analyzed Objects: 15 of 24
+Percentage Completed: 0.63
+
+Analysis Time: PT53M45.686887354S
+Estimated Time: PT26M52.843443672S
+Analyzed Objects: 16 of 24
+Percentage Completed: 0.67
+
+Analysis Time: PT53M45.690424627S
+Estimated Time: PT22M8.225468962S
+Analyzed Objects: 17 of 24
+Percentage Completed: 0.71
+
+Analysis Time: PT53M45.692292039S
+Estimated Time: PT17M55.23076401S
+Analyzed Objects: 18 of 24
+Percentage Completed: 0.75
+
+Analysis Time: PT53M45.693693482S
+Estimated Time: PT14M8.86676144S
+Analyzed Objects: 19 of 24
+Percentage Completed: 0.79
+
+Analysis Time: PT53M45.695110555S
+Estimated Time: PT10M45.139022108S
+Analyzed Objects: 20 of 24
+Percentage Completed: 0.83
+
+Analysis Time: PT53M45.696546839S
+Estimated Time: PT7M40.813792404S
+Analyzed Objects: 21 of 24
+Percentage Completed: 0.88
+
+Analysis Time: PT53M45.697975622S
+Estimated Time: PT4M53.24527051S
+Analyzed Objects: 22 of 24
+Percentage Completed: 0.92
+
+Analysis Time: PT53M45.699251096S
+Estimated Time: PT2M20.247793525S
+Analyzed Objects: 23 of 24
+Percentage Completed: 0.96
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: r4
+		Type: byte[]
+		Statement: r4 = virtualinvoke r2.<java.security.MessageDigest: byte[] digest(byte[])>(r3)
+		Method: <scouter.util.CipherUtil: java.lang.String sha2562(java.lang.String)>
+		SHA-256: d79e4c9dc77e22bab516332db7bf35901282078cb8c41162ececf55f91cf1910
+	Object:
+		Variable: $r4
+		Type: byte[]
+		Statement: $r4 = virtualinvoke $r3.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r8)
+		Method: <scouter.util.CipherData: byte[] encode(byte[])>
+		SHA-256: 11e7b631ac451a845b2c73be54f9610a3f7364cf2904a65fd44e71c2f205ecd4
+	Object:
+		Variable: r1
+		Type: javax.crypto.Cipher
+		Statement: r1 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("DES/ECB/NoPadding")
+		Method: <scouter.util.CipherUtil: java.lang.String encode(java.lang.String)>
+		SHA-256: efd193b83e98d748a15d468eaeb3a0f45710779d7c26bb68bfa3003d4e774b25
+	Object:
+		Variable: $r8
+		Type: javax.crypto.SecretKeyFactory
+		Statement: $r8 = staticinvoke <javax.crypto.SecretKeyFactory: javax.crypto.SecretKeyFactory getInstance(java.lang.String)>("DES")
+		Method: <scouter.util.CipherData: java.security.Key genKey(java.lang.String)>
+		SHA-256: 21a15dc08886c31c2fb4bf59abf98f0527411612ef57f8dbd1057699d18afd0
+	Object:
+		Variable: $r4
+		Type: javax.crypto.Cipher
+		Statement: $r4 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("DES/ECB/NoPadding")
+		Method: <scouter.util.CipherData: void <init>(java.lang.String)>
+		SHA-256: 3c0c3b1ee72d6322847b3e73f14222ef253331b6b5d5a393acc4a286885b9cdc
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r3 = virtualinvoke r12.<java.security.MessageDigest: byte[] digest(byte[])>(r2)
+		Method: <scouter.util.CipherUtil: java.lang.String sha256(java.lang.String)>
+		SHA-256: f4016fadc51b845f3e0cf7e751fba35f658c1cda54b74b078d1436ebbd06d045
+	Object:
+		Variable: $r10
+		Type: javax.crypto.SecretKey
+		Statement: $r10 = virtualinvoke $r8.<javax.crypto.SecretKeyFactory: javax.crypto.SecretKey generateSecret(java.security.spec.KeySpec)>($r9)
+		Method: <scouter.util.CipherUtil: java.security.Key genKey()>
+		SHA-256: b3f8f12a4586d05ba73d77c51591f2475b0d7fc273d0d5833db42547bfd8a6f2
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r2 = virtualinvoke r1.<java.security.MessageDigest: byte[] digest()>()
+		Method: <scouter.util.CipherUtil: java.lang.String md5(java.lang.String)>
+		SHA-256: 542c08cc3c0f73c70793354dd112222af2d96e62370849dfda015a83a2e7ffcc
+	Object:
+		Variable: $r8
+		Type: javax.crypto.SecretKeyFactory
+		Statement: $r8 = staticinvoke <javax.crypto.SecretKeyFactory: javax.crypto.SecretKeyFactory getInstance(java.lang.String)>("DES")
+		Method: <scouter.util.CipherUtil: java.security.Key genKey()>
+		SHA-256: 1f183b342a457b2d718e39beea9742d3e87bfdfcc874b1bfd37be0171de9f472
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r3 = virtualinvoke r1.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r2)
+		Method: <scouter.util.CipherUtil: java.lang.String encode(java.lang.String)>
+		SHA-256: 88ed6882589d5e14093365849595898d0309039ea7323229febba36b9fc56afd
+	Object:
+		Variable: r2
+		Type: java.security.MessageDigest
+		Statement: r2 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("SHA-256")
+		Method: <scouter.util.CipherUtil: java.lang.String sha2562(java.lang.String)>
+		SHA-256: b06ef489f92c04492dd01ab7b78d81cf9eb34997a3766c8aebaf68381189815
+	Object:
+		Variable: r3
+		Type: byte[]
+		Statement: r3 = virtualinvoke r1.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r2)
+		Method: <scouter.util.CipherUtil: java.lang.String encode(java.lang.String)>
+		SHA-256: 34741b6a1a650fab5e65e4aa92509cec4b49f705a88dccaf4ef0026122305845
+	Object:
+		Variable: r6
+		Type: byte[]
+		Statement: r6 = virtualinvoke $r2.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r5)
+		Method: <scouter.util.CipherData: byte[] decode(byte[])>
+		SHA-256: a2eaec97a381fa09177db2fad86753d835ece7fe7ca952f929414c287066f62f
+	Object:
+		Variable: r12
+		Type: java.security.MessageDigest
+		Statement: r12 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("SHA-256")
+		Method: <scouter.util.CipherUtil: java.lang.String sha256(java.lang.String)>
+		SHA-256: fbee06c1e7a384de26bc096b4812912f353b28fb562d4c4a3998a5522456d3e7
+	Object:
+		Variable: $r10
+		Type: javax.crypto.SecretKey
+		Statement: $r10 = virtualinvoke $r8.<javax.crypto.SecretKeyFactory: javax.crypto.SecretKey generateSecret(java.security.spec.KeySpec)>($r9)
+		Method: <scouter.util.CipherData: java.security.Key genKey(java.lang.String)>
+		SHA-256: 95e1d4c4da411acf08ae4562fedcbad22899ba25bb44573293fcd823257b9377
+	Object:
+		Variable: r8
+		Type: byte[]
+		Statement: $r4 = virtualinvoke $r3.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r8)
+		Method: <scouter.util.CipherData: byte[] encode(byte[])>
+		SHA-256: c358633b07dbe099590491b80ca5c35ef57328bd2b5fafdbc396d42de27ffe62
+	Object:
+		Variable: r1
+		Type: javax.crypto.Cipher
+		Statement: r1 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("DES/ECB/NoPadding")
+		Method: <scouter.util.CipherUtil: java.lang.String decode(java.lang.String)>
+		SHA-256: fad8ef3b2c7b48a40cee430509536b7674049edb5f57ac595487ca906de59eb8
+	Object:
+		Variable: r3
+		Type: byte[]
+		Statement: r3 = virtualinvoke r1.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r2)
+		Method: <scouter.util.CipherUtil: java.lang.String decode(java.lang.String)>
+		SHA-256: 26aa251ef60cf972f6aa7e12426272a24d486564035f5a29b70ca8a6e4bb9c5c
+	Object:
+		Variable: $r2
+		Type: javax.crypto.Cipher
+		Statement: $r2 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("DES/ECB/NoPadding")
+		Method: <scouter.util.CipherData: void <init>(java.lang.String)>
+		SHA-256: 54051bb7aff6f7fdf7e5a8f955f9c37485b8aefd114ff2f25b31e9fa5d7b5c2a
+	Object:
+		Variable: r3
+		Type: byte[]
+		Statement: r4 = virtualinvoke r2.<java.security.MessageDigest: byte[] digest(byte[])>(r3)
+		Method: <scouter.util.CipherUtil: java.lang.String sha2562(java.lang.String)>
+		SHA-256: 3a7c55e443a951fc9d17841bd85804a7503b6a21425f38528bade820bdedf625
+	Object:
+		Variable: r1
+		Type: java.security.MessageDigest
+		Statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+		Method: <scouter.util.CipherUtil: java.lang.String md5(java.lang.String)>
+		SHA-256: 8d0e3c75faf8fd6c51e9be3468e6c755ae95b4cbcaabb739dfdd772349d4eee2
+	Object:
+		Variable: r3
+		Type: byte[]
+		Statement: r3 = virtualinvoke r12.<java.security.MessageDigest: byte[] digest(byte[])>(r2)
+		Method: <scouter.util.CipherUtil: java.lang.String sha256(java.lang.String)>
+		SHA-256: cb545b5f9151699bbd1d49409b79512cc6d97134d57b7891b40d2a293035818
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r3 = virtualinvoke r1.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r2)
+		Method: <scouter.util.CipherUtil: java.lang.String decode(java.lang.String)>
+		SHA-256: bd68c019520d1643c3a29f5b695b87af754f4e062be9b5d7d8503c93f785ca6e
+	Object:
+		Variable: r5
+		Type: byte[]
+		Statement: r6 = virtualinvoke $r2.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r5)
+		Method: <scouter.util.CipherData: byte[] decode(byte[])>
+		SHA-256: 36a78362590e566d9d9798a7390c5c16430f4bc3662aee13daff8f829c770142
+
+Findings in Java Class: scouter.util.CipherUtil
+
+	 in Method: java.lang.String decode(java.lang.String)
+		RequiredPredicateError violating CrySL rule for javax.crypto.Cipher
+			Second parameter was not properly generatedKey
+			at statement: virtualinvoke r1.<javax.crypto.Cipher: void init(int,java.security.Key)>(2, r7)
+
+		ConstraintError violating CrySL rule for javax.crypto.Cipher (on Object #fad8ef3b2c7b48a40cee430509536b7674049edb5f57ac595487ca906de59eb8)
+			First parameter (with value "DES/ECB/NoPadding") should be any of {AES, PBEWithHmacSHA224AndAES_128, PBEWithHmacSHA256AndAES_128, PBEWithHmacSHA384AndAES_128, PBEWithHmacSHA512AndAES_128, PBEWithHmacSHA224AndAES_256, PBEWithHmacSHA256AndAES_256, PBEWithHmacSHA384AndAES_256, PBEWithHmacSHA512AndAES_256, RSA}
+			at statement: r1 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("DES/ECB/NoPadding")
+
+
+	 in Method: java.lang.String encode(java.lang.String)
+		ConstraintError violating CrySL rule for javax.crypto.Cipher (on Object #efd193b83e98d748a15d468eaeb3a0f45710779d7c26bb68bfa3003d4e774b25)
+			First parameter (with value "DES/ECB/NoPadding") should be any of {AES, PBEWithHmacSHA224AndAES_128, PBEWithHmacSHA256AndAES_128, PBEWithHmacSHA384AndAES_128, PBEWithHmacSHA512AndAES_128, PBEWithHmacSHA224AndAES_256, PBEWithHmacSHA256AndAES_256, PBEWithHmacSHA384AndAES_256, PBEWithHmacSHA512AndAES_256, RSA}
+			at statement: r1 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("DES/ECB/NoPadding")
+
+		RequiredPredicateError violating CrySL rule for javax.crypto.Cipher
+			Second parameter was not properly generatedKey
+			at statement: virtualinvoke r1.<javax.crypto.Cipher: void init(int,java.security.Key)>(1, r9)
+
+
+	 in Method: java.lang.String md5(java.lang.String)
+		ConstraintError violating CrySL rule for MessageDigest (on Object #8d0e3c75faf8fd6c51e9be3468e6c755ae95b4cbcaabb739dfdd772349d4eee2)
+			First parameter (with value "MD5") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+
+
+	 in Method: java.security.Key genKey()
+		ConstraintError violating CrySL rule for javax.crypto.SecretKeyFactory (on Object #1f183b342a457b2d718e39beea9742d3e87bfdfcc874b1bfd37be0171de9f472)
+			First parameter (with value "DES") should be any of {PBEWithHmacSHA512AndAES_128, PBEWithHmacSHA384AndAES_128, PBEWithHmacSHA384AndAES_128, PBKDF2WithHmacSHA224, PBKDF2WithHmacSHA256, PBKDF2WithHmacSHA384, PBKDF2WithHmacSHA512, PBEWithHmacSHA224AndAES_128, PBEWithHmacSHA256AndAES_128, PBEWithHmacSHA224AndAES_256, PBEWithHmacSHA256AndAES_256, PBEWithHmacSHA384AndAES_256, PBEWithHmacSHA512AndAES_256}
+			at statement: $r8 = staticinvoke <javax.crypto.SecretKeyFactory: javax.crypto.SecretKeyFactory getInstance(java.lang.String)>("DES")
+
+		RequiredPredicateError violating CrySL rule for javax.crypto.SecretKeyFactory
+			First parameter was not properly speccedKey
+			at statement: $r10 = virtualinvoke $r8.<javax.crypto.SecretKeyFactory: javax.crypto.SecretKey generateSecret(java.security.spec.KeySpec)>($r9)
+
+
+Findings in Java Class: scouter.util.CipherData
+
+	 in Method: void <init>(java.lang.String)
+		ConstraintError violating CrySL rule for javax.crypto.Cipher (on Object #3c0c3b1ee72d6322847b3e73f14222ef253331b6b5d5a393acc4a286885b9cdc)
+			First parameter (with value "DES/ECB/NoPadding") should be any of {AES, PBEWithHmacSHA224AndAES_128, PBEWithHmacSHA256AndAES_128, PBEWithHmacSHA384AndAES_128, PBEWithHmacSHA512AndAES_128, PBEWithHmacSHA224AndAES_256, PBEWithHmacSHA256AndAES_256, PBEWithHmacSHA384AndAES_256, PBEWithHmacSHA512AndAES_256, RSA}
+			at statement: $r4 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("DES/ECB/NoPadding")
+
+		RequiredPredicateError violating CrySL rule for javax.crypto.Cipher
+			Second parameter was not properly generatedKey
+			at statement: virtualinvoke $r5.<javax.crypto.Cipher: void init(int,java.security.Key)>(2, r7)
+
+		ConstraintError violating CrySL rule for javax.crypto.Cipher (on Object #54051bb7aff6f7fdf7e5a8f955f9c37485b8aefd114ff2f25b31e9fa5d7b5c2a)
+			First parameter (with value "DES/ECB/NoPadding") should be any of {AES, PBEWithHmacSHA224AndAES_128, PBEWithHmacSHA256AndAES_128, PBEWithHmacSHA384AndAES_128, PBEWithHmacSHA512AndAES_128, PBEWithHmacSHA224AndAES_256, PBEWithHmacSHA256AndAES_256, PBEWithHmacSHA384AndAES_256, PBEWithHmacSHA512AndAES_256, RSA}
+			at statement: $r2 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>("DES/ECB/NoPadding")
+
+		RequiredPredicateError violating CrySL rule for javax.crypto.Cipher
+			Second parameter was not properly generatedKey
+			at statement: virtualinvoke $r3.<javax.crypto.Cipher: void init(int,java.security.Key)>(1, r7)
+
+
+	 in Method: byte[] encode(byte[])
+		TypestateError violating CrySL rule for javax.crypto.Cipher (on Object #54051bb7aff6f7fdf7e5a8f955f9c37485b8aefd114ff2f25b31e9fa5d7b5c2a)
+			Unexpected call to method doFinal on object of type javax.crypto.Cipher.
+			at statement: $r4 = virtualinvoke $r3.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r8)
+
+
+	 in Method: void main(java.lang.String[])
+		IncompleteOperationError violating CrySL rule for javax.crypto.Cipher (on Object #3c0c3b1ee72d6322847b3e73f14222ef253331b6b5d5a393acc4a286885b9cdc)
+			Operation on object of type javax.crypto.Cipher object not completed. Expected call to init, update, wrap, doFinal
+			at statement: specialinvoke $r6.<scouter.util.CipherData: void <init>(java.lang.String)>("admin")
+
+		IncompleteOperationError violating CrySL rule for javax.crypto.Cipher (on Object #54051bb7aff6f7fdf7e5a8f955f9c37485b8aefd114ff2f25b31e9fa5d7b5c2a)
+			Operation on object of type javax.crypto.Cipher object not completed. Expected call to init, update, wrap, doFinal
+			at statement: $r8 = virtualinvoke r1.<scouter.util.CipherData: byte[] decode(byte[])>(r4)
+
+		IncompleteOperationError violating CrySL rule for javax.crypto.Cipher (on Object #54051bb7aff6f7fdf7e5a8f955f9c37485b8aefd114ff2f25b31e9fa5d7b5c2a)
+			Operation on object of type javax.crypto.Cipher object not completed. Expected call to init, update, wrap, doFinal
+			at statement: specialinvoke $r6.<scouter.util.CipherData: void <init>(java.lang.String)>("admin")
+
+		IncompleteOperationError violating CrySL rule for javax.crypto.Cipher (on Object #3c0c3b1ee72d6322847b3e73f14222ef253331b6b5d5a393acc4a286885b9cdc)
+			Operation on object of type javax.crypto.Cipher object not completed. Expected call to init, update, wrap, doFinal
+			at statement: $r8 = virtualinvoke r1.<scouter.util.CipherData: byte[] decode(byte[])>(r4)
+
+
+	 in Method: byte[] decode(byte[])
+		TypestateError violating CrySL rule for javax.crypto.Cipher (on Object #3c0c3b1ee72d6322847b3e73f14222ef253331b6b5d5a393acc4a286885b9cdc)
+			Unexpected call to method doFinal on object of type javax.crypto.Cipher.
+			at statement: r6 = virtualinvoke $r2.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r5)
+
+
+	 in Method: java.security.Key genKey(java.lang.String)
+		RequiredPredicateError violating CrySL rule for javax.crypto.SecretKeyFactory
+			First parameter was not properly speccedKey
+			at statement: $r10 = virtualinvoke $r8.<javax.crypto.SecretKeyFactory: javax.crypto.SecretKey generateSecret(java.security.spec.KeySpec)>($r9)
+
+		ConstraintError violating CrySL rule for javax.crypto.SecretKeyFactory (on Object #21a15dc08886c31c2fb4bf59abf98f0527411612ef57f8dbd1057699d18afd0)
+			First parameter (with value "DES") should be any of {PBEWithHmacSHA512AndAES_128, PBEWithHmacSHA384AndAES_128, PBEWithHmacSHA384AndAES_128, PBKDF2WithHmacSHA224, PBKDF2WithHmacSHA256, PBKDF2WithHmacSHA384, PBKDF2WithHmacSHA512, PBEWithHmacSHA224AndAES_128, PBEWithHmacSHA256AndAES_128, PBEWithHmacSHA224AndAES_256, PBEWithHmacSHA256AndAES_256, PBEWithHmacSHA384AndAES_256, PBEWithHmacSHA512AndAES_256}
+			at statement: $r8 = staticinvoke <javax.crypto.SecretKeyFactory: javax.crypto.SecretKeyFactory getInstance(java.lang.String)>("DES")
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 24
+
+	CogniCrypt found the following violations. For details see description above.
+	RequiredPredicateError: 6
+	ConstraintError: 7
+	IncompleteOperationError: 4
+	TypestateError: 2
+=====================================================================
+Static Analysis took 3225 seconds!
+Analysis finished after 3229 seconds

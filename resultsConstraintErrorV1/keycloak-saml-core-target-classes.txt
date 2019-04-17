@@ -1,0 +1,225 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Warning: Couldn't find any method for CryptSLMethod: keyMaterial = javax.crypto.SecretKey.getEncoded();
+Warning: Couldn't find any method for CryptSLMethod: javax.crypto.SecretKey.destroy();
+Discovered 7 analysis seeds within 1 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT1.760651522S
+Estimated Time: PT10.563909132S
+Analyzed Objects: 1 of 7
+Percentage Completed: 0.14
+
+Analysis Time: PT1.788288427S
+Estimated Time: PT4.470721065S
+Analyzed Objects: 2 of 7
+Percentage Completed: 0.29
+
+Analysis Time: PT1.884089897S
+Estimated Time: PT4.396209755S
+Analyzed Objects: 3 of 10
+Percentage Completed: 0.3
+
+Analysis Time: PT1.940241192S
+Estimated Time: PT2.910361788S
+Analyzed Objects: 4 of 10
+Percentage Completed: 0.4
+
+Analysis Time: PT1.984947933S
+Estimated Time: PT2.381937516S
+Analyzed Objects: 5 of 11
+Percentage Completed: 0.45
+
+Analysis Time: PT2.020659844S
+Estimated Time: PT2.02065984S
+Analyzed Objects: 6 of 12
+Percentage Completed: 0.5
+
+Analysis Time: PT2.024745117S
+Estimated Time: PT1.735495812S
+Analyzed Objects: 7 of 13
+Percentage Completed: 0.54
+
+Analysis Time: PT2.027301289S
+Estimated Time: PT1.267063305S
+Analyzed Objects: 8 of 13
+Percentage Completed: 0.62
+
+Analysis Time: PT2.027774566S
+Estimated Time: PT0.90123314S
+Analyzed Objects: 9 of 13
+Percentage Completed: 0.69
+
+Analysis Time: PT2.028178854S
+Estimated Time: PT0.608453655S
+Analyzed Objects: 10 of 13
+Percentage Completed: 0.77
+
+Analysis Time: PT2.029421735S
+Estimated Time: PT0.36898577S
+Analyzed Objects: 11 of 13
+Percentage Completed: 0.85
+
+Analysis Time: PT2.030368899S
+Estimated Time: PT0.169197408S
+Analyzed Objects: 12 of 13
+Percentage Completed: 0.92
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: r5
+		Type: java.security.Signature
+		Statement: r5 = staticinvoke <java.security.Signature: java.security.Signature getInstance(java.lang.String)>("SHA1withRSA")
+		Method: <org.keycloak.saml.processing.core.saml.v2.util.SignatureUtil: java.security.Signature getSignature(java.lang.String)>
+		SHA-256: 1521aa4dcb87ce25cbb7f4b74471383227a38df8eed589772b7dd2fc508ab0ca
+	Object:
+		Variable: $r6
+		Type: byte[]
+		Statement: $r6 = virtualinvoke r3.<java.security.Signature: byte[] sign()>()
+		Method: <org.keycloak.saml.processing.core.saml.v2.util.SignatureUtil: byte[] sign(java.lang.String,java.security.PrivateKey)>
+		SHA-256: bcf824b09ebcd2a819b49799a75ca5b328823814f6a480fae2eebeadb1b9ef8a
+	Object:
+		Variable: r1
+		Type: byte[]
+		Statement: $z0 = virtualinvoke r4.<java.security.Signature: boolean verify(byte[])>(r1)
+		Method: <org.keycloak.saml.processing.core.saml.v2.util.SignatureUtil: boolean validate(byte[],byte[],java.security.PublicKey)>
+		SHA-256: 9c35491d1e7a869159f702f7f7f665c25b87298ab6b5f4cfa16422615cd781d2
+	Object:
+		Variable: r32
+		Type: byte[]
+		Statement: r32 = virtualinvoke r7.<java.security.Signature: byte[] sign()>()
+		Method: <org.keycloak.saml.BaseSAML2BindingBuilder: java.net.URI generateRedirectUri(java.lang.String,java.lang.String,org.w3c.dom.Document)>
+		SHA-256: 2fb94f6fc7ccabbc39a4601b91cd38563b44abce484b1e29e5c5cfbc87372f1f
+	Object:
+		Variable: $r4
+		Type: java.security.KeyPair
+		Statement: $r4 = new java.security.KeyPair
+		Method: <org.keycloak.saml.BaseSAML2BindingBuilder: org.keycloak.saml.BaseSAML2BindingBuilder signWith(java.lang.String,java.security.PrivateKey,java.security.PublicKey)>
+		SHA-256: 212c96588a08b2a4ba6ff7d12fb5e786fe809b3a38d8874287e8735566c21931
+	Object:
+		Variable: r1
+		Type: byte[]
+		Statement: $z0 = virtualinvoke r4.<java.security.Signature: boolean verify(byte[])>(r1)
+		Method: <org.keycloak.saml.processing.core.saml.v2.util.SignatureUtil: boolean validate(byte[],byte[],java.lang.String,java.security.cert.X509Certificate)>
+		SHA-256: 9c35491d1e7a869159f702f7f7f665c25b87298ab6b5f4cfa16422615cd781d2
+	Object:
+		Variable: r1
+		Type: byte[]
+		Statement: virtualinvoke r0.<java.security.SecureRandom: void nextBytes(byte[])>(r1)
+		Method: <org.keycloak.saml.RandomSecret: byte[] createRandomSecret(int)>
+		SHA-256: 9f8e252308ff410a60f319eb5e9316bcf45c61e83943fee8e7d6039d5fbd0db4
+	Object:
+		Variable: r5
+		Type: java.security.Signature
+		Statement: r5 = staticinvoke <java.security.Signature: java.security.Signature getInstance(java.lang.String)>("SHA1withDSA")
+		Method: <org.keycloak.saml.processing.core.saml.v2.util.SignatureUtil: java.security.Signature getSignature(java.lang.String)>
+		SHA-256: dd166b35fd73fb5ed8d2d5b25485d05d81615a765456797f13f26ee238e6bc7c
+	Object:
+		Variable: $r3
+		Type: java.security.Signature
+		Statement: $r3 = staticinvoke <java.security.Signature: java.security.Signature getInstance(java.lang.String)>($r2)
+		Method: <org.keycloak.saml.SignatureAlgorithm: java.security.Signature createSignature()>
+		SHA-256: 27c0cca65a77dc9c439e7253aef8b3006aced07e94a9450384499669f2b4086a
+	Object:
+		Variable: $r11
+		Type: java.lang.String
+		Statement: specialinvoke r23.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r3, $r11)
+		Method: <org.keycloak.saml.BaseSAML2BindingBuilder: void encryptDocument(org.w3c.dom.Document)>
+		SHA-256: 70eee12ff9a60991fe82b5bc4108e0c90d40c04bd3093df736488028f4372025
+	Object:
+		Variable: r23
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: r23 = new javax.crypto.spec.SecretKeySpec
+		Method: <org.keycloak.saml.BaseSAML2BindingBuilder: void encryptDocument(org.w3c.dom.Document)>
+		SHA-256: e464491c364447106523da6b54d176bf55400063a15f3700601816fe209f6313
+	Object:
+		Variable: $r2
+		Type: java.security.SecureRandom
+		Statement: $r2 = new java.security.SecureRandom
+		Method: <org.keycloak.saml.RandomSecret: byte[] createRandomSecret(int)>
+		SHA-256: 35924a36184ab9631847e51b8e93c9d4253004f7cf25f069aca4c154ecc6d047
+	Object:
+		Variable: $r5
+		Type: java.security.KeyPair
+		Statement: $r5 = new java.security.KeyPair
+		Method: <org.keycloak.saml.BaseSAML2BindingBuilder: org.keycloak.saml.BaseSAML2BindingBuilder signWith(java.lang.String,java.security.PrivateKey,java.security.PublicKey,java.security.cert.X509Certificate)>
+		SHA-256: c538581acb6d102a09d407e05ee1bf40802afedb04239540df756a5190454c30
+
+Findings in Java Class: org.keycloak.saml.processing.core.saml.v2.util.SignatureUtil
+
+	 in Method: java.security.Signature getSignature(java.lang.String)
+		ConstraintError violating CrySL rule for java.security.Signature (on Object #1521aa4dcb87ce25cbb7f4b74471383227a38df8eed589772b7dd2fc508ab0ca)
+			First parameter (with value "SHA1withRSA") should be any of {NONEwithDSA, SHA1withDSA, SHA224withDSA, SHA256withDSA, SHA256withRSA, SHA256withECDSA}
+			at statement: r5 = staticinvoke <java.security.Signature: java.security.Signature getInstance(java.lang.String)>("SHA1withRSA")
+
+
+Findings in Java Class: org.keycloak.saml.BaseSAML2BindingBuilder
+
+	 in Method: java.net.URI generateRedirectUri(java.lang.String,java.lang.String,org.w3c.dom.Document)
+		RequiredPredicateError violating CrySL rule for java.security.Signature
+			First parameter was not properly generatedPrivkey
+			at statement: virtualinvoke r7.<java.security.Signature: void initSign(java.security.PrivateKey)>($r21)
+
+
+	 in Method: void encryptDocument(org.w3c.dom.Document)
+		RequiredPredicateError violating CrySL rule for javax.crypto.spec.SecretKeySpec
+			First parameter was not properly preparedKeyMaterial
+			at statement: specialinvoke r23.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r3, $r11)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 13
+
+	CogniCrypt found the following violations. For details see description above.
+	ConstraintError: 1
+	RequiredPredicateError: 2
+=====================================================================
+Static Analysis took 2 seconds!
+Analysis finished after 5 seconds

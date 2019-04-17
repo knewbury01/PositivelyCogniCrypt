@@ -1,0 +1,139 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Discovered 2 analysis seeds within 1 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT1.610367181S
+Estimated Time: PT4.831101543S
+Analyzed Objects: 1 of 4
+Percentage Completed: 0.25
+
+Analysis Time: PT1.653185858S
+Estimated Time: PT3.306371716S
+Analyzed Objects: 2 of 6
+Percentage Completed: 0.33
+
+Analysis Time: PT1.656384056S
+Estimated Time: PT1.656384054S
+Analyzed Objects: 3 of 6
+Percentage Completed: 0.5
+
+Analysis Time: PT1.657859166S
+Estimated Time: PT0.828929582S
+Analyzed Objects: 4 of 6
+Percentage Completed: 0.67
+
+Analysis Time: PT1.659185557S
+Estimated Time: PT0.331837111S
+Analyzed Objects: 5 of 6
+Percentage Completed: 0.83
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: $r12
+		Type: byte[]
+		Statement: $r12 = virtualinvoke r41.<java.security.MessageDigest: byte[] digest(byte[])>($r11)
+		Method: <com.alibaba.nacos.naming.core.Service: void recalculateChecksum()>
+		SHA-256: 2d2a2cfec0ff267eaf6636b667de6f10084efac963ff5e5ae261924fbc1e5898
+	Object:
+		Variable: $r10
+		Type: byte[]
+		Statement: $r10 = virtualinvoke r38.<java.security.MessageDigest: byte[] digest(byte[])>($r9)
+		Method: <com.alibaba.nacos.naming.core.Instances: void recalculateChecksum()>
+		SHA-256: d4b5d3ce7022c69e89a531f126c036f44789a682a2c1581b033ec7a6062e7898
+	Object:
+		Variable: r38
+		Type: java.security.MessageDigest
+		Statement: r38 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+		Method: <com.alibaba.nacos.naming.core.Instances: void recalculateChecksum()>
+		SHA-256: 3c48cf9394a9174a4ccf38076e9d3f15bc4906408778c01fca2f2cd9b36d64f9
+	Object:
+		Variable: $r11
+		Type: byte[]
+		Statement: $r12 = virtualinvoke r41.<java.security.MessageDigest: byte[] digest(byte[])>($r11)
+		Method: <com.alibaba.nacos.naming.core.Service: void recalculateChecksum()>
+		SHA-256: 3da451f5d5d6effbcb79d9f02f2d60f08ebb5a8ff7bbfcd84f358179301be7a4
+	Object:
+		Variable: r41
+		Type: java.security.MessageDigest
+		Statement: r41 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+		Method: <com.alibaba.nacos.naming.core.Service: void recalculateChecksum()>
+		SHA-256: 4793e677e68b09b245a924accc6e4a0d3b02b561b314a412d7ea3caaef78d011
+	Object:
+		Variable: $r9
+		Type: byte[]
+		Statement: $r10 = virtualinvoke r38.<java.security.MessageDigest: byte[] digest(byte[])>($r9)
+		Method: <com.alibaba.nacos.naming.core.Instances: void recalculateChecksum()>
+		SHA-256: 75e13617c2b7b47bb0082fc67e6c3725cbac91848b883e96f85bdbd91cd69b2
+
+Findings in Java Class: com.alibaba.nacos.naming.core.Service
+
+	 in Method: void recalculateChecksum()
+		ConstraintError violating CrySL rule for MessageDigest (on Object #4793e677e68b09b245a924accc6e4a0d3b02b561b314a412d7ea3caaef78d011)
+			First parameter (with value "MD5") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r41 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+
+
+Findings in Java Class: com.alibaba.nacos.naming.core.Instances
+
+	 in Method: void recalculateChecksum()
+		ConstraintError violating CrySL rule for MessageDigest (on Object #3c48cf9394a9174a4ccf38076e9d3f15bc4906408778c01fca2f2cd9b36d64f9)
+			First parameter (with value "MD5") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r38 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 6
+
+	CogniCrypt found the following violations. For details see description above.
+	ConstraintError: 2
+=====================================================================
+Static Analysis took 1 seconds!
+Analysis finished after 4 seconds

@@ -1,0 +1,778 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Warning: Couldn't find any method for CryptSLMethod: keyMaterial = javax.crypto.SecretKey.getEncoded();
+Warning: Couldn't find any method for CryptSLMethod: javax.crypto.SecretKey.destroy();
+Warning: Couldn't find any method for CryptSLMethod: javax.net.ssl.SSLSocketFactory.createSocket( _ port);
+Warning: Couldn't find any method for CryptSLMethod: javax.net.ssl.SSLServerSocketFactory.createServerSocket( port);
+Discovered 22 analysis seeds within 1 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT1.893073316S
+Estimated Time: PT39.754539636S
+Analyzed Objects: 1 of 22
+Percentage Completed: 0.05
+
+Analysis Time: PT1.916770635S
+Estimated Time: PT19.16770634S
+Analyzed Objects: 2 of 22
+Percentage Completed: 0.09
+
+Analysis Time: PT1.963329598S
+Estimated Time: PT12.434420781S
+Analyzed Objects: 3 of 22
+Percentage Completed: 0.14
+
+Analysis Time: PT1.974285979S
+Estimated Time: PT8.884286892S
+Analyzed Objects: 4 of 22
+Percentage Completed: 0.18
+
+Analysis Time: PT2.004631685S
+Estimated Time: PT6.815747729S
+Analyzed Objects: 5 of 22
+Percentage Completed: 0.23
+
+Analysis Time: PT5M29.271918232S
+Estimated Time: PT16M27.815754684S
+Analyzed Objects: 6 of 24
+Percentage Completed: 0.25
+
+Analysis Time: PT5M29.281892889S
+Estimated Time: PT13M19.684597004S
+Analyzed Objects: 7 of 24
+Percentage Completed: 0.29
+
+Analysis Time: PT5M29.283807166S
+Estimated Time: PT10M58.56761432S
+Analyzed Objects: 8 of 24
+Percentage Completed: 0.33
+
+Analysis Time: PT5M29.389873575S
+Estimated Time: PT9M8.983122615S
+Analyzed Objects: 9 of 24
+Percentage Completed: 0.38
+
+Analysis Time: PT5M29.515254341S
+Estimated Time: PT9M53.127457812S
+Analyzed Objects: 10 of 28
+Percentage Completed: 0.36
+
+Analysis Time: PT5M29.537960037S
+Estimated Time: PT8M59.243934606S
+Analyzed Objects: 11 of 29
+Percentage Completed: 0.38
+
+Analysis Time: PT5M29.560559164S
+Estimated Time: PT8M14.34083874S
+Analyzed Objects: 12 of 30
+Percentage Completed: 0.4
+
+Analysis Time: PT5M29.616059653S
+Estimated Time: PT8M1.746548709S
+Analyzed Objects: 13 of 32
+Percentage Completed: 0.41
+
+Analysis Time: PT11M37.606287976S
+Estimated Time: PT15M46.751390811S
+Analyzed Objects: 14 of 33
+Percentage Completed: 0.42
+
+Analysis Time: PT11M37.615842028S
+Estimated Time: PT14M43.646733219S
+Analyzed Objects: 15 of 34
+Percentage Completed: 0.44
+
+Analysis Time: PT11M37.622168253S
+Estimated Time: PT13M48.426324785S
+Analyzed Objects: 16 of 35
+Percentage Completed: 0.46
+
+Analysis Time: PT11M37.654033418S
+Estimated Time: PT12M59.730978526S
+Analyzed Objects: 17 of 36
+Percentage Completed: 0.47
+
+Analysis Time: PT11M37.687232382S
+Estimated Time: PT11M37.687232382S
+Analyzed Objects: 18 of 36
+Percentage Completed: 0.5
+
+Analysis Time: PT11M37.723308314S
+Estimated Time: PT10M24.278749528S
+Analyzed Objects: 19 of 36
+Percentage Completed: 0.53
+
+Analysis Time: PT11M37.729754819S
+Estimated Time: PT9M53.07029158S
+Analyzed Objects: 20 of 37
+Percentage Completed: 0.54
+
+Analysis Time: PT11M37.762638073S
+Estimated Time: PT8M51.628676624S
+Analyzed Objects: 21 of 37
+Percentage Completed: 0.57
+
+Analysis Time: PT11M37.788456343S
+Estimated Time: PT7M55.76485659S
+Analyzed Objects: 22 of 37
+Percentage Completed: 0.59
+
+Analysis Time: PT11M37.79204187S
+Estimated Time: PT7M4.742982006S
+Analyzed Objects: 23 of 37
+Percentage Completed: 0.62
+
+Analysis Time: PT11M37.793948318S
+Estimated Time: PT6M17.971721998S
+Analyzed Objects: 24 of 37
+Percentage Completed: 0.65
+
+Analysis Time: PT19M21.543478702S
+Estimated Time: PT10M4.002608924S
+Analyzed Objects: 25 of 38
+Percentage Completed: 0.66
+
+Analysis Time: PT27M5.742569804S
+Estimated Time: PT12M30.342724524S
+Analyzed Objects: 26 of 38
+Percentage Completed: 0.68
+
+Analysis Time: PT34M40.755030943S
+Estimated Time: PT14M7.715012606S
+Analyzed Objects: 27 of 38
+Percentage Completed: 0.71
+
+Analysis Time: PT42M25.901954334S
+Estimated Time: PT15M9.25069797S
+Analyzed Objects: 28 of 38
+Percentage Completed: 0.74
+
+Analysis Time: PT42M25.906092802S
+Estimated Time: PT13M10.108787421S
+Analyzed Objects: 29 of 38
+Percentage Completed: 0.76
+
+Analysis Time: PT42M25.910004851S
+Estimated Time: PT11M18.909334624S
+Analyzed Objects: 30 of 38
+Percentage Completed: 0.79
+
+Analysis Time: PT42M25.910948776S
+Estimated Time: PT9M34.883117459S
+Analyzed Objects: 31 of 38
+Percentage Completed: 0.82
+
+Analysis Time: PT42M25.911840661S
+Estimated Time: PT7M57.35847012S
+Analyzed Objects: 32 of 38
+Percentage Completed: 0.84
+
+Analysis Time: PT42M25.925063941S
+Estimated Time: PT6M25.746221805S
+Analyzed Objects: 33 of 38
+Percentage Completed: 0.87
+
+Analysis Time: PT42M25.925736057S
+Estimated Time: PT4M59.520674828S
+Analyzed Objects: 34 of 38
+Percentage Completed: 0.89
+
+Analysis Time: PT42M25.95147441S
+Estimated Time: PT3M38.224412091S
+Analyzed Objects: 35 of 38
+Percentage Completed: 0.92
+
+Analysis Time: PT42M25.976865185S
+Estimated Time: PT2M21.443159176S
+Analyzed Objects: 36 of 38
+Percentage Completed: 0.95
+
+Analysis Time: PT42M25.982627244S
+Estimated Time: PT1M8.810341276S
+Analyzed Objects: 37 of 38
+Percentage Completed: 0.97
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: $r15
+		Type: javax.net.ssl.SSLContext
+		Statement: $r15 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("TLS")
+		Method: <io.netty.handler.ssl.JdkSslServerContext: javax.net.ssl.SSLContext newSSLContext(java.security.Provider,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory,long,long)>
+		SHA-256: 874e83322cecfe3b4963ac128d80bb73bc48b1d37348677f321c661f0e424d88
+	Object:
+		Variable: r1
+		Type: java.security.KeyStore
+		Statement: r1 = staticinvoke <java.security.KeyStore: java.security.KeyStore getInstance(java.lang.String)>($r5)
+		Method: <io.netty.handler.ssl.SslContext: javax.net.ssl.TrustManagerFactory buildTrustManagerFactory(java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory)>
+		SHA-256: 1ebc3d7678aaa78f680eb01cb6d9194f2e3859e5b14abe3488c2df233662747e
+	Object:
+		Variable: $r25
+		Type: javax.net.ssl.KeyManagerFactory
+		Statement: $r25 = staticinvoke <javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManagerFactory getInstance(java.lang.String)>($r24)
+		Method: <io.netty.handler.ssl.ReferenceCountedOpenSslServerContext: io.netty.handler.ssl.OpenSslServerSessionContext newSessionContext(io.netty.handler.ssl.ReferenceCountedOpenSslContext,long,io.netty.handler.ssl.OpenSslEngineMap,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory)>
+		SHA-256: 6f8ba6ce0874c7cc80cefce002524245df9f9a0b6ed765ee66d74a3918ea3f89
+	Object:
+		Variable: $r12
+		Type: javax.net.ssl.SSLContext
+		Statement: $r12 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String,java.security.Provider)>("TLS", r0)
+		Method: <io.netty.handler.ssl.JdkSslClientContext: javax.net.ssl.SSLContext newSSLContext(java.security.Provider,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory,long,long)>
+		SHA-256: dffe0b04b79a00517ef04e72ba02b8063ca05880aa8441179fddedab1b4ff92a
+	Object:
+		Variable: r36
+		Type: javax.net.ssl.TrustManagerFactory
+		Statement: r36 = staticinvoke <javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManagerFactory getInstance(java.lang.String)>($r20)
+		Method: <io.netty.handler.ssl.ReferenceCountedOpenSslServerContext: io.netty.handler.ssl.OpenSslServerSessionContext newSessionContext(io.netty.handler.ssl.ReferenceCountedOpenSslContext,long,io.netty.handler.ssl.OpenSslEngineMap,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory)>
+		SHA-256: 754ae3cd17d10c293ebc5bc85aa12c06b30754c0abe42b4fc0d5c1499d9af5b1
+	Object:
+		Variable: $r15
+		Type: javax.net.ssl.SSLContext
+		Statement: $r15 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String,java.security.Provider)>("TLS", r0)
+		Method: <io.netty.handler.ssl.JdkSslServerContext: javax.net.ssl.SSLContext newSSLContext(java.security.Provider,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory,long,long)>
+		SHA-256: 60bd5adf5f4ea281809876dbc2d624f02212e38ca26563e39639af3048f3b6e
+	Object:
+		Variable: r3
+		Type: javax.net.ssl.KeyManagerFactory
+		Statement: r3 = staticinvoke <javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManagerFactory getInstance(java.lang.String)>(r1)
+		Method: <io.netty.handler.ssl.SslContext: javax.net.ssl.KeyManagerFactory buildKeyManagerFactory(java.security.KeyStore,java.lang.String,char[],javax.net.ssl.KeyManagerFactory)>
+		SHA-256: b228123961dbbdba2112be7710f142baf4275d51bde2501c050fa69e5ca31723
+	Object:
+		Variable: $r3
+		Type: javax.net.ssl.KeyManagerFactory
+		Statement: $r3 = staticinvoke <javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManagerFactory getInstance(java.lang.String)>(r2)
+		Method: <io.netty.handler.ssl.OpenSslX509KeyManagerFactory: io.netty.handler.ssl.OpenSslX509KeyManagerFactory$OpenSslKeyManagerFactorySpi newOpenSslKeyManagerFactorySpi(java.lang.String,java.security.Provider)>
+		SHA-256: e3f34962eb13bb228bd758183f2fc281c97c8b201b9cfa8ce13256b7b8c585fb
+	Object:
+		Variable: r23
+		Type: javax.net.ssl.SSLContext
+		Statement: r23 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("TLS")
+		Method: <io.netty.handler.ssl.Java9SslUtils: void <clinit>()>
+		SHA-256: c3beb8afb5d60ee2179983220a0fdad283c24b82b0eee8d5beea194c6834ee6a
+	Object:
+		Variable: $r18
+		Type: javax.net.ssl.KeyManagerFactory
+		Statement: $r18 = staticinvoke <javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManagerFactory getInstance(java.lang.String)>($r17)
+		Method: <io.netty.handler.ssl.ReferenceCountedOpenSslClientContext: io.netty.handler.ssl.OpenSslSessionContext newSessionContext(io.netty.handler.ssl.ReferenceCountedOpenSslContext,long,io.netty.handler.ssl.OpenSslEngineMap,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory)>
+		SHA-256: 40be3d91fe8c1ac06343b1d0b2ff3facff7842967e199b3dae233c466186256f
+	Object:
+		Variable: r44
+		Type: java.security.KeyPairGenerator
+		Statement: r44 = staticinvoke <java.security.KeyPairGenerator: java.security.KeyPairGenerator getInstance(java.lang.String)>("RSA")
+		Method: <io.netty.handler.ssl.util.SelfSignedCertificate: void <init>(java.lang.String,java.security.SecureRandom,int,java.util.Date,java.util.Date)>
+		SHA-256: 8508f74cf83e98df128baa550712f4632980edc8be985aeff60cd18b97145533
+	Object:
+		Variable: $r35
+		Type: javax.net.ssl.TrustManager[]
+		Statement: $r35 = virtualinvoke r27.<javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManager[] getTrustManagers()>()
+		Method: <io.netty.handler.ssl.ReferenceCountedOpenSslClientContext: io.netty.handler.ssl.OpenSslSessionContext newSessionContext(io.netty.handler.ssl.ReferenceCountedOpenSslContext,long,io.netty.handler.ssl.OpenSslEngineMap,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory)>
+		SHA-256: 9a2e1e612215b8c11804b223c78b4eb7f771180c152215d7b1da437bdbb33dcf
+	Object:
+		Variable: r3
+		Type: java.security.KeyStore
+		Statement: r3 = staticinvoke <java.security.KeyStore: java.security.KeyStore getInstance(java.lang.String)>($r4)
+		Method: <io.netty.handler.ssl.SslContext: java.security.KeyStore buildKeyStore(java.security.cert.X509Certificate[],java.security.PrivateKey,char[])>
+		SHA-256: 82db8e1d351b99c95797b4770c107f0515b6f55f03ef2c9aa8bde14b339953bf
+	Object:
+		Variable: $r2
+		Type: java.security.MessageDigest
+		Statement: $r2 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("SHA1")
+		Method: <io.netty.handler.ssl.util.FingerprintTrustManagerFactory$1: java.security.MessageDigest initialValue()>
+		SHA-256: ee1022963615b0106a12662bd804045aeeca7dd6230cb8195281a51a2c62ea78
+	Object:
+		Variable: $r15
+		Type: javax.net.ssl.KeyManager[]
+		Statement: $r15 = virtualinvoke r11.<javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManager[] getKeyManagers()>()
+		Method: <io.netty.handler.ssl.JdkSslClientContext: javax.net.ssl.SSLContext newSSLContext(java.security.Provider,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory,long,long)>
+		SHA-256: a7003b4824b492e4bb43e77c57223380c40fbf0500860f6fc5e0c5a4447b22ce
+	Object:
+		Variable: r53
+		Type: io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory
+		Statement: r53 = new io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory
+		Method: <io.netty.handler.ssl.ReferenceCountedOpenSslServerContext: io.netty.handler.ssl.OpenSslServerSessionContext newSessionContext(io.netty.handler.ssl.ReferenceCountedOpenSslContext,long,io.netty.handler.ssl.OpenSslEngineMap,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory)>
+		SHA-256: 345ac94f0e2b74b7f6669780d86eec50f6f1ba661c6210b9458f3e31ebd64141
+	Object:
+		Variable: r7
+		Type: javax.net.ssl.SSLEngine
+		Statement: r7 = virtualinvoke r1.<javax.net.ssl.SSLContext: javax.net.ssl.SSLEngine createSSLEngine()>()
+		Method: <io.netty.handler.ssl.JdkSslContext: void <init>(javax.net.ssl.SSLContext,boolean,java.lang.Iterable,io.netty.handler.ssl.CipherSuiteFilter,io.netty.handler.ssl.JdkApplicationProtocolNegotiator,io.netty.handler.ssl.ClientAuth,java.lang.String[],boolean)>
+		SHA-256: b3c4e59193d5ab9208784c3d630b3edce27e208c88d7c72760d00b7b19277d1b
+	Object:
+		Variable: r52
+		Type: io.netty.handler.ssl.OpenSslX509KeyManagerFactory
+		Statement: r52 = new io.netty.handler.ssl.OpenSslX509KeyManagerFactory
+		Method: <io.netty.handler.ssl.ReferenceCountedOpenSslServerContext: io.netty.handler.ssl.OpenSslServerSessionContext newSessionContext(io.netty.handler.ssl.ReferenceCountedOpenSslContext,long,io.netty.handler.ssl.OpenSslEngineMap,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory)>
+		SHA-256: a08f29dbe9330eb60ed57d1acf3b0def6cefdf0979bc65234e88ac4e37fa9eab
+	Object:
+		Variable: r0
+		Type: javax.net.ssl.SSLContext
+		Statement: r0 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("TLS")
+		Method: <io.netty.handler.ssl.JdkSslContext: void <clinit>()>
+		SHA-256: a1cfc1037add6dbd5fa621f3a343fcc6115ec4726ce8eeb16b7c6db7ae9050c3
+	Object:
+		Variable: r43
+		Type: io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory
+		Statement: r43 = new io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory
+		Method: <io.netty.handler.ssl.ReferenceCountedOpenSslClientContext: io.netty.handler.ssl.OpenSslSessionContext newSessionContext(io.netty.handler.ssl.ReferenceCountedOpenSslContext,long,io.netty.handler.ssl.OpenSslEngineMap,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory)>
+		SHA-256: 2c93ca12e41d6dcfb12269ddcdccd66b222db00f1c8d83f889de1a45241baae6
+	Object:
+		Variable: $r16
+		Type: javax.net.ssl.TrustManager[]
+		Statement: $r16 = virtualinvoke r10.<javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManager[] getTrustManagers()>()
+		Method: <io.netty.handler.ssl.JdkSslClientContext: javax.net.ssl.SSLContext newSSLContext(java.security.Provider,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory,long,long)>
+		SHA-256: 7091c3ab1042239e1308066f5574885838c75a56f5bd853a1952919e896e586d
+	Object:
+		Variable: $r3
+		Type: javax.net.ssl.KeyManagerFactory
+		Statement: $r3 = staticinvoke <javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManagerFactory getInstance(java.lang.String,java.security.Provider)>(r2, r0)
+		Method: <io.netty.handler.ssl.OpenSslX509KeyManagerFactory: io.netty.handler.ssl.OpenSslX509KeyManagerFactory$OpenSslKeyManagerFactorySpi newOpenSslKeyManagerFactorySpi(java.lang.String,java.security.Provider)>
+		SHA-256: bb883f1a1b08380de6125bfd545144bb641948cd6a4d5aaac2c3217f586425b8
+	Object:
+		Variable: r6
+		Type: javax.crypto.Cipher
+		Statement: r6 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>($r10)
+		Method: <io.netty.handler.ssl.SslContext: java.security.spec.PKCS8EncodedKeySpec generateKeySpec(char[],byte[])>
+		SHA-256: ab831a15cf228c2976c9ae081f6d8196adc3a96849b44d9036719f5a11ee2087
+	Object:
+		Variable: r5
+		Type: javax.crypto.SecretKey
+		Statement: r5 = virtualinvoke r3.<javax.crypto.SecretKeyFactory: javax.crypto.SecretKey generateSecret(java.security.spec.KeySpec)>(r4)
+		Method: <io.netty.handler.ssl.SslContext: java.security.spec.PKCS8EncodedKeySpec generateKeySpec(char[],byte[])>
+		SHA-256: 9b60f9fbb6493d0fb690d09cd694c392a920d7d911291fae9b9c93007f0225fe
+	Object:
+		Variable: $r6
+		Type: javax.net.ssl.KeyManager[]
+		Statement: $r6 = virtualinvoke r14.<javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManager[] getKeyManagers()>()
+		Method: <io.netty.handler.ssl.JdkSslServerContext: javax.net.ssl.SSLContext newSSLContext(java.security.Provider,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory,long,long)>
+		SHA-256: 24bb3563790714797bde47df352ae8f7616c85307c40e5afbb6334c9657e60eb
+	Object:
+		Variable: $r3
+		Type: javax.net.ssl.KeyManager[]
+		Statement: $r3 = virtualinvoke r0.<javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManager[] getKeyManagers()>()
+		Method: <io.netty.handler.ssl.ReferenceCountedOpenSslContext: io.netty.handler.ssl.OpenSslKeyMaterialProvider providerFor(javax.net.ssl.KeyManagerFactory,java.lang.String)>
+		SHA-256: 8c34d8f90dd7e9a3cedac310797681a39e65cdfde5cd6f80af3f43785c26baab
+	Object:
+		Variable: r30
+		Type: javax.net.ssl.SSLEngine
+		Statement: r30 = virtualinvoke r0.<javax.net.ssl.SSLContext: javax.net.ssl.SSLEngine createSSLEngine()>()
+		Method: <io.netty.handler.ssl.JdkSslContext: void <clinit>()>
+		SHA-256: f27dc73b6266c0590e2989d986f5504cd681e6c45298c30b5e4e1785c0220bac
+	Object:
+		Variable: $r17
+		Type: javax.net.ssl.TrustManager[]
+		Statement: $r17 = virtualinvoke r13.<javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManager[] getTrustManagers()>()
+		Method: <io.netty.handler.ssl.JdkSslServerContext: javax.net.ssl.SSLContext newSSLContext(java.security.Provider,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory,long,long)>
+		SHA-256: 927ea1e071c28a8db9fe2e8bc418e3c2beffc44af0de499c16f052416c6b404c
+	Object:
+		Variable: $r12
+		Type: javax.net.ssl.SSLContext
+		Statement: $r12 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("TLS")
+		Method: <io.netty.handler.ssl.JdkSslClientContext: javax.net.ssl.SSLContext newSSLContext(java.security.Provider,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory,long,long)>
+		SHA-256: b22215db367b90cc11513630dbf533fadeaadeb1805a2175def8cd0240c11a81
+	Object:
+		Variable: $r9
+		Type: javax.crypto.spec.PBEKeySpec
+		Statement: $r9 = new javax.crypto.spec.PBEKeySpec
+		Method: <io.netty.handler.ssl.SslContext: java.security.spec.PKCS8EncodedKeySpec generateKeySpec(char[],byte[])>
+		SHA-256: 68604c6cd7e417fe9536f55fa00471a7c46c1c2abe863809917045256f1b7808
+	Object:
+		Variable: r5
+		Type: java.security.KeyPair
+		Statement: r5 = virtualinvoke r44.<java.security.KeyPairGenerator: java.security.KeyPair generateKeyPair()>()
+		Method: <io.netty.handler.ssl.util.SelfSignedCertificate: void <init>(java.lang.String,java.security.SecureRandom,int,java.util.Date,java.util.Date)>
+		SHA-256: d70edd760a31749e765bc96bac62a5412d766036f97985d94bf795d9588921ac
+	Object:
+		Variable: $r0
+		Type: javax.net.ssl.SSLContext
+		Statement: $r0 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("TLS")
+		Method: <io.netty.handler.ssl.OpenSslX509TrustManagerWrapper: javax.net.ssl.SSLContext newSSLContext()>
+		SHA-256: abce837bde25e435ae0179d7372849c34eb32b1cbaa4247349d9efffac848704
+	Object:
+		Variable: r42
+		Type: io.netty.handler.ssl.OpenSslX509KeyManagerFactory
+		Statement: r42 = new io.netty.handler.ssl.OpenSslX509KeyManagerFactory
+		Method: <io.netty.handler.ssl.ReferenceCountedOpenSslClientContext: io.netty.handler.ssl.OpenSslSessionContext newSessionContext(io.netty.handler.ssl.ReferenceCountedOpenSslContext,long,io.netty.handler.ssl.OpenSslEngineMap,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory)>
+		SHA-256: f41d4d1a4d898351a209b35bff919d3334e18846e13fd6fb6edbb009e10ab815
+	Object:
+		Variable: r7
+		Type: javax.net.ssl.TrustManagerFactory
+		Statement: r7 = staticinvoke <javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManagerFactory getInstance(java.lang.String)>($r6)
+		Method: <io.netty.handler.ssl.SslContext: javax.net.ssl.TrustManagerFactory buildTrustManagerFactory(java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory)>
+		SHA-256: 4108043001498865045141bcfaaf5698e0ca1404099f3f87ae527a3f3255fd3d
+	Object:
+		Variable: r0
+		Type: javax.net.ssl.SSLEngine
+		Statement: r0 = virtualinvoke r23.<javax.net.ssl.SSLContext: javax.net.ssl.SSLEngine createSSLEngine()>()
+		Method: <io.netty.handler.ssl.Java9SslUtils: void <clinit>()>
+		SHA-256: e0605648b0d9e0d938a3e2a518aa61055daebc6cc2d72e67bca8ab395981593e
+	Object:
+		Variable: r27
+		Type: javax.net.ssl.TrustManagerFactory
+		Statement: r27 = staticinvoke <javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManagerFactory getInstance(java.lang.String)>($r11)
+		Method: <io.netty.handler.ssl.ReferenceCountedOpenSslClientContext: io.netty.handler.ssl.OpenSslSessionContext newSessionContext(io.netty.handler.ssl.ReferenceCountedOpenSslContext,long,io.netty.handler.ssl.OpenSslEngineMap,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory)>
+		SHA-256: 11cf4be7e2fa1454547d49316985b1d5089da939af71f1a4512011913453f439
+	Object:
+		Variable: r3
+		Type: javax.crypto.SecretKeyFactory
+		Statement: r3 = staticinvoke <javax.crypto.SecretKeyFactory: javax.crypto.SecretKeyFactory getInstance(java.lang.String)>($r8)
+		Method: <io.netty.handler.ssl.SslContext: java.security.spec.PKCS8EncodedKeySpec generateKeySpec(char[],byte[])>
+		SHA-256: 5e32208f54f916cfbb06c80c5921f9c99b09600663cbe4ebf635bd38fbc0a8a0
+	Object:
+		Variable: $r44
+		Type: javax.net.ssl.TrustManager[]
+		Statement: $r44 = virtualinvoke r36.<javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManager[] getTrustManagers()>()
+		Method: <io.netty.handler.ssl.ReferenceCountedOpenSslServerContext: io.netty.handler.ssl.OpenSslServerSessionContext newSessionContext(io.netty.handler.ssl.ReferenceCountedOpenSslContext,long,io.netty.handler.ssl.OpenSslEngineMap,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory)>
+		SHA-256: 84ad91cb17a1bedb165cb68d195564641d92e2a8f1811623e730f3cc7d1e1f0e
+
+Findings in Java Class: io.netty.handler.ssl.SslContext
+
+	 in Method: java.security.spec.PKCS8EncodedKeySpec generateKeySpec(char[],byte[])
+		ImpreciseValueExtractionError violating CrySL rule for javax.crypto.Cipher
+			Constraint VC:java.lang.String transformation( Split with / at index 0) - AES,PBEWithHmacSHA224AndAES_128,PBEWithHmacSHA256AndAES_128,PBEWithHmacSHA384AndAES_128,PBEWithHmacSHA512AndAES_128,PBEWithHmacSHA224AndAES_256,PBEWithHmacSHA256AndAES_256,PBEWithHmacSHA384AndAES_256,PBEWithHmacSHA512AndAES_256,RSA, could not be evaluted due to insufficient information.
+			at statement: r6 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>($r10)
+
+		IncompleteOperationError violating CrySL rule for javax.crypto.spec.PBEKeySpec (on Object #68604c6cd7e417fe9536f55fa00471a7c46c1c2abe863809917045256f1b7808)
+			Operation on object of type javax.crypto.spec.PBEKeySpec object not completed. Expected call to clearPassword
+			at statement: r5 = virtualinvoke r3.<javax.crypto.SecretKeyFactory: javax.crypto.SecretKey generateSecret(java.security.spec.KeySpec)>(r4)
+
+		IncompleteOperationError violating CrySL rule for javax.crypto.Cipher (on Object #ab831a15cf228c2976c9ae081f6d8196adc3a96849b44d9036719f5a11ee2087)
+			Operation on object of type javax.crypto.Cipher object not completed. Expected call to init, update, wrap, doFinal
+			at statement: $r12 = virtualinvoke r2.<javax.crypto.EncryptedPrivateKeyInfo: java.security.spec.PKCS8EncodedKeySpec getKeySpec(javax.crypto.Cipher)>(r6)
+
+		ForbiddenMethodError violating CrySL rule for javax.crypto.spec.PBEKeySpec
+			Detected call to forbidden method void <init>(char[]) of class javax.crypto.spec.PBEKeySpec. Instead, call method <javax.crypto.spec.PBEKeySpec: void <init>(char[],byte[],int,int)>.
+			at statement: specialinvoke $r9.<javax.crypto.spec.PBEKeySpec: void <init>(char[])>(r0)
+
+		ImpreciseValueExtractionError violating CrySL rule for javax.crypto.SecretKeyFactory
+			Constraint VC:java.lang.String algorithm - PBEWithHmacSHA512AndAES_128,PBEWithHmacSHA384AndAES_128,PBEWithHmacSHA384AndAES_128,PBKDF2WithHmacSHA224,PBKDF2WithHmacSHA256,PBKDF2WithHmacSHA384,PBKDF2WithHmacSHA512,PBEWithHmacSHA224AndAES_128,PBEWithHmacSHA256AndAES_128,PBEWithHmacSHA224AndAES_256,PBEWithHmacSHA256AndAES_256,PBEWithHmacSHA384AndAES_256,PBEWithHmacSHA512AndAES_256, could not be evaluted due to insufficient information.
+			at statement: r3 = staticinvoke <javax.crypto.SecretKeyFactory: javax.crypto.SecretKeyFactory getInstance(java.lang.String)>($r8)
+
+
+	 in Method: javax.net.ssl.KeyManagerFactory buildKeyManagerFactory(java.security.KeyStore,java.lang.String,char[],javax.net.ssl.KeyManagerFactory)
+		ImpreciseValueExtractionError violating CrySL rule for javax.net.ssl.KeyManagerFactory
+			Constraint VC:java.lang.String algo - PKIX,SunX509, could not be evaluted due to insufficient information.
+			at statement: r3 = staticinvoke <javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManagerFactory getInstance(java.lang.String)>(r1)
+
+
+	 in Method: javax.net.ssl.TrustManagerFactory buildTrustManagerFactory(java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory)
+		ImpreciseValueExtractionError violating CrySL rule for javax.net.ssl.TrustManagerFactory
+			Constraint VC:java.lang.String algo - PKIX,SunX509, could not be evaluted due to insufficient information.
+			at statement: r7 = staticinvoke <javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManagerFactory getInstance(java.lang.String)>($r6)
+
+
+	 in Method: io.netty.handler.ssl.SslContext newServerContext(io.netty.handler.ssl.SslProvider,java.io.File,java.io.File,java.lang.String,javax.net.ssl.TrustManagerFactory,java.lang.Iterable,java.lang.Iterable,long,long)
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #345ac94f0e2b74b7f6669780d86eec50f6f1ba661c6210b9458f3e31ebd64141)
+			Operation on object of type io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory object not completed. Expected call to init
+			at statement: $r9 = staticinvoke <io.netty.handler.ssl.SslContext: io.netty.handler.ssl.SslContext newServerContext(io.netty.handler.ssl.SslProvider,java.io.File,javax.net.ssl.TrustManagerFactory,java.io.File,java.io.File,java.lang.String,javax.net.ssl.KeyManagerFactory,java.lang.Iterable,io.netty.handler.ssl.CipherSuiteFilter,io.netty.handler.ssl.ApplicationProtocolConfig,long,long)>(r0, null, r4, r1, r2, r3, null, r5, $r7, $r8, l0, l1)
+
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #a08f29dbe9330eb60ed57d1acf3b0def6cefdf0979bc65234e88ac4e37fa9eab)
+			Operation on object of type io.netty.handler.ssl.OpenSslX509KeyManagerFactory object not completed. Expected call to init
+			at statement: $r9 = staticinvoke <io.netty.handler.ssl.SslContext: io.netty.handler.ssl.SslContext newServerContext(io.netty.handler.ssl.SslProvider,java.io.File,javax.net.ssl.TrustManagerFactory,java.io.File,java.io.File,java.lang.String,javax.net.ssl.KeyManagerFactory,java.lang.Iterable,io.netty.handler.ssl.CipherSuiteFilter,io.netty.handler.ssl.ApplicationProtocolConfig,long,long)>(r0, null, r4, r1, r2, r3, null, r5, $r7, $r8, l0, l1)
+
+
+Findings in Java Class: io.netty.handler.ssl.ReferenceCountedOpenSslClientContext
+
+	 in Method: io.netty.handler.ssl.OpenSslSessionContext newSessionContext(io.netty.handler.ssl.ReferenceCountedOpenSslContext,long,io.netty.handler.ssl.OpenSslEngineMap,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory)
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #f41d4d1a4d898351a209b35bff919d3334e18846e13fd6fb6edbb009e10ab815)
+			Operation on object of type io.netty.handler.ssl.OpenSslX509KeyManagerFactory object not completed. Expected call to init
+			at statement: r29 = staticinvoke <io.netty.handler.ssl.ReferenceCountedOpenSslClientContext: io.netty.handler.ssl.OpenSslKeyMaterialProvider providerFor(javax.net.ssl.KeyManagerFactory,java.lang.String)>(r52, r5)
+
+		ImpreciseValueExtractionError violating CrySL rule for javax.net.ssl.KeyManagerFactory
+			Constraint VC:java.lang.String algo - PKIX,SunX509, could not be evaluted due to insufficient information.
+			at statement: $r18 = staticinvoke <javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManagerFactory getInstance(java.lang.String)>($r17)
+
+		ImpreciseValueExtractionError violating CrySL rule for javax.net.ssl.TrustManagerFactory
+			Constraint VC:java.lang.String algo - PKIX,SunX509, could not be evaluted due to insufficient information.
+			at statement: r27 = staticinvoke <javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManagerFactory getInstance(java.lang.String)>($r11)
+
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #2c93ca12e41d6dcfb12269ddcdccd66b222db00f1c8d83f889de1a45241baae6)
+			Operation on object of type io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory object not completed. Expected call to init
+			at statement: r29 = staticinvoke <io.netty.handler.ssl.ReferenceCountedOpenSslClientContext: io.netty.handler.ssl.OpenSslKeyMaterialProvider providerFor(javax.net.ssl.KeyManagerFactory,java.lang.String)>(r52, r5)
+
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #40be3d91fe8c1ac06343b1d0b2ff3facff7842967e199b3dae233c466186256f)
+			Operation on object of type javax.net.ssl.KeyManagerFactory object not completed. Expected call to init
+			at statement: specialinvoke r43.<io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory: void <init>(javax.net.ssl.KeyManagerFactory)>($r18)
+
+
+Findings in Java Class: io.netty.handler.ssl.OpenSslX509KeyManagerFactory
+
+	 in Method: io.netty.handler.ssl.OpenSslX509KeyManagerFactory$OpenSslKeyManagerFactorySpi newOpenSslKeyManagerFactorySpi(java.lang.String,java.security.Provider)
+		ImpreciseValueExtractionError violating CrySL rule for javax.net.ssl.KeyManagerFactory
+			Constraint VC:java.lang.String algo - PKIX,SunX509, could not be evaluted due to insufficient information.
+			at statement: $r3 = staticinvoke <javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManagerFactory getInstance(java.lang.String,java.security.Provider)>(r2, r0)
+
+		ImpreciseValueExtractionError violating CrySL rule for javax.net.ssl.KeyManagerFactory
+			Constraint VC:java.lang.String algo - PKIX,SunX509, could not be evaluted due to insufficient information.
+			at statement: $r3 = staticinvoke <javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManagerFactory getInstance(java.lang.String)>(r2)
+
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #bb883f1a1b08380de6125bfd545144bb641948cd6a4d5aaac2c3217f586425b8)
+			Operation on object of type javax.net.ssl.KeyManagerFactory object not completed. Expected call to init
+			at statement: specialinvoke $r1.<io.netty.handler.ssl.OpenSslX509KeyManagerFactory$OpenSslKeyManagerFactorySpi: void <init>(javax.net.ssl.KeyManagerFactory)>($r3)
+
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #e3f34962eb13bb228bd758183f2fc281c97c8b201b9cfa8ce13256b7b8c585fb)
+			Operation on object of type javax.net.ssl.KeyManagerFactory object not completed. Expected call to init
+			at statement: specialinvoke $r1.<io.netty.handler.ssl.OpenSslX509KeyManagerFactory$OpenSslKeyManagerFactorySpi: void <init>(javax.net.ssl.KeyManagerFactory)>($r3)
+
+
+Findings in Java Class: io.netty.handler.ssl.ReferenceCountedOpenSslServerContext
+
+	 in Method: io.netty.handler.ssl.OpenSslServerSessionContext newSessionContext(io.netty.handler.ssl.ReferenceCountedOpenSslContext,long,io.netty.handler.ssl.OpenSslEngineMap,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory)
+		ImpreciseValueExtractionError violating CrySL rule for javax.net.ssl.KeyManagerFactory
+			Constraint VC:java.lang.String algo - PKIX,SunX509, could not be evaluted due to insufficient information.
+			at statement: $r25 = staticinvoke <javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManagerFactory getInstance(java.lang.String)>($r24)
+
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #345ac94f0e2b74b7f6669780d86eec50f6f1ba661c6210b9458f3e31ebd64141)
+			Operation on object of type io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory object not completed. Expected call to init
+			at statement: r38 = staticinvoke <io.netty.handler.ssl.ReferenceCountedOpenSslServerContext: io.netty.handler.ssl.OpenSslKeyMaterialProvider providerFor(javax.net.ssl.KeyManagerFactory,java.lang.String)>(r65, r5)
+
+		ImpreciseValueExtractionError violating CrySL rule for javax.net.ssl.TrustManagerFactory
+			Constraint VC:java.lang.String algo - PKIX,SunX509, could not be evaluted due to insufficient information.
+			at statement: r36 = staticinvoke <javax.net.ssl.TrustManagerFactory: javax.net.ssl.TrustManagerFactory getInstance(java.lang.String)>($r20)
+
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #a08f29dbe9330eb60ed57d1acf3b0def6cefdf0979bc65234e88ac4e37fa9eab)
+			Operation on object of type io.netty.handler.ssl.OpenSslX509KeyManagerFactory object not completed. Expected call to init
+			at statement: r38 = staticinvoke <io.netty.handler.ssl.ReferenceCountedOpenSslServerContext: io.netty.handler.ssl.OpenSslKeyMaterialProvider providerFor(javax.net.ssl.KeyManagerFactory,java.lang.String)>(r65, r5)
+
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #6f8ba6ce0874c7cc80cefce002524245df9f9a0b6ed765ee66d74a3918ea3f89)
+			Operation on object of type javax.net.ssl.KeyManagerFactory object not completed. Expected call to init
+			at statement: specialinvoke r53.<io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory: void <init>(javax.net.ssl.KeyManagerFactory)>($r25)
+
+
+Findings in Java Class: io.netty.handler.ssl.util.FingerprintTrustManagerFactory$1
+
+	 in Method: java.security.MessageDigest initialValue()
+		ConstraintError violating CrySL rule for MessageDigest (on Object #ee1022963615b0106a12662bd804045aeeca7dd6230cb8195281a51a2c62ea78)
+			First parameter (with value "SHA1") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: $r2 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("SHA1")
+
+
+Findings in Java Class: io.netty.handler.ssl.JdkSslContext
+
+	 in Method: void <clinit>()
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter (with value null) was not properly generatedTrustManager
+			at statement: virtualinvoke r0.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, null, null)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter (with value null) was not properly generatedKeyManager
+			at statement: virtualinvoke r0.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, null, null)
+
+		ConstraintError violating CrySL rule for javax.net.ssl.SSLContext (on Object #a1cfc1037add6dbd5fa621f3a343fcc6115ec4726ce8eeb16b7c6db7ae9050c3)
+			First parameter (with value "TLS") should be any of {TLSv1, TLSv1.1, TLSv1.2}
+			at statement: r0 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("TLS")
+
+
+Findings in Java Class: io.netty.handler.ssl.JdkSslClientContext
+
+	 in Method: javax.net.ssl.SSLContext newSSLContext(java.security.Provider,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory,long,long)
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter was not properly generatedTrustManager
+			at statement: virtualinvoke r13.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>($r15, $r16, null)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter was not properly generatedKeyManager
+			at statement: virtualinvoke r13.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>($r15, $r16, null)
+
+		ConstraintError violating CrySL rule for javax.net.ssl.SSLContext (on Object #dffe0b04b79a00517ef04e72ba02b8063ca05880aa8441179fddedab1b4ff92a)
+			First parameter (with value "TLS") should be any of {TLSv1, TLSv1.1, TLSv1.2}
+			at statement: $r12 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String,java.security.Provider)>("TLS", r0)
+
+		ConstraintError violating CrySL rule for javax.net.ssl.SSLContext (on Object #b22215db367b90cc11513630dbf533fadeaadeb1805a2175def8cd0240c11a81)
+			First parameter (with value "TLS") should be any of {TLSv1, TLSv1.1, TLSv1.2}
+			at statement: $r12 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("TLS")
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter was not properly generatedTrustManager
+			at statement: virtualinvoke r13.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>($r15, $r16, null)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter was not properly generatedKeyManager
+			at statement: virtualinvoke r13.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>($r15, $r16, null)
+
+
+Findings in Java Class: io.netty.handler.ssl.JdkSslServerContext
+
+	 in Method: javax.net.ssl.SSLContext newSSLContext(java.security.Provider,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory,long,long)
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter was not properly generatedTrustManager
+			at statement: virtualinvoke r16.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>($r6, $r17, null)
+
+		ConstraintError violating CrySL rule for javax.net.ssl.SSLContext (on Object #874e83322cecfe3b4963ac128d80bb73bc48b1d37348677f321c661f0e424d88)
+			First parameter (with value "TLS") should be any of {TLSv1, TLSv1.1, TLSv1.2}
+			at statement: $r15 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("TLS")
+
+		ConstraintError violating CrySL rule for javax.net.ssl.SSLContext (on Object #60bd5adf5f4ea281809876dbc2d624f02212e38ca26563e39639af3048f3b6e)
+			First parameter (with value "TLS") should be any of {TLSv1, TLSv1.1, TLSv1.2}
+			at statement: $r15 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String,java.security.Provider)>("TLS", r0)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter was not properly generatedKeyManager
+			at statement: virtualinvoke r16.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>($r6, $r17, null)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter was not properly generatedTrustManager
+			at statement: virtualinvoke r16.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>($r6, $r17, null)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter was not properly generatedKeyManager
+			at statement: virtualinvoke r16.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>($r6, $r17, null)
+
+
+Findings in Java Class: io.netty.handler.ssl.Java9SslUtils
+
+	 in Method: void <clinit>()
+		ConstraintError violating CrySL rule for javax.net.ssl.SSLContext (on Object #c3beb8afb5d60ee2179983220a0fdad283c24b82b0eee8d5beea194c6834ee6a)
+			First parameter (with value "TLS") should be any of {TLSv1, TLSv1.1, TLSv1.2}
+			at statement: r23 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("TLS")
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter (with value null) was not properly generatedKeyManager
+			at statement: virtualinvoke r23.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, null, null)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter (with value null) was not properly generatedTrustManager
+			at statement: virtualinvoke r23.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, null, null)
+
+
+Findings in Java Class: io.netty.handler.ssl.OpenSslX509TrustManagerWrapper
+
+	 in Method: javax.net.ssl.SSLContext newSSLContext()
+		ConstraintError violating CrySL rule for javax.net.ssl.SSLContext (on Object #abce837bde25e435ae0179d7372849c34eb32b1cbaa4247349d9efffac848704)
+			First parameter (with value "TLS") should be any of {TLSv1, TLSv1.1, TLSv1.2}
+			at statement: $r0 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("TLS")
+
+
+	 in Method: void <clinit>()
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter was not properly generatedTrustManager
+			at statement: virtualinvoke r14.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, r20, null)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter (with value null) was not properly generatedKeyManager
+			at statement: virtualinvoke r14.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, r20, null)
+
+
+Findings in Java Class: io.netty.handler.ssl.ReferenceCountedOpenSslContext
+
+	 in Method: io.netty.handler.ssl.OpenSslKeyMaterialProvider providerFor(javax.net.ssl.KeyManagerFactory,java.lang.String)
+		TypestateError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #2c93ca12e41d6dcfb12269ddcdccd66b222db00f1c8d83f889de1a45241baae6)
+			Unexpected call to method getKeyManagers on object of type io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory. Expect a call to one of the following methods init
+			at statement: $r3 = virtualinvoke r0.<javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManager[] getKeyManagers()>()
+
+		TypestateError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #f41d4d1a4d898351a209b35bff919d3334e18846e13fd6fb6edbb009e10ab815)
+			Unexpected call to method getKeyManagers on object of type io.netty.handler.ssl.OpenSslX509KeyManagerFactory. Expect a call to one of the following methods init
+			at statement: $r3 = virtualinvoke r0.<javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManager[] getKeyManagers()>()
+
+		TypestateError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #a08f29dbe9330eb60ed57d1acf3b0def6cefdf0979bc65234e88ac4e37fa9eab)
+			Unexpected call to method getKeyManagers on object of type io.netty.handler.ssl.OpenSslX509KeyManagerFactory. Expect a call to one of the following methods init
+			at statement: $r3 = virtualinvoke r0.<javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManager[] getKeyManagers()>()
+
+		TypestateError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #345ac94f0e2b74b7f6669780d86eec50f6f1ba661c6210b9458f3e31ebd64141)
+			Unexpected call to method getKeyManagers on object of type io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory. Expect a call to one of the following methods init
+			at statement: $r3 = virtualinvoke r0.<javax.net.ssl.KeyManagerFactory: javax.net.ssl.KeyManager[] getKeyManagers()>()
+
+
+Findings in Java Class: io.netty.handler.ssl.OpenSslServerContext
+
+	 in Method: void <init>(java.io.File,java.io.File,java.lang.String,javax.net.ssl.TrustManagerFactory,java.lang.Iterable,io.netty.handler.ssl.OpenSslApplicationProtocolNegotiator,long,long)
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #a08f29dbe9330eb60ed57d1acf3b0def6cefdf0979bc65234e88ac4e37fa9eab)
+			Operation on object of type io.netty.handler.ssl.OpenSslX509KeyManagerFactory object not completed. Expected call to init
+			at statement: specialinvoke r0.<io.netty.handler.ssl.OpenSslServerContext: void <init>(java.io.File,javax.net.ssl.TrustManagerFactory,java.io.File,java.io.File,java.lang.String,javax.net.ssl.KeyManagerFactory,java.lang.Iterable,io.netty.handler.ssl.CipherSuiteFilter,io.netty.handler.ssl.OpenSslApplicationProtocolNegotiator,long,long)>(null, r4, r1, r2, r3, null, r5, null, r6, l0, l1)
+
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #345ac94f0e2b74b7f6669780d86eec50f6f1ba661c6210b9458f3e31ebd64141)
+			Operation on object of type io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory object not completed. Expected call to init
+			at statement: specialinvoke r0.<io.netty.handler.ssl.OpenSslServerContext: void <init>(java.io.File,javax.net.ssl.TrustManagerFactory,java.io.File,java.io.File,java.lang.String,javax.net.ssl.KeyManagerFactory,java.lang.Iterable,io.netty.handler.ssl.CipherSuiteFilter,io.netty.handler.ssl.OpenSslApplicationProtocolNegotiator,long,long)>(null, r4, r1, r2, r3, null, r5, null, r6, l0, l1)
+
+
+	 in Method: void <init>(java.io.File,java.io.File,java.lang.String,java.lang.Iterable,io.netty.handler.ssl.CipherSuiteFilter,io.netty.handler.ssl.ApplicationProtocolConfig,long,long)
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #345ac94f0e2b74b7f6669780d86eec50f6f1ba661c6210b9458f3e31ebd64141)
+			Operation on object of type io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory object not completed. Expected call to init
+			at statement: specialinvoke r0.<io.netty.handler.ssl.OpenSslServerContext: void <init>(java.io.File,javax.net.ssl.TrustManagerFactory,java.io.File,java.io.File,java.lang.String,javax.net.ssl.KeyManagerFactory,java.lang.Iterable,io.netty.handler.ssl.CipherSuiteFilter,io.netty.handler.ssl.ApplicationProtocolConfig,long,long)>(null, null, r1, r2, r3, null, r4, r5, r6, l0, l1)
+
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #a08f29dbe9330eb60ed57d1acf3b0def6cefdf0979bc65234e88ac4e37fa9eab)
+			Operation on object of type io.netty.handler.ssl.OpenSslX509KeyManagerFactory object not completed. Expected call to init
+			at statement: specialinvoke r0.<io.netty.handler.ssl.OpenSslServerContext: void <init>(java.io.File,javax.net.ssl.TrustManagerFactory,java.io.File,java.io.File,java.lang.String,javax.net.ssl.KeyManagerFactory,java.lang.Iterable,io.netty.handler.ssl.CipherSuiteFilter,io.netty.handler.ssl.ApplicationProtocolConfig,long,long)>(null, null, r1, r2, r3, null, r4, r5, r6, l0, l1)
+
+
+Findings in Java Class: io.netty.handler.ssl.SslContextBuilder
+
+	 in Method: io.netty.handler.ssl.SslContext build()
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #a08f29dbe9330eb60ed57d1acf3b0def6cefdf0979bc65234e88ac4e37fa9eab)
+			Operation on object of type io.netty.handler.ssl.OpenSslX509KeyManagerFactory object not completed. Expected call to init
+			at statement: $r27 = staticinvoke <io.netty.handler.ssl.SslContext: io.netty.handler.ssl.SslContext newServerContextInternal(io.netty.handler.ssl.SslProvider,java.security.Provider,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory,java.lang.Iterable,io.netty.handler.ssl.CipherSuiteFilter,io.netty.handler.ssl.ApplicationProtocolConfig,long,long,io.netty.handler.ssl.ClientAuth,java.lang.String[],boolean,boolean)>($r26, $r25, $r24, $r23, $r22, $r21, $r20, $r19, $r18, $r17, $r16, $l3, $l2, $r15, $r14, $z3, $z2)
+
+		IncompleteOperationError violating CrySL rule for javax.net.ssl.KeyManagerFactory (on Object #345ac94f0e2b74b7f6669780d86eec50f6f1ba661c6210b9458f3e31ebd64141)
+			Operation on object of type io.netty.handler.ssl.OpenSslCachingX509KeyManagerFactory object not completed. Expected call to init
+			at statement: $r27 = staticinvoke <io.netty.handler.ssl.SslContext: io.netty.handler.ssl.SslContext newServerContextInternal(io.netty.handler.ssl.SslProvider,java.security.Provider,java.security.cert.X509Certificate[],javax.net.ssl.TrustManagerFactory,java.security.cert.X509Certificate[],java.security.PrivateKey,java.lang.String,javax.net.ssl.KeyManagerFactory,java.lang.Iterable,io.netty.handler.ssl.CipherSuiteFilter,io.netty.handler.ssl.ApplicationProtocolConfig,long,long,io.netty.handler.ssl.ClientAuth,java.lang.String[],boolean,boolean)>($r26, $r25, $r24, $r23, $r22, $r21, $r20, $r19, $r18, $r17, $r16, $l3, $l2, $r15, $r14, $z3, $z2)
+
+
+Findings in Java Class: io.netty.handler.ssl.OpenSslX509TrustManagerWrapper$UnsafeTrustManagerWrapper
+
+	 in Method: javax.net.ssl.X509TrustManager wrapIfNeeded(javax.net.ssl.X509TrustManager)
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter was not properly generatedTrustManager
+			at statement: virtualinvoke r8.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, r11, null)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter (with value null) was not properly generatedKeyManager
+			at statement: virtualinvoke r8.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, r11, null)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 38
+
+	CogniCrypt found the following violations. For details see description above.
+	ConstraintError: 8
+	TypestateError: 4
+	ForbiddenMethodError: 1
+	ImpreciseValueExtractionError: 10
+	RequiredPredicateError: 16
+	IncompleteOperationError: 18
+=====================================================================
+Static Analysis took 2546 seconds!
+Analysis finished after 2549 seconds

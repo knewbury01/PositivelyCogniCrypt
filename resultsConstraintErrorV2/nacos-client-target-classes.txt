@@ -1,0 +1,171 @@
+Using call graph algorithm CHA
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: $r6
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: specialinvoke $r6.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r11, varReplacer407)
+		Method: <com.alibaba.nacos.client.config.impl.SpasAdapter: java.lang.String signWithhmacSHA1Encrypt(java.lang.String,java.lang.String)>
+		SHA-256: c32525388465398ee5b4ce20770a4f05822e1c3ec02c61186b6e1d95eeecee11
+		Secure: false
+	Object:
+		Variable: $r3
+		Type: java.security.MessageDigest
+		Statement: $r3 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer580)
+		Method: <com.alibaba.nacos.client.config.utils.MD5: void <init>()>
+		SHA-256: 92d3ce24d722299de9a56e584a2d6300026303f3e93b1d9e6d4f163096fefaf9
+		Secure: false
+	Object:
+		Variable: $r2
+		Type: java.security.SecureRandom
+		Statement: specialinvoke $r2.<java.security.SecureRandom: void <init>()>()
+		Method: <com.alibaba.nacos.client.naming.utils.ThreadLocalRandom$1: void run()>
+		SHA-256: 8b8a700cd43b9c84c4cc63fb805662a18230d986bcd96ddaa3135b9165018d50
+		Secure: true
+	Object:
+		Variable: r0
+		Type: byte[]
+		Statement: $r6 = virtualinvoke r14.<javax.crypto.Mac: byte[] doFinal(byte[])>(r0)
+		Method: <com.alibaba.nacos.client.naming.utils.SignUtil: byte[] sign(byte[],byte[],com.alibaba.nacos.client.naming.utils.SignUtil$SigningAlgorithm)>
+		SHA-256: 91904f127a542f5eb3dca77f66c64a34d9113ae865041b2ef8a190fb1f830b4
+		Secure: true
+	Object:
+		Variable: varReplacer407
+		Type: java.lang.String
+		Statement: specialinvoke $r6.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r11, varReplacer407)
+		Method: <com.alibaba.nacos.client.config.impl.SpasAdapter: java.lang.String signWithhmacSHA1Encrypt(java.lang.String,java.lang.String)>
+		SHA-256: 951798c8a940df84e559be49478ffeff7e3474ce08542104b04e1b1fc92f3a23
+		Secure: false
+	Object:
+		Variable: $r5
+		Type: java.lang.String
+		Statement: specialinvoke $r4.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r1, $r5)
+		Method: <com.alibaba.nacos.client.naming.utils.SignUtil: byte[] sign(byte[],byte[],com.alibaba.nacos.client.naming.utils.SignUtil$SigningAlgorithm)>
+		SHA-256: f5a97e0172d54e1540d059bbee253b632e2089bb9000bbf2b5fa67fb10f078a0
+		Secure: false
+	Object:
+		Variable: r5
+		Type: byte[]
+		Statement: r5 = virtualinvoke r3.<javax.crypto.Mac: byte[] doFinal(byte[])>(r4)
+		Method: <com.alibaba.nacos.client.config.impl.SpasAdapter: java.lang.String signWithhmacSHA1Encrypt(java.lang.String,java.lang.String)>
+		SHA-256: 3352a9195c32d771bb0053ee6c821f42f974ff0de6d39acbf4821eef09971ee0
+		Secure: true
+	Object:
+		Variable: r4
+		Type: byte[]
+		Statement: r5 = virtualinvoke r3.<javax.crypto.Mac: byte[] doFinal(byte[])>(r4)
+		Method: <com.alibaba.nacos.client.config.impl.SpasAdapter: java.lang.String signWithhmacSHA1Encrypt(java.lang.String,java.lang.String)>
+		SHA-256: 6abbe5bacfc9d25019b85dc8a37a02efc33389a3a4c3fdb7d6fcacd89fcbd89a
+		Secure: true
+	Object:
+		Variable: r3
+		Type: javax.crypto.Mac
+		Statement: r3 = staticinvoke <javax.crypto.Mac: javax.crypto.Mac getInstance(java.lang.String)>(varReplacer405)
+		Method: <com.alibaba.nacos.client.config.impl.SpasAdapter: java.lang.String signWithhmacSHA1Encrypt(java.lang.String,java.lang.String)>
+		SHA-256: 4ebf07201d3932ae9c10081543896dae28ceb8300e5ac39c6f96c7d71cf263f5
+		Secure: true
+	Object:
+		Variable: $r4
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: specialinvoke $r4.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r1, $r5)
+		Method: <com.alibaba.nacos.client.naming.utils.SignUtil: byte[] sign(byte[],byte[],com.alibaba.nacos.client.naming.utils.SignUtil$SigningAlgorithm)>
+		SHA-256: 67d6defa4927820d6241ab3de1a9c5adba59ae784fd9ecaed2043ca19a8fe4b2
+		Secure: false
+	Object:
+		Variable: r14
+		Type: javax.crypto.Mac
+		Statement: r14 = staticinvoke <javax.crypto.Mac: javax.crypto.Mac getInstance(java.lang.String)>($r3)
+		Method: <com.alibaba.nacos.client.naming.utils.SignUtil: byte[] sign(byte[],byte[],com.alibaba.nacos.client.naming.utils.SignUtil$SigningAlgorithm)>
+		SHA-256: 334e6cbb0e03429b4e91c5c110252cf1fe37b29fa5087cef30bd73ef5e4b45e
+		Secure: true
+	Object:
+		Variable: $r6
+		Type: byte[]
+		Statement: $r6 = virtualinvoke r14.<javax.crypto.Mac: byte[] doFinal(byte[])>(r0)
+		Method: <com.alibaba.nacos.client.naming.utils.SignUtil: byte[] sign(byte[],byte[],com.alibaba.nacos.client.naming.utils.SignUtil$SigningAlgorithm)>
+		SHA-256: 249d1950468361b34d0f8eb9b5013c382ba931e745a4e9c9ec390cb3e3d2a737
+		Secure: true
+
+Findings in Java Class: com.alibaba.nacos.client.config.utils.MD5
+
+	 in Method: void <init>()
+		ConstraintError violating CrySL rule for MessageDigest (on Object #92d3ce24d722299de9a56e584a2d6300026303f3e93b1d9e6d4f163096fefaf9)
+			First parameter (with value "md5") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: $r3 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer580)
+
+
+Findings in Java Class: com.alibaba.nacos.client.config.impl.SpasAdapter
+
+	 in Method: java.lang.String signWithhmacSHA1Encrypt(java.lang.String,java.lang.String)
+		RequiredPredicateError violating CrySL rule for javax.crypto.spec.SecretKeySpec
+			First parameter was not properly generated as prepared Key Material
+			at statement: specialinvoke $r6.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r11, varReplacer407)
+
+
+Findings in Java Class: com.alibaba.nacos.client.naming.utils.SignUtil
+
+	 in Method: byte[] sign(byte[],byte[],com.alibaba.nacos.client.naming.utils.SignUtil$SigningAlgorithm)
+		RequiredPredicateError violating CrySL rule for javax.crypto.spec.SecretKeySpec
+			First parameter was not properly generated as prepared Key Material
+			at statement: specialinvoke $r4.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r1, $r5)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 12
+
+	CogniCrypt found the following violations. For details see description above.
+	ConstraintError: 1
+	RequiredPredicateError: 2
+=====================================================================
+Analysis finished after 14 seconds

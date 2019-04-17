@@ -1,0 +1,296 @@
+Using call graph algorithm CHA
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: r4
+		Type: javax.crypto.KeyGenerator
+		Statement: r4 = staticinvoke <javax.crypto.KeyGenerator: javax.crypto.KeyGenerator getInstance(java.lang.String)>(varReplacer381)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateHmacSha1Key()>
+		SHA-256: 6d6c4b2fb7eb26ffdd7fbea5ef77c8347e447a8c12d08051001f745334674dbf
+		Secure: false
+	Object:
+		Variable: r0
+		Type: byte[]
+		Statement: $r4 = virtualinvoke r2.<javax.crypto.Mac: byte[] doFinal(byte[])>(r0)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] hmacSha1(byte[],byte[])>
+		SHA-256: 80c8bf40637ed7b9d34596caf54ed00339c74ff95db3ab862f3e4b0d23899881
+		Secure: true
+	Object:
+		Variable: r0
+		Type: javax.crypto.SecretKey
+		Statement: r0 = virtualinvoke r4.<javax.crypto.KeyGenerator: javax.crypto.SecretKey generateKey()>()
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateHmacSha1Key()>
+		SHA-256: 374d5634ed90e78f9b44be03755fd70435eda72ecf5f98b13994894a1aa825dd
+		Secure: false
+	Object:
+		Variable: $r2
+		Type: java.security.SecureRandom
+		Statement: specialinvoke $r2.<java.security.SecureRandom: void <init>()>()
+		Method: <org.springside.modules.utils.text.HashUtil: void <clinit>()>
+		SHA-256: 80502925d440b2f321197127332597cb8d5c14b678905a58ebfb8de6edf174ac
+		Secure: true
+	Object:
+		Variable: $r4
+		Type: byte[]
+		Statement: $r4 = virtualinvoke r2.<javax.crypto.Mac: byte[] doFinal(byte[])>(r0)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] hmacSha1(byte[],byte[])>
+		SHA-256: 976826a46139a8b5f59474c0772488b691399c130bd37288400e167582b8500a
+		Secure: true
+	Object:
+		Variable: r2
+		Type: javax.crypto.Mac
+		Statement: r2 = staticinvoke <javax.crypto.Mac: javax.crypto.Mac getInstance(java.lang.String)>(varReplacer379)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] hmacSha1(byte[],byte[])>
+		SHA-256: a60b30b7689cdeb7bc525a62a81b69eb4c36c050431d05a91a99e112ab3fbe93
+		Secure: true
+	Object:
+		Variable: $r6
+		Type: javax.crypto.spec.IvParameterSpec
+		Statement: specialinvoke $r6.<javax.crypto.spec.IvParameterSpec: void <init>(byte[])>(r2)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],byte[],int)>
+		SHA-256: 5ec487411b1fa19bdf1a535ce42b28d8a7b7fb348b6b3c5665e3b8e860d20a31
+		Secure: false
+	Object:
+		Variable: $r0
+		Type: java.security.SecureRandom
+		Statement: specialinvoke $r0.<java.security.SecureRandom: void <init>()>()
+		Method: <org.springside.modules.utils.misc.IdGenerator: void <clinit>()>
+		SHA-256: 7858174ce1e892a4b0b5df0f0865eb6afe4c3da3177e7dd8949aa2db470c6272
+		Secure: true
+	Object:
+		Variable: varReplacer387
+		Type: java.lang.String
+		Statement: specialinvoke $r3.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r1, varReplacer387)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],int)>
+		SHA-256: ab3febe4b51c3d2f3304a3dd255a3cd8f4a3e0cb73f54549b5771026ed55e491
+		Secure: false
+	Object:
+		Variable: varReplacer380
+		Type: java.lang.String
+		Statement: specialinvoke $r3.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r1, varReplacer380)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] hmacSha1(byte[],byte[])>
+		SHA-256: 9bb3927eba07f0a77092feec8ba4a364c2e6048051f9e887f6167a0adc175905
+		Secure: false
+	Object:
+		Variable: $r1
+		Type: byte[]
+		Statement: $r1 = interfaceinvoke r0.<javax.crypto.SecretKey: byte[] getEncoded()>()
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateAesKey(int)>
+		SHA-256: 6bd6b93c5a233b61c1bf70e6ed619fe4ade0bfb70a3b7beac5498ed272eed21
+		Secure: true
+	Object:
+		Variable: $r3
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: specialinvoke $r3.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r1, varReplacer387)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],int)>
+		SHA-256: 9589be75d74865593b095ff5f834b9e1143faf8816586b9f0867acfff8069281
+		Secure: false
+	Object:
+		Variable: $r7
+		Type: byte[]
+		Statement: $r7 = virtualinvoke r4.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r0)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],byte[],int)>
+		SHA-256: 4ef35848db854cac7e4ca9e1565558fa048b3be41ee0d2a18c66a715af6998a0
+		Secure: false
+	Object:
+		Variable: r4
+		Type: javax.crypto.Cipher
+		Statement: r4 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>(varReplacer390)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],byte[],int)>
+		SHA-256: 83c892bd317091025c56fc80622c783ed5fb62b42bc28bf136304e05b1917895
+		Secure: false
+	Object:
+		Variable: $r3
+		Type: java.security.SecureRandom
+		Statement: specialinvoke $r3.<java.security.SecureRandom: void <init>()>()
+		Method: <org.springside.modules.utils.number.RandomUtil: java.security.SecureRandom secureRandom()>
+		SHA-256: 805f08259004dc4acffa68e84d404a49031e2463210afbb98c85a58eb6287659
+		Secure: true
+	Object:
+		Variable: $r3
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: specialinvoke $r3.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r1, varReplacer380)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] hmacSha1(byte[],byte[])>
+		SHA-256: 2b679aaa89ecc42f6f2af8954823619e1aeed4b8fdca214a3916b0eb6b26cd35
+		Secure: false
+	Object:
+		Variable: r0
+		Type: javax.crypto.SecretKey
+		Statement: r0 = virtualinvoke r4.<javax.crypto.KeyGenerator: javax.crypto.SecretKey generateKey()>()
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateAesKey(int)>
+		SHA-256: 4802fe357a8bfc113b748c70d69cf026fdd624b42b5215e1f5ffbd25605e86c3
+		Secure: true
+	Object:
+		Variable: $r5
+		Type: javax.crypto.spec.SecretKeySpec
+		Statement: specialinvoke $r5.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r1, varReplacer389)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],byte[],int)>
+		SHA-256: 2538ce2329658c8357e4cbb097c7de63e09c3a37efaec5e60fcc7ce4b671df25
+		Secure: false
+	Object:
+		Variable: r2
+		Type: javax.crypto.Cipher
+		Statement: r2 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>(varReplacer388)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],int)>
+		SHA-256: 457cb34e5b720b5e36a8da227ce4463404409bacb8780a5851dbe5327efee78
+		Secure: false
+	Object:
+		Variable: $r4
+		Type: byte[]
+		Statement: $r4 = virtualinvoke r2.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r0)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],int)>
+		SHA-256: bd3e12cd7587f747063e7ec033b97c9ed441ce3a91a40eac5bc1b13d20c1a6b6
+		Secure: false
+	Object:
+		Variable: varReplacer389
+		Type: java.lang.String
+		Statement: specialinvoke $r5.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r1, varReplacer389)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],byte[],int)>
+		SHA-256: 4d03d1f637a28325ed5bf2d8190097a86060f4d84d17dfd3efe178569e9885b1
+		Secure: false
+	Object:
+		Variable: r0
+		Type: byte[]
+		Statement: $r4 = virtualinvoke r2.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r0)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],int)>
+		SHA-256: 14fce5b46e279921ccaab1c642c0c3d7c1081907f93e9d4be6cbd1e78e4ed7fc
+		Secure: false
+	Object:
+		Variable: r0
+		Type: byte[]
+		Statement: $r7 = virtualinvoke r4.<javax.crypto.Cipher: byte[] doFinal(byte[])>(r0)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] aes(byte[],byte[],byte[],int)>
+		SHA-256: aab2c9085f2bb3482bce1561f7c6d7a44e1b285cd85a4ee6abfee25550ac3f93
+		Secure: false
+	Object:
+		Variable: $r1
+		Type: java.security.SecureRandom
+		Statement: $r1 = staticinvoke <java.security.SecureRandom: java.security.SecureRandom getInstance(java.lang.String)>(varReplacer304)
+		Method: <org.springside.modules.utils.number.RandomUtil: java.security.SecureRandom secureRandom()>
+		SHA-256: e553017bb2c02a82cb1931462beb2dd548ab7ebdc605a2038df3d8ae17efce96
+		Secure: true
+	Object:
+		Variable: r4
+		Type: javax.crypto.KeyGenerator
+		Statement: r4 = staticinvoke <javax.crypto.KeyGenerator: javax.crypto.KeyGenerator getInstance(java.lang.String)>(varReplacer392)
+		Method: <org.springside.modules.utils.security.CryptoUtil: byte[] generateAesKey(int)>
+		SHA-256: db04769892783be169bbad6b8f5265956ec864b0504dacc68cfeb8045a2e0568
+		Secure: true
+	Object:
+		Variable: $r3
+		Type: java.security.MessageDigest
+		Statement: $r3 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>($r2)
+		Method: <org.springside.modules.utils.text.HashUtil$1: java.security.MessageDigest initialValue()>
+		SHA-256: be4a94bb3abe6bf609927804962b849ece8d3023da9cd81d1fd924983a366922
+		Secure: false
+
+Findings in Java Class: org.springside.modules.utils.text.HashUtil$1
+
+	 in Method: java.lang.Object initialValue()
+		IncompleteOperationError violating CrySL rule for MessageDigest (on Object #be4a94bb3abe6bf609927804962b849ece8d3023da9cd81d1fd924983a366922)
+			Operation on object of type java.security.MessageDigest object not completed. Expected call to digest, update
+			at statement: return $r1
+
+
+Findings in Java Class: org.springside.modules.utils.security.CryptoUtil
+
+	 in Method: byte[] generateHmacSha1Key()
+		ConstraintError violating CrySL rule for javax.crypto.KeyGenerator (on Object #6d6c4b2fb7eb26ffdd7fbea5ef77c8347e447a8c12d08051001f745334674dbf)
+			First parameter (with value "HmacSHA1") should be any of {AES, HmacSHA224, HmacSHA256, HmacSHA384, HmacSHA512}
+			at statement: r4 = staticinvoke <javax.crypto.KeyGenerator: javax.crypto.KeyGenerator getInstance(java.lang.String)>(varReplacer381)
+
+
+	 in Method: byte[] aes(byte[],byte[],int)
+		RequiredPredicateError violating CrySL rule for javax.crypto.Cipher
+			Second parameter was not properly generated as generated Key
+			at statement: virtualinvoke r2.<javax.crypto.Cipher: void init(int,java.security.Key)>(i0, r7)
+
+		RequiredPredicateError violating CrySL rule for javax.crypto.spec.SecretKeySpec
+			First parameter was not properly generated as prepared Key Material
+			at statement: specialinvoke $r3.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r1, varReplacer387)
+
+		ConstraintError violating CrySL rule for javax.crypto.Cipher (on Object #457cb34e5b720b5e36a8da227ce4463404409bacb8780a5851dbe5327efee78)
+			First parameter (with value "AES") should be any of AES/{CBC, GCM, PCBC, CTR, CTS, CFB, OFB}
+			at statement: r2 = staticinvoke <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)>(varReplacer388)
+
+
+	 in Method: byte[] aes(byte[],byte[],byte[],int)
+		RequiredPredicateError violating CrySL rule for javax.crypto.spec.IvParameterSpec
+			First parameter was not properly generated as randomized
+			at statement: specialinvoke $r6.<javax.crypto.spec.IvParameterSpec: void <init>(byte[])>(r2)
+
+		RequiredPredicateError violating CrySL rule for javax.crypto.Cipher
+			Second parameter was not properly generated as generated Key
+			at statement: virtualinvoke r4.<javax.crypto.Cipher: void init(int,java.security.Key,java.security.spec.AlgorithmParameterSpec)>(i0, r10, r3)
+
+		RequiredPredicateError violating CrySL rule for javax.crypto.spec.SecretKeySpec
+			First parameter was not properly generated as prepared Key Material
+			at statement: specialinvoke $r5.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r1, varReplacer389)
+
+
+	 in Method: byte[] hmacSha1(byte[],byte[])
+		RequiredPredicateError violating CrySL rule for javax.crypto.spec.SecretKeySpec
+			First parameter was not properly generated as prepared Key Material
+			at statement: specialinvoke $r3.<javax.crypto.spec.SecretKeySpec: void <init>(byte[],java.lang.String)>(r1, varReplacer380)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 26
+
+	CogniCrypt found the following violations. For details see description above.
+	RequiredPredicateError: 6
+	IncompleteOperationError: 1
+	ConstraintError: 2
+=====================================================================
+Analysis finished after 47 seconds

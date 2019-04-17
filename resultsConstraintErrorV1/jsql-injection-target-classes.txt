@@ -1,0 +1,266 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 1 seconds
+Warning: Couldn't find any method for CryptSLMethod: javax.net.ssl.SSLSocketFactory.createSocket( _ port);
+Warning: Couldn't find any method for CryptSLMethod: javax.net.ssl.SSLServerSocketFactory.createServerSocket( port);
+Discovered 7 analysis seeds within 1 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT2.161324801S
+Estimated Time: PT17.290598408S
+Analyzed Objects: 1 of 9
+Percentage Completed: 0.11
+
+Analysis Time: PT2.199394781S
+Estimated Time: PT8.79757912S
+Analyzed Objects: 2 of 10
+Percentage Completed: 0.2
+
+Analysis Time: PT2.23114444S
+Estimated Time: PT5.949718504S
+Analyzed Objects: 3 of 11
+Percentage Completed: 0.27
+
+Analysis Time: PT11M18.933309989S
+Estimated Time: PT22M37.866619976S
+Analyzed Objects: 4 of 12
+Percentage Completed: 0.33
+
+Analysis Time: PT11M18.988512871S
+Estimated Time: PT18M6.381620592S
+Analyzed Objects: 5 of 13
+Percentage Completed: 0.38
+
+Analysis Time: PT11M18.999595502S
+Estimated Time: PT13M12.16619475S
+Analyzed Objects: 6 of 13
+Percentage Completed: 0.46
+
+Analysis Time: PT11M19.007682443S
+Estimated Time: PT9M42.006584946S
+Analyzed Objects: 7 of 13
+Percentage Completed: 0.54
+
+Analysis Time: PT11M19.014703417S
+Estimated Time: PT7M4.384189635S
+Analyzed Objects: 8 of 13
+Percentage Completed: 0.62
+
+Analysis Time: PT11M19.017335938S
+Estimated Time: PT5M1.785482636S
+Analyzed Objects: 9 of 13
+Percentage Completed: 0.69
+
+Analysis Time: PT11M19.019733309S
+Estimated Time: PT3M23.70591999S
+Analyzed Objects: 10 of 13
+Percentage Completed: 0.77
+
+Analysis Time: PT11M19.021638242S
+Estimated Time: PT2M3.45847968S
+Analyzed Objects: 11 of 13
+Percentage Completed: 0.85
+
+Analysis Time: PT11M19.024129144S
+Estimated Time: PT56.585344095S
+Analyzed Objects: 12 of 13
+Percentage Completed: 0.92
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: r13
+		Type: javax.net.ssl.SSLContext
+		Statement: r13 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("SSL")
+		Method: <com.jsql.util.CertificateUtil: void ignoreCertificationChain()>
+		SHA-256: 94028d7a4b815a25f4e15f40df603e8fd80fa8939c1d24ca14245ca0b605ad0f
+	Object:
+		Variable: r130
+		Type: byte[]
+		Statement: r130 = virtualinvoke r127.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.jsql.view.swing.manager.util.ActionCoder: void transform(java.lang.String)>
+		SHA-256: 6196baa989db48d0243fa5d444ebf9ec78ababb5be181e124ec1fd8c370166bc
+	Object:
+		Variable: r16
+		Type: java.security.SecureRandom
+		Statement: r16 = new java.security.SecureRandom
+		Method: <com.jsql.util.CertificateUtil: void ignoreCertificationChain()>
+		SHA-256: 5303643a5bbbcc6f8370b73b2cbd57151add6431061b0883ee72a06c21400185
+	Object:
+		Variable: r144
+		Type: byte[]
+		Statement: r144 = virtualinvoke r141.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.jsql.view.swing.manager.util.ActionCoder: void transform(java.lang.String)>
+		SHA-256: 12a2f9333c6d4475c78aa629aed9f6eea3f09e69ae0eedcd5988e15cbcc0f013
+	Object:
+		Variable: r4
+		Type: byte[]
+		Statement: r4 = virtualinvoke r1.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.jsql.view.swing.bruteforce.Hash: java.lang.String generateMySQL(char[])>
+		SHA-256: a15ba999f00a21d2be384452766fc2f8eec2e9e20d6732306e29edee2570b212
+	Object:
+		Variable: r1
+		Type: java.security.MessageDigest
+		Statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("sha-1")
+		Method: <com.jsql.view.swing.bruteforce.Hash: java.lang.String generateMySQL(char[])>
+		SHA-256: 3e0bea3f33b916bdc0866ecdd92b123ba39d471b1791c17644db9de63903c140
+	Object:
+		Variable: r9
+		Type: byte[]
+		Statement: r9 = virtualinvoke r6.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.jsql.view.swing.bruteforce.Hash: java.lang.String generateMySQL(char[])>
+		SHA-256: ee851577109c85081691f2e8bb3fe9fbb4305cf20c3cb8879c9eaa9a018d1ef7
+	Object:
+		Variable: r6
+		Type: byte[]
+		Statement: r6 = virtualinvoke r141.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.jsql.view.swing.manager.util.ActionCoder: void transform(java.lang.String)>
+		SHA-256: 2d253867a65a5c0fcf0cceeab0456abf6ac7b0ed087b6655b82cc3b9a99da18b
+	Object:
+		Variable: r141
+		Type: java.security.MessageDigest
+		Statement: r141 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("sha-1")
+		Method: <com.jsql.view.swing.manager.util.ActionCoder: void transform(java.lang.String)>
+		SHA-256: 57b9951d0329d91f41ba0d37d63c66be7ebb5162fdfa9f5f93f5fd79d4ec9c48
+	Object:
+		Variable: r2
+		Type: java.security.MessageDigest
+		Statement: r2 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r0)
+		Method: <com.jsql.view.swing.bruteforce.Hash: java.lang.String generateHash(java.lang.String,char[])>
+		SHA-256: 8601af0cceca27255d7ae7bdb4197f058abd0a37ed248601c93d04811951241b
+	Object:
+		Variable: r6
+		Type: java.security.MessageDigest
+		Statement: r6 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("sha-1")
+		Method: <com.jsql.view.swing.bruteforce.Hash: java.lang.String generateMySQL(char[])>
+		SHA-256: d5199cb3819b5359ba723409013aa8207ae2cca5e5c4efb09f5665032315fbbc
+	Object:
+		Variable: r127
+		Type: java.security.MessageDigest
+		Statement: r127 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r2)
+		Method: <com.jsql.view.swing.manager.util.ActionCoder: void transform(java.lang.String)>
+		SHA-256: b792721bb9ca2af4e70406c4918ed96db335927ade0ea62ef67b0ac8eb595024
+	Object:
+		Variable: r5
+		Type: byte[]
+		Statement: r5 = virtualinvoke r2.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.jsql.view.swing.bruteforce.Hash: java.lang.String generateHash(java.lang.String,char[])>
+		SHA-256: b8ba014f83fdc40a580d69358ab9f5d7294cfd572698ba5cb953a04de9109007
+
+Findings in Java Class: com.jsql.view.swing.manager.util.ActionCoder
+
+	 in Method: void transform(java.lang.String)
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint int pre_len p int 0 could not be evaluted due to insufficient information.
+			at statement: virtualinvoke r141.<java.security.MessageDigest: void update(byte[],int,int)>(r143, 0, $i0)
+
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint int pre_len p int 0 could not be evaluted due to insufficient information.
+			at statement: virtualinvoke r141.<java.security.MessageDigest: void update(byte[],int,int)>(r5, 0, $i1)
+
+		ConstraintError violating CrySL rule for MessageDigest (on Object #57b9951d0329d91f41ba0d37d63c66be7ebb5162fdfa9f5f93f5fd79d4ec9c48)
+			First parameter (with value "sha-1") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r141 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("sha-1")
+
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint int pre_len p int 0 could not be evaluted due to insufficient information.
+			at statement: virtualinvoke r127.<java.security.MessageDigest: void update(byte[],int,int)>(r129, 0, $i4)
+
+
+Findings in Java Class: com.jsql.view.swing.bruteforce.Hash
+
+	 in Method: java.lang.String generateMySQL(char[])
+		ConstraintError violating CrySL rule for MessageDigest (on Object #3e0bea3f33b916bdc0866ecdd92b123ba39d471b1791c17644db9de63903c140)
+			First parameter (with value "sha-1") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("sha-1")
+
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint int pre_len p int 0 could not be evaluted due to insufficient information.
+			at statement: virtualinvoke r1.<java.security.MessageDigest: void update(byte[],int,int)>(r3, 0, $i0)
+
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint int pre_len p int 0 could not be evaluted due to insufficient information.
+			at statement: virtualinvoke r6.<java.security.MessageDigest: void update(byte[],int,int)>(r8, 0, $i1)
+
+		ConstraintError violating CrySL rule for MessageDigest (on Object #d5199cb3819b5359ba723409013aa8207ae2cca5e5c4efb09f5665032315fbbc)
+			First parameter (with value "sha-1") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r6 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("sha-1")
+
+
+	 in Method: java.lang.String generateHash(java.lang.String,char[])
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint int pre_len p int 0 could not be evaluted due to insufficient information.
+			at statement: virtualinvoke r2.<java.security.MessageDigest: void update(byte[],int,int)>(r4, 0, $i0)
+
+
+Findings in Java Class: com.jsql.util.CertificateUtil
+
+	 in Method: void ignoreCertificationChain()
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter (with value null) was not properly generatedKeyManager
+			at statement: virtualinvoke r13.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, r18, r16)
+
+		ConstraintError violating CrySL rule for javax.net.ssl.SSLContext (on Object #94028d7a4b815a25f4e15f40df603e8fd80fa8939c1d24ca14245ca0b605ad0f)
+			First parameter (with value "SSL") should be any of {TLSv1, TLSv1.1, TLSv1.2}
+			at statement: r13 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>("SSL")
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter was not properly generatedTrustManager
+			at statement: virtualinvoke r13.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(null, r18, r16)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 13
+
+	CogniCrypt found the following violations. For details see description above.
+	ImpreciseValueExtractionError: 6
+	ConstraintError: 4
+	RequiredPredicateError: 2
+=====================================================================
+Static Analysis took 679 seconds!
+Analysis finished after 682 seconds

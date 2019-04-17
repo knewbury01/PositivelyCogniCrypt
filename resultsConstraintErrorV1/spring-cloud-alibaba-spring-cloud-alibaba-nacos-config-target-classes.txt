@@ -1,0 +1,98 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Discovered 1 analysis seeds within 0 seconds!
+ERROR StatusLogger No Log4j 2 configuration file found. Using default configuration (logging only errors to the console), or user programmatically provided configurations. Set system property 'log4j2.debug' to show Log4j 2 internal initialization logging. See https://logging.apache.org/log4j/2.x/manual/configuration.html for instructions on how to configure Log4j 2
+Analysis Time: PT0.651385505S
+Estimated Time: PT1.30277101S
+Analyzed Objects: 1 of 3
+Percentage Completed: 0.33
+
+Analysis Time: PT0.661757555S
+Estimated Time: PT0.330878777S
+Analyzed Objects: 2 of 3
+Percentage Completed: 0.67
+
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: $r13
+		Type: byte[]
+		Statement: $r13 = virtualinvoke r22.<java.security.MessageDigest: byte[] digest(byte[])>($r12)
+		Method: <org.springframework.cloud.alibaba.nacos.refresh.NacosContextRefresher$1: void receiveConfigInfo(java.lang.String)>
+		SHA-256: 7e51e2f75e9a959774c824e26d6f4336c2c9d1f790d9a21cd2479b5cd595d8a8
+	Object:
+		Variable: r22
+		Type: java.security.MessageDigest
+		Statement: r22 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+		Method: <org.springframework.cloud.alibaba.nacos.refresh.NacosContextRefresher$1: void receiveConfigInfo(java.lang.String)>
+		SHA-256: aeed0ecdaddee0d3d0a54d522aaffa60009e90da5baa47ab3f99076dff70bfe2
+	Object:
+		Variable: $r12
+		Type: byte[]
+		Statement: $r13 = virtualinvoke r22.<java.security.MessageDigest: byte[] digest(byte[])>($r12)
+		Method: <org.springframework.cloud.alibaba.nacos.refresh.NacosContextRefresher$1: void receiveConfigInfo(java.lang.String)>
+		SHA-256: a947ebf82241a8a8e0b13a22d4c981d2ea979fc3d005ab6a8698f3281f4970a8
+
+Findings in Java Class: org.springframework.cloud.alibaba.nacos.refresh.NacosContextRefresher$1
+
+	 in Method: void receiveConfigInfo(java.lang.String)
+		ConstraintError violating CrySL rule for MessageDigest (on Object #aeed0ecdaddee0d3d0a54d522aaffa60009e90da5baa47ab3f99076dff70bfe2)
+			First parameter (with value "MD5") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r22 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>("MD5")
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 3
+
+	CogniCrypt found the following violations. For details see description above.
+	ConstraintError: 1
+=====================================================================
+Static Analysis took 0 seconds!
+Analysis finished after 2 seconds

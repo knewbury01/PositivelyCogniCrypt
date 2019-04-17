@@ -1,0 +1,190 @@
+Using call graph algorithm CHA
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Finished initializing soot
+Analysis soot setup done after 1 seconds
+Ruleset: 
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.Cipher
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	MessageDigest
+	javax.crypto.spec.PBEParameterSpec
+	java.security.KeyStore
+	javax.crypto.SecretKey
+	java.security.spec.DSAGenParameterSpec
+	java.security.Signature
+	SSLSocketFactory
+	javax.net.ssl.SSLParameters
+	java.security.DigestInputStream
+	javax.crypto.CipherInputStream
+	SSLSocket
+	java.security.Key
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.net.ssl.TrustManagerFactory
+	javax.crypto.CipherOutputStream
+	java.security.DigestOutputStream
+	java.security.spec.DSAParameterSpec
+	java.security.cert.PKIXParameters
+	SSLServerSocket
+	java.security.KeyPairGenerator
+	java.security.AlgorithmParameters
+	javax.crypto.spec.DHParameterSpec
+	SSLServerSocketFactory
+	javax.crypto.KeyGenerator
+	javax.crypto.spec.SecretKeySpec
+	Stopwatch
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.Mac
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.SecureRandom
+	java.security.cert.PKIXBuilderParameters
+	javax.net.ssl.SSLContext
+	java.security.spec.RSAKeyGenParameterSpec
+	javax.crypto.spec.DHGenParameterSpec
+	java.security.cert.TrustAnchor
+	javax.net.ssl.SSLEngine
+
+Analyzed Objects: 
+	Object:
+		Variable: r141
+		Type: java.security.MessageDigest
+		Statement: r141 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer1292)
+		Method: <com.jsql.view.swing.manager.util.ActionCoder: void transform(java.lang.String)>
+		SHA-256: 847373c5bcbcfb4212373db74778a455137caa9abb3ae772e97939a54002f890
+		Secure: false
+	Object:
+		Variable: r2
+		Type: java.security.MessageDigest
+		Statement: r2 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r0)
+		Method: <com.jsql.view.swing.bruteforce.Hash: java.lang.String generateHash(java.lang.String,char[])>
+		SHA-256: d4269fc5bc08154b4835de1873d70e3dee220f3f0d75752407f40414989c1b93
+		Secure: true
+	Object:
+		Variable: r6
+		Type: byte[]
+		Statement: r6 = virtualinvoke r141.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.jsql.view.swing.manager.util.ActionCoder: void transform(java.lang.String)>
+		SHA-256: c23fe7417898df3b5b7c30e70a009063a9b0819dc46241b8a193a8d6e567c3f8
+		Secure: false
+	Object:
+		Variable: r16
+		Type: java.security.SecureRandom
+		Statement: specialinvoke r16.<java.security.SecureRandom: void <init>()>()
+		Method: <com.jsql.util.CertificateUtil: void ignoreCertificationChain()>
+		SHA-256: 9fa06d675115c06271bcf41596898b213a54632fc9b595826f6cdcd38190b334
+		Secure: true
+	Object:
+		Variable: r144
+		Type: byte[]
+		Statement: r144 = virtualinvoke r141.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.jsql.view.swing.manager.util.ActionCoder: void transform(java.lang.String)>
+		SHA-256: 16e34360232a5ec8d2a20a7422ac6841fafa4c864905688ebbaf3d86e022eb54
+		Secure: false
+	Object:
+		Variable: r6
+		Type: java.security.MessageDigest
+		Statement: r6 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer3314)
+		Method: <com.jsql.view.swing.bruteforce.Hash: java.lang.String generateMySQL(char[])>
+		SHA-256: 7dcc1dc74098baa7b65ab689b6a5c6ac7d31ea2e588df71eb9203c146074bf8f
+		Secure: false
+	Object:
+		Variable: r130
+		Type: byte[]
+		Statement: r130 = virtualinvoke r127.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.jsql.view.swing.manager.util.ActionCoder: void transform(java.lang.String)>
+		SHA-256: e1b02c8e6d84eb9cafbffc567c07d66d74d5b9805c8afe8651a44d581bc240da
+		Secure: true
+	Object:
+		Variable: r9
+		Type: byte[]
+		Statement: r9 = virtualinvoke r6.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.jsql.view.swing.bruteforce.Hash: java.lang.String generateMySQL(char[])>
+		SHA-256: f1d9750e699c01f12f44f7f3c099a0a0b6b457931181fd26c51de1acd86ac9c7
+		Secure: false
+	Object:
+		Variable: r4
+		Type: byte[]
+		Statement: r4 = virtualinvoke r1.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.jsql.view.swing.bruteforce.Hash: java.lang.String generateMySQL(char[])>
+		SHA-256: 5f68189be6aeb56a75bfe4fa37e7180f6e8b4fd58e953cf870f2fd7b4a9328f8
+		Secure: false
+	Object:
+		Variable: r13
+		Type: javax.net.ssl.SSLContext
+		Statement: r13 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>(varReplacer6162)
+		Method: <com.jsql.util.CertificateUtil: void ignoreCertificationChain()>
+		SHA-256: dc76e7319b83e6d2c3f61e02ef03c9da3c1c4777c4b31e534a44c74631c57d35
+		Secure: false
+	Object:
+		Variable: r1
+		Type: java.security.MessageDigest
+		Statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer3315)
+		Method: <com.jsql.view.swing.bruteforce.Hash: java.lang.String generateMySQL(char[])>
+		SHA-256: 301a68dccf6ea60c3a521eff216a0b1bff29226f14ae6706d79acd432380876c
+		Secure: false
+	Object:
+		Variable: r5
+		Type: byte[]
+		Statement: r5 = virtualinvoke r2.<java.security.MessageDigest: byte[] digest()>()
+		Method: <com.jsql.view.swing.bruteforce.Hash: java.lang.String generateHash(java.lang.String,char[])>
+		SHA-256: 322396d37d9346dd6825ddd3ffd5c306aaedc13a909fdac38567db4f07b2d325
+		Secure: true
+	Object:
+		Variable: r127
+		Type: java.security.MessageDigest
+		Statement: r127 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r2)
+		Method: <com.jsql.view.swing.manager.util.ActionCoder: void transform(java.lang.String)>
+		SHA-256: e021f71f7371123c08dc654972241f4b4b4a3d56f0be9744bfd68880d2e69442
+		Secure: true
+
+Findings in Java Class: com.jsql.view.swing.manager.util.ActionCoder
+
+	 in Method: void transform(java.lang.String)
+		ConstraintError violating CrySL rule for MessageDigest (on Object #847373c5bcbcfb4212373db74778a455137caa9abb3ae772e97939a54002f890)
+			First parameter (with value "sha-1") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r141 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer1292)
+
+
+Findings in Java Class: com.jsql.view.swing.bruteforce.Hash
+
+	 in Method: java.lang.String generateMySQL(char[])
+		ConstraintError violating CrySL rule for MessageDigest (on Object #7dcc1dc74098baa7b65ab689b6a5c6ac7d31ea2e588df71eb9203c146074bf8f)
+			First parameter (with value "sha-1") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r6 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer3314)
+
+		ConstraintError violating CrySL rule for MessageDigest (on Object #301a68dccf6ea60c3a521eff216a0b1bff29226f14ae6706d79acd432380876c)
+			First parameter (with value "sha-1") should be any of {SHA-256, SHA-384, SHA-512}
+			at statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(varReplacer3315)
+
+
+Findings in Java Class: com.jsql.util.CertificateUtil
+
+	 in Method: void ignoreCertificationChain()
+		ConstraintError violating CrySL rule for javax.net.ssl.SSLContext (on Object #dc76e7319b83e6d2c3f61e02ef03c9da3c1c4777c4b31e534a44c74631c57d35)
+			First parameter (with value "SSL") should be any of {TLSv1, TLSv1.1, TLSv1.2}
+			at statement: r13 = staticinvoke <javax.net.ssl.SSLContext: javax.net.ssl.SSLContext getInstance(java.lang.String)>(varReplacer6162)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			Second parameter was not properly generated as generated Trust Manager
+			at statement: virtualinvoke r13.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(varReplacer6164, r18, r16)
+
+		RequiredPredicateError violating CrySL rule for javax.net.ssl.SSLContext
+			First parameter was not properly generated as generated Key Manager
+			at statement: virtualinvoke r13.<javax.net.ssl.SSLContext: void init(javax.net.ssl.KeyManager[],javax.net.ssl.TrustManager[],java.security.SecureRandom)>(varReplacer6164, r18, r16)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 13
+
+	CogniCrypt found the following violations. For details see description above.
+	ConstraintError: 4
+	RequiredPredicateError: 2
+=====================================================================
+Analysis finished after 11 seconds
