@@ -87,3 +87,30 @@
 
 	./findConstraintErrors.sh FPV2Log.txt V2
 ```
+
+  ## 8. Detect False Positives:
+  * There will now be two files: FPV1Log.txt and FPV2Log.txt, generated. These should serve as the template to perform false positive detection. Inherently this labelling of each error as reported for each project, must be manual. However we make the results of our evaluation public.
+  * The format by which the logs should be filled out (for subsequent auto generation of reports) will be, T for a true positive, and FP for a false positive. Each row of the file is labelled with the CogniCrypt output file name. Each error in each output should be reviewed and placed into the file in top down order of the report of the error, and each label should be placed with no spaces.
+  * so for example, a report with 2 constraint errors, where the project name is X, the first error is True and the second error is False Positive, will have an entry in the log as such:
+
+```
+
+  X=TFP
+
+```
+
+ ## 9. Generate Reports:
+ * This process assumes that the development environment has R installed, and also RScript
+ * This process can produce reports on:
+   * a general summary of the number of projects that were analyzed successfully, and found to be relevant and found to have at least one error
+   * overall error type distributions
+   * frequency counts of constraint errors reported across projects
+   * a table of false positives as per the logs generated in the previous step
+ * All figures and reports can be generated in one step by running:
+
+```
+  ./makeAllFigures.sh
+
+```
+
+ * Alternatively each step can be performed in isolation, simply by copying any such line from the makeAllFigures script.

@@ -1,0 +1,356 @@
+Using call graph algorithm CHA
+Finished initializing soot
+Analysis soot setup done after 0 seconds
+Discovered 10 analysis seeds within 0 seconds!
+Analysis Time: PT0.613114572S
+Estimated Time: PT6.13114572S
+Analyzed Objects: 1 of 11
+Percentage Completed: 0.09
+
+Analysis Time: PT0.638030679S
+Estimated Time: PT3.19015339S
+Analyzed Objects: 2 of 12
+Percentage Completed: 0.17
+
+Analysis Time: PT0.648917287S
+Estimated Time: PT2.16305762S
+Analyzed Objects: 3 of 13
+Percentage Completed: 0.23
+
+Analysis Time: PT0.657126666S
+Estimated Time: PT1.64281666S
+Analyzed Objects: 4 of 14
+Percentage Completed: 0.29
+
+Analysis Time: PT0.667205663S
+Estimated Time: PT1.33441132S
+Analyzed Objects: 5 of 15
+Percentage Completed: 0.33
+
+Analysis Time: PT0.675182813S
+Estimated Time: PT1.12530468S
+Analyzed Objects: 6 of 16
+Percentage Completed: 0.38
+
+Analysis Time: PT0.683620633S
+Estimated Time: PT0.9766009S
+Analyzed Objects: 7 of 17
+Percentage Completed: 0.41
+
+Analysis Time: PT0.698126503S
+Estimated Time: PT0.87265812S
+Analyzed Objects: 8 of 18
+Percentage Completed: 0.44
+
+Analysis Time: PT0.706143719S
+Estimated Time: PT0.78460413S
+Analyzed Objects: 9 of 19
+Percentage Completed: 0.47
+
+Analysis Time: PT0.711977374S
+Estimated Time: PT0.71197737S
+Analyzed Objects: 10 of 20
+Percentage Completed: 0.5
+
+Analysis Time: PT0.741685491S
+Estimated Time: PT0.606833577S
+Analyzed Objects: 11 of 20
+Percentage Completed: 0.55
+
+Analysis Time: PT0.763750324S
+Estimated Time: PT0.50916688S
+Analyzed Objects: 12 of 20
+Percentage Completed: 0.6
+
+Analysis Time: PT0.779814111S
+Estimated Time: PT0.4198999S
+Analyzed Objects: 13 of 20
+Percentage Completed: 0.65
+
+Analysis Time: PT0.79074498S
+Estimated Time: PT0.338890704S
+Analyzed Objects: 14 of 20
+Percentage Completed: 0.7
+
+Analysis Time: PT0.807053588S
+Estimated Time: PT0.26901786S
+Analyzed Objects: 15 of 20
+Percentage Completed: 0.75
+
+Analysis Time: PT0.816258681S
+Estimated Time: PT0.204064668S
+Analyzed Objects: 16 of 20
+Percentage Completed: 0.8
+
+Analysis Time: PT0.826096994S
+Estimated Time: PT0.14578182S
+Analyzed Objects: 17 of 20
+Percentage Completed: 0.85
+
+Analysis Time: PT0.835497738S
+Estimated Time: PT0.092833082S
+Analyzed Objects: 18 of 20
+Percentage Completed: 0.9
+
+Analysis Time: PT0.844809101S
+Estimated Time: PT0.044463636S
+Analyzed Objects: 19 of 20
+Percentage Completed: 0.95
+
+Ruleset: 
+	javax.net.ssl.SSLEngine
+	java.security.DigestInputStream
+	java.security.cert.PKIXBuilderParameters
+	java.security.Key
+	javax.crypto.spec.IvParameterSpec
+	javax.crypto.Mac
+	java.security.spec.DSAGenParameterSpec
+	java.security.DigestOutputStream
+	javax.crypto.spec.PBEParameterSpec
+	javax.net.ssl.SSLParameters
+	javax.crypto.CipherOutputStream
+	javax.crypto.spec.DHParameterSpec
+	java.security.spec.RSAKeyGenParameterSpec
+	java.security.KeyPairGenerator
+	SSLServerSocket
+	java.security.KeyPair
+	javax.net.ssl.KeyManagerFactory
+	java.security.SecureRandom
+	java.security.cert.PKIXParameters
+	SSLSocketFactory
+	java.security.AlgorithmParameters
+	java.security.spec.DSAParameterSpec
+	SSLServerSocketFactory
+	com.amazonaws.services.kms.model.GenerateDataKeyRequest
+	javax.crypto.spec.GCMParameterSpec
+	javax.crypto.KeyGenerator
+	javax.net.ssl.TrustManagerFactory
+	java.security.cert.TrustAnchor
+	Stopwatch
+	javax.crypto.spec.DHGenParameterSpec
+	javax.crypto.spec.PBEKeySpec
+	javax.crypto.SecretKeyFactory
+	javax.crypto.SecretKey
+	javax.crypto.Cipher
+	java.security.KeyStore
+	javax.xml.crypto.dsig.spec.HMACParameterSpec
+	java.security.Signature
+	javax.net.ssl.CertPathTrustManagerParameters
+	javax.net.ssl.SSLContext
+	javax.net.ssl.KeyStoreBuilderParameters
+	javax.crypto.spec.SecretKeySpec
+	javax.crypto.CipherInputStream
+	SSLSocket
+	MessageDigest
+
+Analyzed Objects: 
+	Object:
+		Variable: r4
+		Type: java.security.MessageDigest
+		Statement: r4 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r3)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BaseEncodeGood: java.lang.String getSHA256()>
+		SHA-256: 329bf49c6f8693ee2c40536b36b80819ad89868f44bc76ac32bc2bfde05f6a61
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r2 = virtualinvoke r0.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ScanLoop: java.lang.String getSHA256()>
+		SHA-256: fead4c4a16d5ba12bd5a1c8f81c5fdec5611cecf0026355fffb5bdcf2d9820c2
+	Object:
+		Variable: r6
+		Type: byte[]
+		Statement: r6 = virtualinvoke r4.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BaseEncodeBad: java.lang.String getSHA256()>
+		SHA-256: 157bba82bd7b1c3afd796a6c4f766e48dcf042d04235857735ef5434cfd06195
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r2 = virtualinvoke r0.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.FileRead: java.lang.String getSHA256()>
+		SHA-256: 63e66aa623550e13b71557e68a5a9249bb1f40c94935fdd3c9ed31e87e96cf2f
+	Object:
+		Variable: r0
+		Type: java.security.MessageDigest
+		Statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ScanLoop: java.lang.String getSHA256()>
+		SHA-256: 4db9396e890e2db358d6f094b6edb58b3b942322ef893f4fd3b843fb2ac81165
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r2 = virtualinvoke r0.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.FileAsStr: java.lang.String getSHA256()>
+		SHA-256: 94916364d0be3058e8ce8e2b3262488713786959f2f8c3663ea5b08ce0c1f718
+	Object:
+		Variable: r0
+		Type: java.security.MessageDigest
+		Statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.FileRead: java.lang.String getSHA256()>
+		SHA-256: 80765e1c85ad7fb509b2b602efdc07297ffd1afd2fe00bcdc57b28e193d48729
+	Object:
+		Variable: r1
+		Type: java.security.MessageDigest
+		Statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r0)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ConsoleIn: java.lang.String getSHA256()>
+		SHA-256: 2bbf92ad09e8766dae5252c16a8378486a4794dd742f6ab83cd69ba5c1f07802
+	Object:
+		Variable: r0
+		Type: java.security.MessageDigest
+		Statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.FileAsStr: java.lang.String getSHA256()>
+		SHA-256: 66976234423ba273ae5edcfee01a23bd42fbcf859c7a82a29fd1aa5dae17d9d4
+	Object:
+		Variable: r0
+		Type: java.security.MessageDigest
+		Statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BufRead: java.lang.String getSHA256()>
+		SHA-256: 29d173a29959b2682f10e6ba143d15444b1c934563719052d2e358da3038f463
+	Object:
+		Variable: r3
+		Type: byte[]
+		Statement: r3 = virtualinvoke r1.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ScanSysIn: java.lang.String getSHA256()>
+		SHA-256: e6f7381f0d7e57f5bc1bcc0d9d860ac4e24fd744ed14d4902bb1d2efccedd675
+	Object:
+		Variable: r6
+		Type: byte[]
+		Statement: r6 = virtualinvoke r4.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BaseEncodeGood: java.lang.String getSHA256()>
+		SHA-256: 56acd9bd67ffb232f19afffd09a2d98de91f00c4ccf0f4e1e7cd31cf6cf724f5
+	Object:
+		Variable: r3
+		Type: byte[]
+		Statement: r3 = virtualinvoke r1.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BufReadSysIn: java.lang.String getSHA256()>
+		SHA-256: c47a055c695c85645e85af15037a2dceb566e077b48e272c5b27048c112c3f63
+	Object:
+		Variable: r3
+		Type: byte[]
+		Statement: r3 = virtualinvoke r1.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ConsoleIn: java.lang.String getSHA256()>
+		SHA-256: 86f87a689ad1a0b23f19413df2c4b032876d00f9a1ea39e8546a40e7499082ca
+	Object:
+		Variable: r1
+		Type: java.security.MessageDigest
+		Statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r0)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BufReadSysIn: java.lang.String getSHA256()>
+		SHA-256: ae29d817f380e330bdf8f4d92fffe7ef571d2fb3a2a319aa1f21ad6aacbd783b
+	Object:
+		Variable: r4
+		Type: java.security.MessageDigest
+		Statement: r4 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r3)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BaseEncodeBad: java.lang.String getSHA256()>
+		SHA-256: 7ba67c8b6908711c7cfda535135cde370b3f13dba8de9fbf84d494e8a981785a
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r2 = virtualinvoke r0.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.BufRead: java.lang.String getSHA256()>
+		SHA-256: f53f898e7fd15e5ca24d5e9da0297ac3fd7fbd78632d1fde09bd09f2b41fc45
+	Object:
+		Variable: r0
+		Type: java.security.MessageDigest
+		Statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ScanNext: java.lang.String getSHA256()>
+		SHA-256: 89bfd9ab67e07eec61018709867076a4ac8b7ea9a7627913fcb83009ff09c388
+	Object:
+		Variable: r2
+		Type: byte[]
+		Statement: r2 = virtualinvoke r0.<java.security.MessageDigest: byte[] digest()>()
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ScanNext: java.lang.String getSHA256()>
+		SHA-256: 4111e3cc6bfcc0af3877e9a3d0f20eab170fe5732e3113da45ca4495e8162af3
+	Object:
+		Variable: r1
+		Type: java.security.MessageDigest
+		Statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r0)
+		Method: <ConstraintErrorExample.ConstraintErrorExample.ScanSysIn: java.lang.String getSHA256()>
+		SHA-256: a5e4091f570ce00c263c25bd1de1177bd9b0d61c630669ec3d8aa8b6a0ff587
+
+Findings in Java Class: ConstraintErrorExample.ConstraintErrorExample.FileRead
+
+	 in Method: java.lang.String getSHA256()
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint VC:java.lang.String digestAlg - SHA-256,SHA-384,SHA-512, could not be evaluted due to insufficient information.
+			at statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+
+
+Findings in Java Class: ConstraintErrorExample.ConstraintErrorExample.BaseEncodeBad
+
+	 in Method: java.lang.String getSHA256()
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint VC:java.lang.String digestAlg - SHA-256,SHA-384,SHA-512, could not be evaluted due to insufficient information.
+			at statement: r4 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r3)
+
+
+Findings in Java Class: ConstraintErrorExample.ConstraintErrorExample.FileAsStr
+
+	 in Method: java.lang.String getSHA256()
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint VC:java.lang.String digestAlg - SHA-256,SHA-384,SHA-512, could not be evaluted due to insufficient information.
+			at statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+
+
+Findings in Java Class: ConstraintErrorExample.ConstraintErrorExample.BufReadSysIn
+
+	 in Method: java.lang.String getSHA256()
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint VC:java.lang.String digestAlg - SHA-256,SHA-384,SHA-512, could not be evaluted due to insufficient information.
+			at statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r0)
+
+
+Findings in Java Class: ConstraintErrorExample.ConstraintErrorExample.ScanLoop
+
+	 in Method: java.lang.String getSHA256()
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint VC:java.lang.String digestAlg - SHA-256,SHA-384,SHA-512, could not be evaluted due to insufficient information.
+			at statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+
+
+Findings in Java Class: ConstraintErrorExample.ConstraintErrorExample.ScanSysIn
+
+	 in Method: java.lang.String getSHA256()
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint VC:java.lang.String digestAlg - SHA-256,SHA-384,SHA-512, could not be evaluted due to insufficient information.
+			at statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r0)
+
+
+Findings in Java Class: ConstraintErrorExample.ConstraintErrorExample.BufRead
+
+	 in Method: java.lang.String getSHA256()
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint VC:java.lang.String digestAlg - SHA-256,SHA-384,SHA-512, could not be evaluted due to insufficient information.
+			at statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+
+
+Findings in Java Class: ConstraintErrorExample.ConstraintErrorExample.BaseEncodeGood
+
+	 in Method: java.lang.String getSHA256()
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint VC:java.lang.String digestAlg - SHA-256,SHA-384,SHA-512, could not be evaluted due to insufficient information.
+			at statement: r4 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r3)
+
+
+Findings in Java Class: ConstraintErrorExample.ConstraintErrorExample.ScanNext
+
+	 in Method: java.lang.String getSHA256()
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint VC:java.lang.String digestAlg - SHA-256,SHA-384,SHA-512, could not be evaluted due to insufficient information.
+			at statement: r0 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r7)
+
+
+Findings in Java Class: ConstraintErrorExample.ConstraintErrorExample.ConsoleIn
+
+	 in Method: java.lang.String getSHA256()
+		ImpreciseValueExtractionError violating CrySL rule for MessageDigest
+			Constraint VC:java.lang.String digestAlg - SHA-256,SHA-384,SHA-512, could not be evaluted due to insufficient information.
+			at statement: r1 = staticinvoke <java.security.MessageDigest: java.security.MessageDigest getInstance(java.lang.String)>(r0)
+
+
+======================= CogniCrypt Summary ==========================
+	Number of CrySL rules: 44
+	Number of Objects Analyzed: 20
+
+	CogniCrypt found the following violations. For details see description above.
+	ImpreciseValueExtractionError: 10
+=====================================================================
+Static Analysis took 0 seconds!
+Analysis finished after 2 seconds

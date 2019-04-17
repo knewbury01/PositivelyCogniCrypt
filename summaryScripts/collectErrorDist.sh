@@ -2,7 +2,7 @@
 #collects the number of errors for each type
 #
 # sample usage:
-#    ./collectErrorDist.sh ../CogniCryptResults V2ErrorDist
+#    ./collectErrorDist.sh ../CogniCryptResults V2ErrorDist V2
 ########################
 rm Report$2.txt
 rm allErrors$2.txt
@@ -60,4 +60,4 @@ echo "Typestate=$TypestateError" >> Report$2.txt
 echo "RequiredPredicate=$RequiredPredicateError" >> Report$2.txt
 echo "IncompleteOp=$IncompleteOperationError" >> Report$2.txt
 
-RScript CogSummary.r Report.txt $2.png
+RScript CogSummary.r Report$2.txt $2.png "Distribution of Error Types Found $3"

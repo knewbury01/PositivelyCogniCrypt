@@ -14,8 +14,8 @@ table(counts$V1)
 
 barplot(table(counts$V1),
 
-main ="Distribution of Constraint Error Totals Found Across Projects",
+main =args[3],
 ylab="Number of Projects Containing that Number of Constraint Error Occurrences",
 xlab="Number of Constraint Errors",
-ylim=c(0, 7)
+ylim=c(0, 14)
 )
