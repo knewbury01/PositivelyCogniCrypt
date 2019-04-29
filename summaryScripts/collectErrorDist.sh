@@ -60,4 +60,4 @@ echo "Typestate=$TypestateError" >> Report$2.txt
 echo "RequiredPredicate=$RequiredPredicateError" >> Report$2.txt
 echo "IncompleteOp=$IncompleteOperationError" >> Report$2.txt
 
-RScript CogSummary.r Report$2.txt $2.png "Distribution of Error Types Found $3"
+RScript CogSummary.r Report$2.txt $2.png "Distribution of Total # Errors Found $3"
